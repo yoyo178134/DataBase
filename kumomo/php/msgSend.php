@@ -5,9 +5,9 @@
     $msgSend = msgSend($_POST['text'], $_POST['send_id'], $_POST['receive_id']);
 
     if($msgSend){
-        echo "true";
+        echo 'true';
     }
     else{
-        echo "false";
+        echo 'false';
     }
 ?>    

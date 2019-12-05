@@ -116,7 +116,7 @@
         echo($sql);
         $query = mysqli_query($_SESSION['link'], $sql);
         if($query){
-            if(mysqli_num_rows($query) > 0){
+            if(mysqli_affected_rows($_SESSION['link']) > 0){
                 $result = true;
             }
             else{
