@@ -113,6 +113,7 @@
         //$user_send_id = $_SESSION['login_user_id'];
         $sql = "INSERT INTO message VALUES('', '{$text}', '{$send_id}', '{$receive_id}, '{$current_date}', '1', '1'),
                                           ('', '{$text}', '{$receive_id}', '{$send_id}, '{$current_date}', '0', '0')";
+        echo($sql);
         $query = mysqli_query($_SESSION['link'], $sql);
         if($query){
             if(mysqli_num_rows($query) > 0){
