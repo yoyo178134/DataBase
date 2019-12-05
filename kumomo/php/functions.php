@@ -1,5 +1,8 @@
 <?php
-    session_start();
+    if(!isset($_SESSION)){
+        session_start();
+    }
+    
 
     function checkHasAccont($account){
          $result = null;
@@ -21,7 +24,6 @@
 
     function signup($account, $password, $passwordConfirm, $name, $birthdate, $career ,$gender){
         $result = null;
-        
         if($password != $passwordConfirm){
             $result = false;
         }
@@ -79,8 +81,9 @@
         $query = mysqli_query($_SESSION['link'], $sql);
         if($query){
             if(mysqli_num_rows($query) == 1){
-                $row = mysqli_fetch_assoc($query);
-                $data[] = $row;
+                $row = mysqli_fetch_array($query,MYSQLI_ASSOC);
+                //echo($row['account']);
+                $data = $row;
             }
         }
         else{
@@ -102,4 +105,6 @@
         }
         return $result;
     }
+
+    //function msgSend($text, $send_id, $receive_id, )
 ?>
