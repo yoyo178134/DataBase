@@ -26,37 +26,37 @@
         <form id="login" class="col s12" action="./php/signup.php" method="POST">
           <div class="row">
             <div class="input-field col s12">
-              <input id="account" type="text" class="validate">
+              <input id="account" name="account" type="text" class="validate">
               <label for="account">account</label>
             </div>
           </div>
           <div class="row">
             <div class="input-field col s12">
-              <input id="password" type="password" class="validate">
+              <input id="password" name="password" type="password" class="validate" minlength="6">
               <label for="password">password</label>
             </div>
           </div>
           <div class="row">
             <div class="input-field col s12">
-              <input id="passwordConfirm" type="password" class="validate">
+              <input id="passwordConfirm" name="passwordConfirm" type="password" class="validate" minlength="6">
               <label for="passwordConfirm">passwordConfirm</label>
             </div>
           </div>
           <div class="row">
             <div class="input-field col s12">
-              <input id="name" type="text" class="validate">
+              <input id="name" name="name" type="text" class="validate">
               <label for="name">name</label>
             </div>
           </div>
           <div class="row">
             <div class="input-field col s12">
-              <input id="email" type="email" class="validate">
+              <input id="email" name="email" type="email" class="validate">
               <label for="email">Email</label>
             </div>
           </div>
           <div class="row">
             <div class="input-field col s12">
-              <input id="birthdate" type="text" class="datepicker">
+              <input id="birthdate" name="birthdate" type="text" class="datepicker">
               <label for="birthdate">birthdate</label>
             </div>
           </div>
