@@ -131,7 +131,6 @@
     function msgRsv($send_id, $receive_id){
         $data = array();
         $sql = "SELECT * FROM message WHERE send_id = {$send_id} AND receive_id = {$receive_id}";
-        echo($sql);
         $query = mysqli_query($_SESSION['link'], $sql);
         if($query){
             if(mysqli_num_rows($query) > 0){
