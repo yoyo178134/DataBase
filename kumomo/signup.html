@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>kumomo</title>
+
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <div id="login" class="">
+      <div class="row">
+        <form class="col s12">
+          <div class="row">
+            <div class="input-field col s12">
+              <input id="account" type="text" class="validate">
+              <label for="account">account</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12">
+              <input id="password" type="password" class="validate">
+              <label for="password">password</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12">
+              <input id="passwordConfirm" type="password" class="validate">
+              <label for="passwordConfirm">passwordConfirm</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12">
+              <input id="name" type="text" class="validate">
+              <label for="name">name</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12">
+              <input id="email" type="email" class="validate">
+              <label for="email">Email</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12">
+              <input id="birthdate" type="text" class="datepicker">
+              <label for="birthdate">birthdate</label>
+            </div>
+          </div>
+          <div class="row">
+            <label for="gender">gender</label>
+          </div>
+          <div class="row">
+            <div class="input-field col s4">
+              <label>
+                <input name="gender" type="radio" checked />
+                <span>male</span>
+              </label>
+            </div>
+            <div class="input-field col s4">
+              <label>
+                <input name="gender" type="radio" />
+                <span>female</span>
+              </label>
+            </div>
+            <div class="input-field col s4">
+              <label>
+                <input name="gender" type="radio" />
+                <span>secret</span>
+              </label>
+            </div>
+          </div>
+          <br>
+          <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+            <i class="material-icons right">send</i>
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
