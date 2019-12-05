@@ -77,7 +77,7 @@
 
     function userProfile($id){
         $data = array();
-        $sql = "SELECT account, name, birthdate, career, gender FROM user where id = '{$id}'";
+        $sql = "SELECT account, name, birthdate, career, gender FROM user WHERE id = '{$id}'";
         $query = mysqli_query($_SESSION['link'], $sql);
         if($query){
             if(mysqli_num_rows($query) == 1){
@@ -126,5 +126,21 @@
             mysqli_error($_SESSION['link']);
         }
         return $result;
+    }
+
+    function msgRsv($send_id, $receive_id){
+        $data = array();
+        $sql = "SELECT * FROM message WHERE send_id = {$send_id} AND send_id = {$receive_id}";
+        $query = mysqli_query($_SESSION['link'], $sql);
+        if($query){
+            if(mysqli_num_rows($query) == 1){
+                $row = mysqli_fetch_array($query,MYSQLI_ASSOC);
+                $data = $row;
+            }
+        }
+        else{
+            mysqli_error($_SESSION['link']);
+        }
+        return $data;
     }
 ?>
