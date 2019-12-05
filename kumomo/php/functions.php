@@ -134,7 +134,7 @@
         $query = mysqli_query($_SESSION['link'], $sql);
         if($query){
             if(mysqli_num_rows($query) > 0){
-                while($row = mysqli_fetch_assoc($query,MYSQLI_ASSOC)){
+                while($row = mysqli_fetch_assoc($query)){
                     $data[] = $row;
                 }
             }
