@@ -144,4 +144,23 @@
         }
         return $data;
     }
+
+    function msgRead($send_id, $receive_id){
+        $result = null;
+        $sql = "UPDATE message SET isRead = 1 WHERE send_id = '{$send_id}' AND receive_id = '{$receive_id}'";
+        $query = mysqli_query($_SESSION['link'], $sql);
+        if($query){
+            if(mysqli_affected_rows($_SESSION['link']) > 0){
+               $result = true;
+            }
+            else{
+                $result = false;
+            }
+        }
+        else{
+            mysqli_error($_SESSION['link']);
+        }
+        return $result;
+    }
+
 ?>
