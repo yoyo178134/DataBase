@@ -195,4 +195,24 @@
         return $text;
     }
 
+    function twitterPost($text,$poster_id){
+        $result = null;
+        $current_date = date("Y-m-d H:i:s");
+        $text = htmlspecialchars($text);
+        $sql = "INSERT INTO twitter VALUES('', '{$text}', '{$poster_id}', '{$current_date}', 0)";
+        $query = mysqli_query($_SESSION['link'], $sql);
+        if($query){
+            if(mysqli_affected_rows($_SESSION['link']) > 0){
+                $result = true;
+            }
+            else{
+                $result = false;
+            }
+        }
+        else{
+            mysqli_error($_SESSION['link']);
+        }
+        return $result;
+    }
+
 ?>
