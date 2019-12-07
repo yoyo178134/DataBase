@@ -179,4 +179,20 @@
         return $count;
     }
 
+    function msgLast($send_id, $receive_id){
+        $text = null;
+        $sql = "SELECT text FROM message WHERE time in (SELECT MAX(time) FROM message WHERE send_id = '{$send_id}' AND receive_id = '{$receive_id}') AND isOwner = 0";
+        $query = mysqli_query($_SESSION['link'], $sql);
+        if($query){
+            if(mysqli_num_rows($query) == 1){
+                $row = mysqli_fetch_assoc($query);
+                $text = $row['text'];
+            }
+        }
+        else{
+            mysqli_error($_SESSION['link']);
+        }
+        return $text;
+    }
+
 ?>
