@@ -163,4 +163,20 @@
         return $result;
     }
 
+    function msgUnreadCnt($send_id, $receive_id){
+        $count = 0;
+        $sql = "SELECT COUNT(id) FROM message WHERE send_id = '{$send_id}' AND receive_id = '{$receive_id}' AND isRead = 0";
+        $query = mysqli_query($_SESSION['link'], $sql);
+        if($query){
+            if(mysqli_num_rows($query) == 1){
+                $row = mysqli_fetch_assoc($query);
+                $count = $row['COUNT(id)'];
+            } 
+        }
+        else{
+            mysqli_error($_SESSION['link']);
+        }
+        return $count;
+    }
+
 ?>
