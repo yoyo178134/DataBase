@@ -180,19 +180,20 @@
     }
 
     function msgLast($send_id, $receive_id){
-        $text = null;
-        $sql = "SELECT text FROM message WHERE time in (SELECT MAX(time) FROM message WHERE send_id = '{$send_id}' AND receive_id = '{$receive_id}') AND isOwner = 0";
+        $data = array();
+        $sql = "SELECT * FROM message WHERE time in (SELECT MAX(time) FROM message WHERE send_id = '{$send_id}' AND receive_id = '{$receive_id}') AND isOwner = 0";
         $query = mysqli_query($_SESSION['link'], $sql);
+        //echo $sql;
         if($query){
             if(mysqli_num_rows($query) == 1){
-                $row = mysqli_fetch_assoc($query);
-                $text = $row['text'];
+                $row = mysqli_fetch_array($query,MYSQLI_ASSOC);
+                $data = $row;
             }
         }
         else{
             mysqli_error($_SESSION['link']);
         }
-        return $text;
+        return $data;
     }
 
     function twitterPost($text,$poster_id){

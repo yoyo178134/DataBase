@@ -4,6 +4,6 @@
 
     $msgLast = msgLast($_GET['send_id'], $_GET['receive_id']);
 
-    echo $msgLast;
+    echo json_encode($msgLast);
 
 ?>
