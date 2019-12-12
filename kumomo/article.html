@@ -23,7 +23,7 @@
 
 <body>
     <nav>
-        <div class="nav-wrapper cyan lighten-3">
+        <div class="nav-wrapper teal lighten-2">
             <div class="container">
                 <a href="#!" class="brand-logo hide-on-med-and-down">Kumomo 聊一下</a>
                 <a href="#!" class="brand-logo hide-on-large-only">Kumomo</a>
@@ -47,9 +47,22 @@
 
     </div>
 
+    <div class="fixed-action-btn">
+        <a class="btn-floating btn-large red">
+            <i class="large material-icons">mode_edit</i>
+        </a>
+        <ul>
+            <li><a class="btn-floating red"><i class="material-icons">insert_chart</i></a></li>
+            <li><a class="btn-floating yellow darken-1"><i class="material-icons">format_quote</i></a></li>
+            <li><a class="btn-floating green"><i class="material-icons">publish</i></a></li>
+            <li><a class="btn-floating blue"><i class="material-icons">attach_file</i></a></li>
+        </ul>
+    </div>
+
     <script type="text/javascript">
         $(document).ready(function () {
             $('.sidenav').sidenav();
+            $('.fixed-action-btn').floatingActionButton();
         });
     </script>
 </body>
