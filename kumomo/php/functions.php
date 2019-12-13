@@ -130,7 +130,7 @@
 
     function msgRsv($send_id, $receive_id){
         $data = array();
-        $sql = "SELECT * FROM message WHERE send_id = {$send_id} AND receive_id = {$receive_id}";
+        $sql = "SELECT * FROM message WHERE send_id = '{$send_id}' AND receive_id = '{$receive_id}'";
         $query = mysqli_query($_SESSION['link'], $sql);
         if($query){
             if(mysqli_num_rows($query) > 0){
@@ -152,6 +152,112 @@
         if($query){
             if(mysqli_affected_rows($_SESSION['link']) > 0){
                $result = true;
+            }
+            else{
+                $result = false;
+            }
+        }
+        else{
+            mysqli_error($_SESSION['link']);
+        }
+        return $result;
+    }
+
+    function msgUnreadCnt($send_id, $receive_id){
+        $count = 0;
+        $sql = "SELECT COUNT(id) FROM message WHERE send_id = '{$send_id}' AND receive_id = '{$receive_id}' AND isRead = 0";
+        $query = mysqli_query($_SESSION['link'], $sql);
+        if($query){
+            if(mysqli_num_rows($query) == 1){
+                $row = mysqli_fetch_assoc($query);
+                $count = $row['COUNT(id)'];
+            } 
+        }
+        else{
+            mysqli_error($_SESSION['link']);
+        }
+        return $count;
+    }
+
+    function msgLast($send_id, $receive_id){
+        $data = array();
+        $sql = "SELECT * FROM message WHERE time in (SELECT MAX(time) FROM message WHERE send_id = '{$send_id}' AND receive_id = '{$receive_id}') AND isOwner = 0";
+        $query = mysqli_query($_SESSION['link'], $sql);
+        //echo $sql;
+        if($query){
+            if(mysqli_num_rows($query) == 1){
+                $row = mysqli_fetch_array($query,MYSQLI_ASSOC);
+                $data = $row;
+            }
+        }
+        else{
+            mysqli_error($_SESSION['link']);
+        }
+        return $data;
+    }
+
+    function twitterPost($text,$poster_id){
+        $result = null;
+        $current_date = date("Y-m-d H:i:s");
+        $text = htmlspecialchars($text);
+        $sql = "INSERT INTO twitter VALUES('', '{$text}', '{$poster_id}', '{$current_date}', 0)";
+        $query = mysqli_query($_SESSION['link'], $sql);
+        if($query){
+            if(mysqli_affected_rows($_SESSION['link']) > 0){
+                $result = true;
+            }
+            else{
+                $result = false;
+            }
+        }
+        else{
+            mysqli_error($_SESSION['link']);
+        }
+        return $result;
+    }
+
+    function twitterLoad($poster_id){
+        $data = array();
+        $sql = "SELECT * FROM twitter WHERE poster_id = '{$poster_id}'";
+        $query = mysqli_query($_SESSION['link'], $sql);
+        if($query){
+            if(mysqli_num_rows($query) > 0){
+                while($row = mysqli_fetch_assoc($query)){
+                    $data[] = $row;
+                }
+            }
+        }
+        else{
+            mysqli_error($_SESSION['link']);
+        }
+        return $data;
+    }
+
+    function twitterLike($id){
+        $result = null;
+        $sql = "UPDATE twitter SET likes = likes + 1 WHERE id = '{$id}'";
+        $query = mysqli_query($_SESSION['link'], $sql);
+        if($query){
+            if(mysqli_affected_rows($_SESSION['link']) > 0){
+                $result = true;
+            }
+            else{
+                $result = false;
+            }
+        }
+        else{
+            mysqli_error($_SESSION['link']);
+        }
+        return $result;
+    }
+
+    function twitterDelete($id){
+        $result = null;
+        $sql = "DELETE FROM twitter WHERE id = '{$id}'";
+        $query = mysqli_query($_SESSION['link'], $sql);
+        if($query){
+            if(mysqli_affected_rows($_SESSION['link']) > 0){
+                $result = true;
             }
             else{
                 $result = false;
