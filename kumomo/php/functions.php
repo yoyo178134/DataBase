@@ -93,8 +93,9 @@
         return $data;
     }
 
-    function userUpdate($id, $name, $birthdate, $career, $gender){
+    function userUpdate($name, $birthdate, $career, $gender){
         $result = null;
+        $id = $_SESSION['login_user_id'];
         $sql = "UPDATE user SET name = '{$name}', birthdate = '{$birthdate}', career = '{$career}', gender = '{$gender}'
                 WHERE id = '{$id}'";
         $query = mysqli_query($_SESSION['link'], $sql);
