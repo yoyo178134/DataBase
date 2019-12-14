@@ -75,8 +75,9 @@
         return $result;
     }
 
-    function userProfile($id){
+    function userProfile(){
         $data = array();
+        $id = $_SESSION['login_user_id'];
         $sql = "SELECT account, name, birthdate, career, gender FROM user WHERE id = '{$id}'";
         $query = mysqli_query($_SESSION['link'], $sql);
         if($query){
