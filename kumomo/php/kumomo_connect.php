@@ -4,7 +4,7 @@
 
     $host = 'localhost';
     $username = 'root';
-    $password = '695221414';
+    $password = '';
     $db = 'kumomo';
 
     $_SESSION['link'] = mysqli_connect($host, $username, $password, $db);
