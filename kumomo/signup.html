@@ -136,18 +136,19 @@
 
       $("#account").on("focusout", function (e) {
         $.ajax({
-          url: "php/checkAccount.php",
+          url: "http://course.clipfetcher.com/DataBase/kumomo/php/checkAccount.php",
           type: "post",
           data: {
             account: $(this).val()
           },
-          dataType: "json",
+          dataType: "text",
           success: function (data) {
             if (data == "true") {
               $(this).removeClass("invalid").addClass("valid");
             } else {
               $(this).removeClass("valid").addClass("invalid");
             }
+            console.log(data)
           }
         })
       })
