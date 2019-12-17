@@ -121,14 +121,6 @@
         format: 'yyyy-mm-dd'
       });
 
-      $("#password").on("focusout", function (e) {
-        if ($(this).val() != $("#passwordConfirm").val() | $(this).val().length >= 6) {
-          $("#passwordConfirm").removeClass("valid").addClass("invalid");
-        } else {
-          $("#passwordConfirm").removeClass("invalid").addClass("valid");
-        }
-      });
-
       $("#passwordConfirm").on("keyup", function (e) {
         if ($("#passwordConfirm").val() != "") {
           if ($("#password").val() != $(this).val()) {
