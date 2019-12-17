@@ -34,6 +34,7 @@
               <div class="input-field col s12">
                 <input id="account" name="account" type="text" class="validate">
                 <label for="account">account</label>
+                <span data-error="account not allow" data-success="account allow" class="helper-text"></span>
               </div>
             </div>
             <div class="row">
@@ -144,11 +145,11 @@
           dataType: "text",
           success: function (data) {
             if (data == "true") {
-              $(this).removeClass("invalid").addClass("valid");
+              $("#account").removeClass("invalid").addClass("valid");
             } else {
-              $(this).removeClass("valid").addClass("invalid");
+              $("#account").removeClass("valid").addClass("invalid");
             }
-            console.log(data)
+
           }
         })
       })
