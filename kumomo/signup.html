@@ -29,49 +29,50 @@
     <div class="row">
       <div class="col s12 m8 offset-m2">
         <div class="card-panel">
-          <form id="login" action="./php/signup.php" method="POST">
+          <form id="login">
             <div class="row">
               <div class="input-field col s12">
-                <input id="account" name="account" type="text" class="validate">
+                <input id="account" name="account" type="text" class="validate" required="required">
                 <label for="account">account</label>
-                <span data-error="account not allow" data-success="account allow" class="helper-text"></span>
+                <span data-error="Account not allow" data-success="Account allow" class="helper-text"></span>
               </div>
             </div>
             <div class="row">
               <div class="input-field col s12">
-                <input id="password" name="password" type="password" class="validate" minlength="6">
+                <input id="password" name="password" type="password" class="validate" minlength="6" required="required">
                 <label for="password">password</label>
-                <span data-error="password not allow" data-success="password allow" class="helper-text"></span>
+                <span data-error="Password not allow" data-success="Password allow" class="helper-text"></span>
               </div>
             </div>
             <div class="row">
               <div class="input-field col s12">
-                <input id="passwordConfirm" name="passwordConfirm" type="password" class="validate" minlength="6">
+                <input id="passwordConfirm" name="passwordConfirm" type="password" class="validate" minlength="6"
+                  required="required">
                 <label for="passwordConfirm">passwordConfirm</label>
                 <span data-error="Password not match" data-success="Password Match" class="helper-text"></span>
               </div>
             </div>
             <div class="row">
               <div class="input-field col s12">
-                <input id="name" name="name" type="text" class="validate">
+                <input id="name" name="name" type="text" class="validate" required="required">
                 <label for="name">name</label>
               </div>
             </div>
             <div class="row">
               <div class="input-field col s12">
-                <input id="email" name="email" type="email" class="validate">
+                <input id="email" name="email" type="email" class="validate" required="required">
                 <label for="email">Email</label>
               </div>
             </div>
             <div class="row">
               <div class="input-field col s12">
-                <input id="birthdate" name="birthdate" type="text" class="datepicker">
+                <input id="birthdate" name="birthdate" type="text" class="datepicker" required="required">
                 <label for="birthdate">birthdate</label>
               </div>
             </div>
             <div class="row">
               <div class="input-field col s12">
-                <input id="career" name="career" type="text" class="validate">
+                <input id="career" name="career" type="text" class="validate" required="required">
                 <label for="career">career</label>
               </div>
             </div>
@@ -79,7 +80,7 @@
             <div class="row">
               <div class="input-field col s4">
                 <label>
-                  <input name="gender" type="radio" value="m" />
+                  <input name="gender" type="radio" value="m" required />
                   <span>male</span>
                 </label>
               </div>
@@ -140,7 +141,7 @@
 
       $("#account").on("focusout", function (e) {
         $.ajax({
-          url: "http://course.clipfetcher.com/DataBase/kumomo/php/checkAccount.php",
+          url: "php/checkAccount.php",
           type: "post",
           data: {
             account: $(this).val()
@@ -156,6 +157,27 @@
           }
         })
       })
+
+      $("#login").submit(function (e) {
+
+        var form = $(this);
+        $.ajax({
+          type: "POST",
+          url: "php/signup.php",
+          data: form.serialize(),
+          success: function (data) {
+            if (data == "true") {
+              alert("registration success")
+            } else if (data == "false") {
+              alert("registration fail")
+            } else {
+              alert("unexpecded")
+            }
+          }
+        })
+
+      })
+
     })
 
 
