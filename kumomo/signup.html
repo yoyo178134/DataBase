@@ -120,7 +120,7 @@
         format: 'yyyy-mm-dd'
       });
 
-      $("#passwordConfirm").on("keyup", function (e) {
+      $("#passwordConfirm").on("focusout", function (e) {
         if ($("#passwordConfirm").val() != "") {
           if ($("#password").val() != $(this).val()) {
             $(this).removeClass("valid").addClass("invalid");
