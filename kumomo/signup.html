@@ -136,7 +136,7 @@
 
       $("#account").on("focusout", function (e) {
         $.ajax({
-          url: "/php/checkAccount.php",
+          url: "/DataBase/kumomo/php/checkAccount.php",
           type: "post",
           data: {
             account: $(this).val()
