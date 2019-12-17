@@ -134,55 +134,20 @@
         }
       });
 
-      $("#account").on("keyup", function () {
-        //取得輸入的值
-        var keyin_value = $(this).val();
-        //當keyup的時候，裡面的值不是空字串的話，就檢查。
-        if (keyin_value != '') {
-          //$.ajax 是 jQuery 的方法，裡面使用的是物件。
-          $.ajax({
-            type: "POST",	//表單傳送的方式 同 form 的 method 屬性
-            url: "/php/checkAccount.php",  //目標給哪個檔案 同 form 的 action 屬性
-            data: {	//為要傳過去的資料，使用物件方式呈現，因為變數key值為英文的關係，所以用物件方式送。ex: {name : "輸入的名字", password : "輸入的密碼"}
-              n: $(this).val()	//代表要傳一個 n 變數值為，username 文字方塊裡的值
-            },
-            dataType: 'html' //設定該網頁回應的會是 html 格式
-          }).done(function (data) {
-            //成功的時候
-            //console.log(data); //透過 console 看回傳的結果
-            if (data == "yes") {
-              //如果為 yes username 文字方塊的復元素先移除 has-error 類別，再加入 has-success 類別
-              $("#account").removeClass("invalid")
-            }
-            else {
-              alert("帳號有重複，不可以註冊");
-              $("#account").addClass("invalid");
-            }
 
-          }).fail(function (jqXHR, textStatus, errorThrown) {
-            //失敗的時候
-            alert("有錯誤產生，請看 console log");
-            console.log(jqXHR.responseText);
-          });
-        }
-        else {
-          //若為空字串，就移除 has-error 跟 has-success 類別
-          $("#account").removeClass("invalid")
-        }
-
-      });
-    });
-
-    $("#account").on("focusout", function (e) {
-      $.ajax({
-        url: "/php/checkAccount.php",
-        type: "post",
-        dataType: "json",
-        success: function (data) {
-          console.log(data)
-        }
+      $("#account").on("focusout", function (e) {
+        $.ajax({
+          url: "/php/checkAccount.php",
+          type: "post",
+          data: {
+            account: $(this).val()
+          },
+          dataType: "json",
+          success: function (data) {
+            console.log(data)
+          }
+        })
       })
-    })
   </script>
 </body>
 
