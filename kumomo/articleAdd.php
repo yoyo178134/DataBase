@@ -83,7 +83,9 @@
             $.ajax({
                 type: "POST",
                 url: "php/twitterPost.php",
-                data: {text : $("#articleText")},
+                data:{
+                    text : $("#articleText").val()
+                },
                 success: function (data) {
                     console.log(data)
                     if (data == "true") {
