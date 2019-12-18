@@ -52,7 +52,7 @@
         <div class="row">
             <div class="col s12 m10 offset-m1">
                 <div class="card-panel">
-                    <form id="login" action="./php/twitterPost.php" method="POST">
+                    <form id="form"">
                         <div class="row">
                             <div class="input-field col s12">
                                 <textarea id="articleText" name="text" placeholder="寫點什麼吧" class="materialize-textarea"
@@ -77,6 +77,22 @@
             $('.tooltipped').tooltip();
             $(".dropdown-trigger").dropdown();
         });
+
+        $("#form").submit(function (e) {
+            var form = $(this);
+            $.ajax({
+                type: "POST",
+                url: "php/twitterPost.php",
+                data:{
+                    text : $("#articleText").val()
+                },
+                datatype:"text", 
+                success: function (data) {
+                    window.location.href = "article.php"
+                }
+            })
+            return false;
+        })
     </script>
 </body>
 

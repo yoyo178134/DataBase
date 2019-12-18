@@ -78,7 +78,7 @@
     function userProfile(){
         $data = array();
         $id = $_SESSION['login_user_id'];
-        $sql = "SELECT * FROM user WHERE id = '{$id}'";
+        $sql = "SELECT id, account, name, birthdate, career, gender FROM user WHERE id = '{$id}'";
         $query = mysqli_query($_SESSION['link'], $sql);
         if($query){
             if(mysqli_num_rows($query) == 1){
@@ -93,10 +93,10 @@
         return $data;
     }
 
-    function userUpdate($name, $birthdate, $career, $gender){
+    function userUpdate($name, $birthdate, $career){
         $result = null;
         $id = $_SESSION['login_user_id'];
-        $sql = "UPDATE user SET name = '{$name}', birthdate = '{$birthdate}', career = '{$career}', gender = '{$gender}'
+        $sql = "UPDATE user SET name = '{$name}', birthdate = '{$birthdate}', career = '{$career}'
                 WHERE id = '{$id}'";
         $query = mysqli_query($_SESSION['link'], $sql);
         if($query){
@@ -214,8 +214,9 @@
         return $name;
     }
 
-    function twitterPost($text,$poster_id){
+    function twitterPost($text){
         $result = null;
+        $poster_id = $_SESSION['login_user_id'];
         $current_date = date("Y-m-d H:i:s");
         $text = htmlspecialchars($text);
         $sql = "INSERT INTO twitter VALUES('', '{$text}', '{$poster_id}', '{$current_date}', 0)";
