@@ -57,7 +57,7 @@
     <div class="container">
         <br><br>
         <div class="collection">
-            <a href="#!" class="collection-item">
+            <a href="#!" class="collection-item avatar">
                 <div class="row">
                     <div class="col s2">
                         <i class="large material-icons">account_circle</i>
@@ -69,9 +69,9 @@
                 </div>
                 <p class="right-align">2019-06-28 00:02:00</p>
             </a>
-            <a href="#!" class="collection-item">Alvin</a>
-            <a href="#!" class="collection-item">Alvin</a>
-            <a href="#!" class="collection-item">Alvin</a>
+            <a href="#!" class="collection-item avatar">Alvin</a>
+            <a href="#!" class="collection-item avatar">Alvin</a>
+            <a href="#!" class="collection-item avatar">Alvin</a>
       </div>
     </div>
 
