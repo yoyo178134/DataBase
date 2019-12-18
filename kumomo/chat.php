@@ -69,7 +69,7 @@
                         <p>閉嘴<span class="new badge">1</span></p>
                     </div>
                 </div>
-                <p class="right-align"><small>2019-06-28 00:02:00</small></p>
+                <p class="right-align grey-text""><small>2019-06-28 00:02:00</small></p>
             </li>
             <li href="#!" class="collection-item avatar">Alvin</li>
             <li href="#!" class="collection-item avatar">Alvin</li>
