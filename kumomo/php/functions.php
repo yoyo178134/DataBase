@@ -78,7 +78,7 @@
     function userProfile(){
         $data = array();
         $id = $_SESSION['login_user_id'];
-        $sql = "SELECT * FROM user WHERE id = '{$id}'";
+        $sql = "SELECT id, account, name, birthdate, career, gender FROM user WHERE id = '{$id}'";
         $query = mysqli_query($_SESSION['link'], $sql);
         if($query){
             if(mysqli_num_rows($query) == 1){
