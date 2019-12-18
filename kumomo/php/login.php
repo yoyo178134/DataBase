@@ -6,6 +6,7 @@
       
       if($checkLogin){
           echo "true";
+          header("Location: ../article.php");
       }
       else{
           echo "false";
