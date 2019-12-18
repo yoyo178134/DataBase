@@ -1,4 +1,10 @@
-
+<?php
+    session_start() ;
+    if(isset($_SESSION['is_login']) && $_SESSION['is_login'])
+    {
+        header("Location: article.php");
+    }
+?>
 <!DOCTYPE html>
 <html lang="zh-TW">
 
