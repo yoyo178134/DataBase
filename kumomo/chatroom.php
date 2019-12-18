@@ -64,10 +64,10 @@
                             <i class="medium material-icons">account_circle</i>
                             <h6 class="title">郭垣佑</h6>
                         </div>
-                        <div class="col s8">
+                        <div class="col s8 m8">
                             <p>閉嘴</p>
                         </div>
-                        <div class="col s2">
+                        <div class="col s2 m2">
                             <p class="right-align"><span class="new badge">1</span></p>
                         </div>
                     </div>
