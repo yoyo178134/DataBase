@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="zh-TW">
 
@@ -55,10 +56,11 @@
                     <p class="center-align">ID : ###</p>
                     <div class="row">
                         <div class="col s12 m8 offset-m2">
-                            <p class="left-align">Account : ###</p>
-                            <p class="left-align">Name : ###</p>
-                            <p class="left-align">BirthDate : ###</p>
-                            <p class="left-align">Gender : ###</p>
+                            <p class="left-align" id="account">Account : ###</p>
+                            <p class="left-align" id="name">Name : ###</p>
+                            <p class="left-align" id="birthdate">BirthDate : ###</p>
+                            <p class="left-align" id="gender">Gender : ###</p>
+                            <p class="left-align" id="career">Career : ###</p>
                         </div>
                     </div>
                     <p class="right-align">
@@ -76,6 +78,22 @@
             $('.fixed-action-btn').floatingActionButton();
             $('.tooltipped').tooltip();
             $(".dropdown-trigger").dropdown();
+
+            $.ajax({
+                type: "GET",
+                url: "php/userProfile.php",
+                dataType: "json"
+                success: function (data) {
+                    console.log(data)
+                    $(#account).text("Account : "+data.account)
+                    $(#account).text("Name : "+data.name)
+                    $(#account).text("BirthDate : "+data.birthdate)
+                    $(#account).text("Gender : "+data.gender)
+                    $(#account).text("Career : "+data.career)
+                }
+            })
+            return false;
+            })
         });
     </script>
 </body>
