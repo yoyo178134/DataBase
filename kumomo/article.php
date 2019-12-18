@@ -75,6 +75,11 @@
                         <div class="divider"></div>
                         <div class="section">
                             <blockquote>
+                                <p class="right-align" style="display:none;">
+                                    <a class="waves-effect waves-yellow btn-flat" id="delete">
+                                        <i class="material-icons right">delete</i>
+                                    </a>
+                                </p>
                                 <div class="row">
                                     <div class="col s12 m8 offset-m2">
                                         <p id="text">阿你要先講啊</p>
@@ -84,7 +89,7 @@
                                     <a class="waves-effect waves-yellow btn-flat" id="thumb">
                                         <i class="material-icons left" >thumb_up</i><span id="likes">5</span>
                                     </a>
-                                        <div id="id" style="display:none;">12</div>
+                                    <div id="id" style="display:none;">12</div>
                                 </p>
                             </blockquote>
                         </div>
