@@ -139,7 +139,7 @@
                         temp.find("#text").text(ele.text)
                         temp.find("#time").text(ele.time)
                         temp.find("#likes").text(ele.likes)
-                        mix += temp[0].outerHTML();
+                        mix += temp[0].outerHTML;
                     })
                     $("#articleList").html(mix);
                 },
