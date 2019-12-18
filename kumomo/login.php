@@ -45,16 +45,16 @@
                         <div class="row">
                             <div class="col s6">
                                 <p class="left-align">
-                                    <button class="btn waves-effect waves-light"
-                                        onclick="location.href='signup.php'">sign up
-                                        <i class="material-icons right">person_add</i>
+                                    <button class="btn waves-effect waves-light" type="submit">sign in
+                                        <i class="material-icons right">send</i>
                                     </button>
                                 </p>
                             </div>
                             <div class="col s6">
                                 <p class="right-align">
-                                    <button class="btn waves-effect waves-light" type="submit">sign in
-                                        <i class="material-icons right">send</i>
+                                    <button class="btn waves-effect waves-light"
+                                        onclick="location.href='signup.php'">sign up
+                                        <i class="material-icons right">person_add</i>
                                     </button>
                                 </p>
                             </div>
