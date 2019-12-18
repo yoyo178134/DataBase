@@ -59,19 +59,12 @@
         <div class="collection">
             <a href="#!" class="collection-item">
                 <div class="row">
-                    <div class="col s4">
+                    <div class="col s2">
                         <i class="large material-icons">account_circle</i>
                     </div>
-                    <div class="col s8">
+                    <div class="col s10">
                         <span class="title">郭垣佑</span>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col s8 offset-s2">
-                        <p>閉嘴</p>
-                    </div>
-                    <div class="col s2">
-                        <p>閉嘴</p>
+                        <p>閉嘴<span class="new badge">4</span></p>
                     </div>
                 </div>
                 <p class="right-align">2019-06-28 00:02:00</p>
