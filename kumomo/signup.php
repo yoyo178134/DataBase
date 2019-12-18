@@ -161,7 +161,7 @@
           success: function (data) {
             if (data == "true") {
               alert("registration success")
-              location = "login.html"
+              location = "login.php"
             } else if (data == "false") {
               alert("registration fail")
             } else {
