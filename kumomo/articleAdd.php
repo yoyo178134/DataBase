@@ -39,7 +39,7 @@
                 <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
                 <ul class="right hide-on-med-and-down">
                     <li><a href="article.php">文章</a></li>
-                    <li><a href="chat.php">聊天室</a></li>
+                    <li><a href="chatroom.php">聊天室</a></li>
                     <li><a href="profile.php">個人頁面</a></li>
                     <li><a class="waves-effect waves-light btn" href="php/logout.php">登出</a></li>
                 </ul>
@@ -49,7 +49,7 @@
 
     <ul class="sidenav" id="mobile-demo">
         <li><a href="article.php">文章</a></li>
-        <li><a href="chat.php">聊天室</a></li>
+        <li><a href="chatroom.php">聊天室</a></li>
         <li><a href="profile.php">個人頁面</a></li>
         <li><a class="waves-effect waves-light btn" href="php/logout.php">登出</a></li>
     </ul>
