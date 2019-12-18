@@ -26,7 +26,7 @@
         <div class="row">
             <div class="col s12 m8 offset-m2">
                 <div class="card-panel">
-                    <form id="login" action="./php/login.php" method="POST">
+                    <form id="login">
                         <div class="row">
                             <div class="input-field col s12">
                                 <input id="account" name="account" type="text" class="validate">
@@ -39,11 +39,22 @@
                                 <label for="password">password</label>
                             </div>
                         </div>
-                        <br>
-                        <br>
-                        <button class="btn waves-effect waves-light" type="submit" name="action">Login
-                            <i class="material-icons right">send</i>
-                        </button>
+
+                        <div class="row">
+                            <div class="col s6">
+                                <p class="left-align">
+                                    <button class="btn waves-effect waves-light"
+                                        onclick="location.hred='signup.html'">sign up
+                                        <i class="material-icons right">person_add</i>
+                                    </button>
+                                </p>
+                            </div>
+                            <div class="col s6">
+                                <p class="right-align"> <button class="btn waves-effect waves-light" type="submit">sign
+                                        in
+                                        <i class="material-icons right">send</i></button></p>
+                            </div>
+
                     </form>
                 </div>
             </div>
@@ -51,5 +62,29 @@
     </div>
 
 </body>
+
+<script>
+    $(function () {
+        $("#login").submit(function (e) {
+            var form = $(this);
+            $.ajax({
+                type: "POST",
+                url: "php/login.php",
+                data: form.serialize(),
+                success: function (data) {
+                    if (data == "true") {
+                        alert("sign in success")
+                        location = "login.html"
+                    } else if (data == "false") {
+                        alert("sign in  fail")
+                    } else {
+                        alert("unexpecded")
+                    }
+                }
+            })
+            return false;
+        })
+    })
+</script>
 
 </html>
