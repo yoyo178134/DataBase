@@ -5,9 +5,9 @@
     $twitterPost = twitterPost($_POST['text']);
 
     if($twitterPost){
-        echo 'true';
+        echo "true";
     }
     else{
-        echo 'false';
+        echo "false";
     }
 ?>   
