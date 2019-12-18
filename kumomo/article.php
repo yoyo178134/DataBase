@@ -63,7 +63,7 @@
                     <div class="card-panel">
                         <div class="section">
                             <div class="row">
-                                <div id="id" style="display:none;">12</div>
+                                
                                 <div class="col s7 m9">
                                     <h5 id="name">林子平</h5>
                                 </div>
@@ -80,8 +80,11 @@
                                         <p id="text">阿你要先講啊</p>
                                     </div>
                                 </div>
-                                <p class="right-align"><a class="waves-effect waves-yellow btn-flat">
-                                        <i class="material-icons left" id="thumb">thumb_up</i><span id="likes">5</span></a>
+                                <p class="right-align">
+                                    <a class="waves-effect waves-yellow btn-flat">
+                                        <i class="material-icons left" id="thumb">thumb_up</i><span id="likes">5</span>
+                                    </a>
+                                        <div id="id" style="display:none;">12</div>
                                 </p>
                             </blockquote>
                         </div>
@@ -140,7 +143,10 @@
                         temp.find("#time").text(ele.time)
                         temp.find("#likes").text(ele.likes)
                         mix += temp[0].outerHTML;
-                        
+                        temp.find("#thumb").click(function(){
+                            let id = $(this).siblings("#id").text;
+                            thumbclick(id);
+                        })
                     })
                     $("#articleList").html(mix);
                 },
@@ -151,6 +157,17 @@
                 }
             })
         });
+        function thumbclick(id){
+            $.ajax({
+                type: "POST",
+                url: "php/twitterLike.php",
+                dataType: "text",
+                data:{id : id},
+                success: function (data) {
+                    console.log(data)
+                }
+            })
+        }
 
         
     </script>
