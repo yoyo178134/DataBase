@@ -88,8 +88,8 @@
                 },
                 datatype:"text", 
                 success: function (data) {
+                    console.log(data.length)
                     console.log(data)
-                    console.log(typeof(data))
                     if (data == "true") {
                         alert("success")
                         window.location.href = "article.php"
