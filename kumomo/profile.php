@@ -53,7 +53,7 @@
             <div class="col s12 m8 offset-m2">
                 <div class="card-panel">
                     <p class="center-align"><i class="large material-icons">account_circle</i></p>
-                    <p class="center-alig" id="id" >ID : ###</p>
+                    <p class="center-align" id="id" >ID : ###</p>
                     <div class="row">
                         <div class="col s12 m8 offset-m2">
                             <p class="left-align" id="account">Account : ###</p>
