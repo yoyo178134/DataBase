@@ -83,7 +83,7 @@
                 success: function (data) {
                     console.log(data)
                     if (data == "true") {
-                        alert("sign in success")
+                        //alert("sign in success")
                         //location = "login.php"
                     } else if (data == "false") {
                         alert("sign in  fail")
