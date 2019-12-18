@@ -4,9 +4,7 @@
     
     $datas = msgRsv($_GET['send_id'], $_GET['receive_id']);
     if(!empty($datas)){
-        foreach($datas as $data){
-            echo json_encode($data);
-        }
+        echo json_encode($datas, JSON_UNESCAPED_UNICODE);
     }
     else{
         echo "false";
