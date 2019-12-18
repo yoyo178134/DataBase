@@ -5,9 +5,9 @@
     $signup = signup($_POST['account'], $_POST['password'], $_POST['passwordConfirm'], $_POST['name'], $_POST['birthdate'], $_POST['career'], $_POST['gender']);
 
     if($signup){
-        echo 'true';
+        echo "true";
     }
     else{
-        echo 'false';
+        echo "false";
     }
 ?>

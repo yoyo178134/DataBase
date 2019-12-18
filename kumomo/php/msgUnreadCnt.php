@@ -8,7 +8,7 @@
         echo $msgUnreadCnt;
     }
     else{
-        echo 'false';//沒有未讀
+        echo "false";//沒有未讀
     }
 
 ?>

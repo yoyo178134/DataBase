@@ -8,6 +8,6 @@
         echo $findName;
     }
     else{
-        echo 'false';
+        echo "false";
     }
 ?>   

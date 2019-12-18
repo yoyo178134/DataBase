@@ -5,9 +5,9 @@
     $userUpdate = userUpdate($_POST['name'], $_POST['birthdate'], $_POST['career']);
 
     if($userUpdate){
-        echo 'true';
+        echo "true";
     }
     else{
-        echo 'false';
+        echo "false";
     }
 ?>

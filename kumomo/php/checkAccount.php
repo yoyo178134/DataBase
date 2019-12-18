@@ -5,9 +5,9 @@
     $check = checkHasAccont($_POST['account']);
 
     if($check){
-        echo 'false';
+        echo "false";
     }
     else{
-        echo 'true';
+        echo "true";
     }
 ?>

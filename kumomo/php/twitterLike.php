@@ -5,9 +5,9 @@
     $twitterLike = twitterLike($_POST['id']);
 
     if($twitterLike){
-        echo 'true';
+        echo "true";
     }
     else{
-        echo 'false';
+        echo "false";
     }
 ?>  

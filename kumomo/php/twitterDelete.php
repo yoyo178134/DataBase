@@ -5,9 +5,9 @@
     $twitterDelete = twitterDelete($_POST['id']);
 
     if($twitterDelete){
-        echo 'true';
+        echo "true";
     }
     else{
-        echo 'false';
+        echo "false";
     }
 ?>  

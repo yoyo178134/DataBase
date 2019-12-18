@@ -5,10 +5,10 @@
     $msgRead = msgRead($_POST['send_id'], $_POST['receive_id']);
 
     if($msgRead){
-        echo 'true';
+        echo "true";
     }
     else{
-        echo 'false';
+        echo "false";
     }
 
 ?>
