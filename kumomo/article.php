@@ -49,64 +49,37 @@
     <div class="container">
         <br><br>
         <div id="articleList">
-            <div class="articleBlock">
-                <div class="card-panel">
-                    <div class="section">
-                        <div class="row">
-                            <div class="col s7 m9">
-                                <h5>林子平</h5>
-                            </div>
-                            <div class="col s5 m3">
-                                <p class="right-align grey-text"><small>2019-10-11 10:01:50</small></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="divider"></div>
-                    <div class="section">
-                        <blockquote>
+
+            <template class="item">
+                <div class="articleBlock">
+                    <div class="card-panel">
+                        <div class="section">
                             <div class="row">
-                                <div class="col s12 m8 offset-m2">
-                                    <p>阿你要先講啊</p>
+                                <div class="col s7 m9">
+                                    <h5>林子平</h5>
+                                </div>
+                                <div class="col s5 m3">
+                                    <p class="right-align grey-text"><small>2019-10-11 10:01:50</small></p>
                                 </div>
                             </div>
-                            <p class="right-align"><a class="waves-effect waves-yellow btn-flat">
-                                    <i class="material-icons left">thumb_up</i><span>5</span></a>
-                            </p>
-                        </blockquote>
-                    </div>
-                </div>
-            </div>
-            <div class="articleBlock">
-                <div class="card-panel">
-                    <div class="section">
-                        <div class="row">
-                            <div class="col s7 m9">
-                                <h5>蔡宗翰</h5>
-                            </div>
-                            <div class="col s5 m3">
-                                <p class="right-align grey-text"><small>2019-10-10 00:01:50</small></p>
-                            </div>
+                        </div>
+                        <div class="divider"></div>
+                        <div class="section">
+                            <blockquote>
+                                <div class="row">
+                                    <div class="col s12 m8 offset-m2">
+                                        <p>阿你要先講啊</p>
+                                    </div>
+                                </div>
+                                <p class="right-align"><a class="waves-effect waves-yellow btn-flat">
+                                        <i class="material-icons left">thumb_up</i><span>5</span></a>
+                                </p>
+                            </blockquote>
                         </div>
                     </div>
-                    <div class="divider"></div>
-                    <div class="section">
-                        <blockquote>
-                            <p class="right-align"><a class="waves-effect waves-red btn-flat"
-                                    onclick="$(this).parent().parent().parent().parent().fadeOut();">
-                                    <i class="material-icons">delete</i></a>
-                            </p>
-                            <div class="row">
-                                <div class="col s12 m8 offset-m2">
-                                    <p>有人沒跟我說證明要考</p>
-                                </div>
-                            </div>
-                            <p class="right-align"><a class="waves-effect waves-yellow btn-flat">
-                                    <i class="material-icons left">thumb_up</i><span>10</span></a>
-                            </p>
-                        </blockquote>
-                    </div>
                 </div>
-            </div>
+            </template>
+            
         </div>
     </div>
 
