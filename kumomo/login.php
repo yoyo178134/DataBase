@@ -1,8 +1,8 @@
 <?php
     session_start() ;
-    if(!isset($_SESSION['is_login']) || !$_SESSION['is_login'])
+    if(isset($_SESSION['is_login']) || $_SESSION['is_login'])
     {
-        header("Location: login.php");
+        header("Location: article.php");
     }
 ?>
 <!DOCTYPE html>
