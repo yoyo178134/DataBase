@@ -106,6 +106,9 @@
 
     <script type="text/javascript">
         $(document).ready(function () {
+            $('.datepicker').datepicker({
+                format: 'yyyy-mm-dd'
+            });
             $('.sidenav').sidenav();
             $('.fixed-action-btn').floatingActionButton();
             $('.tooltipped').tooltip();
