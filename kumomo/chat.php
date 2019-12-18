@@ -59,10 +59,10 @@
         <ul class="collection">
             <li href="#!" class="collection-item">
                 <div class="row">
-                    <div class="col s2">
+                    <div class="col s4 m2">
                         <i class="medium material-icons">account_circle</i>
                     </div>
-                    <div class="col s10">
+                    <div class="col s8 m10">
                         <h6 class="title">郭垣佑</h6>
                         <div class="divider"></div>
                         <br>
