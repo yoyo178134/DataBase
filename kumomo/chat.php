@@ -38,9 +38,9 @@
                 <a href="#!" class="brand-logo hide-on-large-only">Kumomo</a>
                 <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
                 <ul class="right hide-on-med-and-down">
-                    <li><a href="article.html">文章</a></li>
-                    <li><a href="chat.html">聊天室</a></li>
-                    <li><a href="profile.html">個人頁面</a></li>
+                    <li><a href="article.php">文章</a></li>
+                    <li><a href="chat.php">聊天室</a></li>
+                    <li><a href="profile.php">個人頁面</a></li>
                     <li><a class="waves-effect waves-light btn">登出</a></li>
                 </ul>
             </div>
@@ -48,9 +48,9 @@
     </nav>
 
     <ul class="sidenav" id="mobile-demo">
-        <li><a href="article.html">文章</a></li>
-        <li><a href="chat.html">聊天室</a></li>
-        <li><a href="profile.html">個人頁面</a></li>
+        <li><a href="article.php">文章</a></li>
+        <li><a href="chat.php">聊天室</a></li>
+        <li><a href="profile.php">個人頁面</a></li>
         <li><a class="waves-effect waves-light btn">登出</a></li>
     </ul>
 
