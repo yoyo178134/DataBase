@@ -142,12 +142,12 @@
                         temp.find("#text").text(ele.text)
                         temp.find("#time").text(ele.time)
                         temp.find("#likes").text(ele.likes)
-                        mix += temp[0].outerHTML;
                         temp.find("#thumb").click(function(){
                             let id = $(this).siblings("#id").text();
                             console.log("click id:"+id)
                             thumbclick(id);
                         })
+                        mix += temp[0].outerHTML;
                     })
                     $("#articleList").html(mix);
                 },
