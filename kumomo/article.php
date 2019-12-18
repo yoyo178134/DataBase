@@ -133,13 +133,13 @@
                     var temp = getTemplate();
                     var mix = '';
                     console.log(data)
-                    $.each(date, function (key,ele){
+                    $.each(data, function (key,ele){
                         temp.find("#id").text(ele.id)
                         temp.find("#name").text(ele.name)
                         temp.find("#text").text(ele.text)
                         temp.find("#time").text(ele.time)
                         temp.find("#likes").text(ele.likes)
-                        mix += temp[0].outerHTML();
+                        mix += temp[0].outerHTML;
                     })
                     $("#articleList").html(mix);
                 },
