@@ -137,16 +137,14 @@
                     var mix = '';
                     console.log(data)
                     $.each(data, function (key,ele){
+                        let id = ele.id;
                         temp.find("#id").text(ele.id)
                         temp.find("#name").text(ele.name)
                         temp.find("#text").text(ele.text)
                         temp.find("#time").text(ele.time)
                         temp.find("#likes").text(ele.likes)
-                        temp.find("#thumb").click(function(){
-                            let id = $(this).siblings("#id").text();
-                            console.log("click id:"+id)
-                            thumbclick(id);
-                        })
+                        temp.find("#thumb").attr('onclick',"thumbclick(" + id + ")");
+                        
                         mix += temp[0].outerHTML;
                     })
                     $("#articleList").html(mix);
