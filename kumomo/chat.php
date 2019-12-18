@@ -65,6 +65,7 @@
                     <div class="col s10">
                         <h6 class="title">郭垣佑</h6>
                         <div class="divider"></div>
+                        <br>
                         <p>閉嘴<span class="new badge">1</span></p>
                     </div>
                 </div>
