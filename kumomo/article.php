@@ -63,11 +63,12 @@
                     <div class="card-panel">
                         <div class="section">
                             <div class="row">
+                                <div id="id" style="display:none;">12</div>
                                 <div class="col s7 m9">
-                                    <h5>林子平</h5>
+                                    <h5 id="name">林子平</h5>
                                 </div>
                                 <div class="col s5 m3">
-                                    <p class="right-align grey-text"><small>2019-10-11 10:01:50</small></p>
+                                    <p class="right-align grey-text"><small id="time">2019-10-11 10:01:50</small></p>
                                 </div>
                             </div>
                         </div>
@@ -76,18 +77,18 @@
                             <blockquote>
                                 <div class="row">
                                     <div class="col s12 m8 offset-m2">
-                                        <p>阿你要先講啊</p>
+                                        <p id="text">阿你要先講啊</p>
                                     </div>
                                 </div>
                                 <p class="right-align"><a class="waves-effect waves-yellow btn-flat">
-                                        <i class="material-icons left">thumb_up</i><span>5</span></a>
+                                        <i class="material-icons left">thumb_up</i><span id="likes">5</span></a>
                                 </p>
                             </blockquote>
                         </div>
                     </div>
                 </div>
             </template>
-            
+
         </div>
     </div>
 
@@ -111,11 +112,43 @@
     </div>
 
     <script type="text/javascript">
+        var getTemplate = function (){
+            var html = $("template.item").html();
+            return $(html).clone();
+        }
+
+
+
         $(document).ready(function () {
             $('.sidenav').sidenav();
             $('.fixed-action-btn').floatingActionButton();
             $('.tooltipped').tooltip();
             $(".dropdown-trigger").dropdown();
+
+            $.ajax({
+                type: "GET",
+                url: "php/twitterLoad.php",
+                dataType: "json",
+                success: function (data) {
+                    var temp = getTemplate();
+                    var mix = '';
+                    console.log(data)
+                    $.each(date, function (key,ele){
+                        temp.find("#id").text(ele.id)
+                        temp.find("#name").text(ele.name)
+                        temp.find("#text").text(ele.text)
+                        temp.find("#time").text(ele.time)
+                        temp.find("#likes").text(ele.likes)
+                        mix += temp[0].outerHTML();
+                    })
+                    $("#articleList").html(mix);
+                },
+                error: function(XMLHttpRequest, textStatus, errorThrown) {
+                    alert(XMLHttpRequest.status);
+                    alert(XMLHttpRequest.readyState);
+                    alert(textStatus);
+                }
+            })
         });
     </script>
 </body>
