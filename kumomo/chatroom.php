@@ -77,10 +77,7 @@
                     <p class="right-align grey-text""><small>2019-06-28 00:02:00</small></p>
                 </a>
             </li>
-            <li href="#!" class="collection-item">Alvin</li>
-            <li href="#!" class="collection-item">Alvin</li>
-            <li href="#!" class="collection-item">Alvin</li>
-</ul>
+        </ul>
     </div>
 
     <div class="fixed-action-btn">
