@@ -81,7 +81,7 @@
                                     </div>
                                 </div>
                                 <p class="right-align"><a class="waves-effect waves-yellow btn-flat">
-                                        <i class="material-icons left">thumb_up</i><span id="likes">5</span></a>
+                                        <i class="material-icons left" id="thumb">thumb_up</i><span id="likes">5</span></a>
                                 </p>
                             </blockquote>
                         </div>
@@ -140,6 +140,16 @@
                         temp.find("#time").text(ele.time)
                         temp.find("#likes").text(ele.likes)
                         mix += temp[0].outerHTML;
+                        $temp.find("#thumb").on("click" ,function(e){
+                            $.ajax({
+                                typeL:"GET",
+                                url: "php/twitterLike.php",
+                                data : {id : ele.id},
+                                success: function (data) {
+                                    console.log(data)
+                                }
+                            })
+                        })
                     })
                     $("#articleList").html(mix);
                 },
@@ -150,6 +160,8 @@
                 }
             })
         });
+
+        
     </script>
 </body>
 
