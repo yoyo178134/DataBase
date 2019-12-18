@@ -76,7 +76,7 @@
                         <div class="section">
                             <blockquote>
                                 <p class="right-align">
-                                    <a class="waves-effect waves-yellow btn-flat" id="delete">
+                                    <a class="waves-effect waves-yellow btn-flat" id="delete" onclick="$(this).parent().parent().parent().parent().parent().fadeout()">
                                         <i class="material-icons right">delete</i>
                                     </a>
                                 </p>
