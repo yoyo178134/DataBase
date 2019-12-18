@@ -140,16 +140,7 @@
                         temp.find("#time").text(ele.time)
                         temp.find("#likes").text(ele.likes)
                         mix += temp[0].outerHTML;
-                        $temp.find("#thumb").on("click" ,function(e){
-                            $.ajax({
-                                typeL:"GET",
-                                url: "php/twitterLike.php",
-                                data : {id : ele.id},
-                                success: function (data) {
-                                    console.log(data)
-                                }
-                            })
-                        })
+                        
                     })
                     $("#articleList").html(mix);
                 },
