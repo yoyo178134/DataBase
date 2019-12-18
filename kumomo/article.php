@@ -143,7 +143,7 @@
                         temp.find("#text").text(ele.text)
                         temp.find("#time").text(ele.time)
                         temp.find("#likes").text(ele.likes)
-                        temp.find("#thumb").attr('onclick',"thumbclick(" + id + ")");
+                        temp.find("#thumb").attr('onclick',"thumbclick(" + id +","+ temp.find("#likes")  + ")");
                         
                         mix += temp[0].outerHTML;
                     })
@@ -156,7 +156,7 @@
                 }
             })
         });
-        function thumbclick(id){
+        function thumbclick(id,likedom){
             $.ajax({
                 type: "POST",
                 url: "php/twitterLike.php",
@@ -164,7 +164,7 @@
                 data:{id : id},
                 success: function (data) {
                     console.log(data)
-                    //likedom.text(parseInt(likedom.text())+1)
+                    likedom.text(parseInt(likedom.text())+1)
                 },
                 error: function(XMLHttpRequest, textStatus, errorThrown) {
                     alert(XMLHttpRequest.status);
