@@ -60,14 +60,15 @@
             <li href="#!" class="collection-item avatar">
                 <div class="row">
                     <div class="col s2">
-                        <i class="material-icons">account_circle</i>
+                        <i class="large material-icons">account_circle</i>
                     </div>
                     <div class="col s10">
-                        <span class="title">郭垣佑</span>
-                        <p class="center-align">閉嘴<span class="new badge">1</span></p>
+                        <h6 class="title">郭垣佑</h6>
+                        <div class="divider"></div>
+                        <p>閉嘴<span class="new badge">1</span></p>
                     </div>
                 </div>
-                <p class="right-align">2019-06-28 00:02:00</p>
+                <p class="right-align"><small>2019-06-28 00:02:00</small></p>
             </li>
             <li href="#!" class="collection-item avatar">Alvin</li>
             <li href="#!" class="collection-item avatar">Alvin</li>
