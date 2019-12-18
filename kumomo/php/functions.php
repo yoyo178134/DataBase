@@ -78,7 +78,7 @@
     function userProfile(){
         $data = array();
         $id = $_SESSION['login_user_id'];
-        $sql = "SELECT account, name, birthdate, career, gender FROM user WHERE id = '{$id}'";
+        $sql = "SELECT * FROM user WHERE id = '{$id}'";
         $query = mysqli_query($_SESSION['link'], $sql);
         if($query){
             if(mysqli_num_rows($query) == 1){
@@ -114,7 +114,7 @@
         $text = htmlspecialchars($text);
         //$user_send_id = $_SESSION['login_user_id'];
         $sql = "INSERT INTO message VALUES('', '{$text}', {$send_id}, {$receive_id}, '{$current_date}', 1, 1),
-                                          ('', '{$text}', {$send_id}, {$receive_id}, '{$current_date}', 0, 0)";
+                                          ('', '{$text}', {$receive_id}, {$send_id}, '{$current_date}', 0, 0)";
         $query = mysqli_query($_SESSION['link'], $sql);
         if($query){
             if(mysqli_affected_rows($_SESSION['link']) > 0){
@@ -198,6 +198,22 @@
         return $data;
     }
 
+    function findName($id){
+        $name = null;
+        $sql = "SELECT name FROM user WHERE id = '{$id}'";
+        $query = mysqli_query($_SESSION['link'], $sql);
+        if($query){
+            if(mysqli_num_rows($query) == 1){
+                $row = mysqli_fetch_array($query,MYSQLI_ASSOC);
+                $name = $row['name'];
+            }
+        }
+        else{
+            mysqli_error($_SESSION['link']);
+        }
+        return $name;
+    }
+
     function twitterPost($text,$poster_id){
         $result = null;
         $current_date = date("Y-m-d H:i:s");
@@ -218,9 +234,9 @@
         return $result;
     }
 
-    function twitterLoad($poster_id){
+    function twitterLoad(){
         $data = array();
-        $sql = "SELECT * FROM twitter WHERE poster_id = '{$poster_id}'";
+        $sql = "SELECT twitter.*, name FROM twitter, user WHERE twitter.poster_id = user.id ORDER BY time DESC ";
         $query = mysqli_query($_SESSION['link'], $sql);
         if($query){
             if(mysqli_num_rows($query) > 0){
