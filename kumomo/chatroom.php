@@ -65,7 +65,8 @@
                             <h6 class="title">郭垣佑</h6>
                         </div>
                         <div class="col s8 m8">
-                            <p>閉嘴</p>
+                            <p>閉嘴scnijdshfuhnadiucufoinewhfugasdiulhfiuadhnfilcilnhmcralidjrfiuwhviluhwaeljcrbkurdwyfiucwebriucnadiufbhiuhfvufhclihfu gvhiuhcgilmsjcgioersjmgiojdoigfdiojhgios;ejvgiojnoigjiorjglsjhgiluoihurt,lhisudmilgmsiomgu
+                            </p>
                         </div>
                         <div class="col s8 m2">
                             <p class="right-align"><span class="new badge">1</span></p>
