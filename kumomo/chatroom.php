@@ -58,7 +58,7 @@
         <br><br>
         <ul class="collection">
             <li class="collection-item">
-                <a href="chat.php">
+                <a href="chat.php" class="black-text">
                     <div class="row">
                         <div class="col s4 m2">
                             <i class="medium material-icons">account_circle</i>
