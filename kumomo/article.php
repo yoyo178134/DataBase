@@ -133,7 +133,7 @@
                     var temp = getTemplate();
                     var mix = '';
                     console.log(data)
-                    $.each(date, function (key,ele){
+                    $.each(data, function (key,ele){
                         temp.find("#id").text(ele.id)
                         temp.find("#name").text(ele.name)
                         temp.find("#text").text(ele.text)
