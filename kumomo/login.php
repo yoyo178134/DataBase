@@ -79,7 +79,7 @@
                     console.log(data)
                     if (data == "true") {
                         alert("sign in success")
-                        //location = "login.html"
+                        //location = "login.php"
                     } else if (data == "false") {
                         alert("sign in  fail")
                     } else {
