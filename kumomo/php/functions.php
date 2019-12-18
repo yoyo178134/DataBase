@@ -272,7 +272,8 @@
 
     function twitterDelete($id){
         $result = null;
-        $sql = "DELETE FROM twitter WHERE id = '{$id}'";
+        $poster_id = $_SESSION['login_user_id'];
+        $sql = "DELETE FROM twitter WHERE id = '{$id}' AND poster_id = '{$poster_id}'";
         $query = mysqli_query($_SESSION['link'], $sql);
         if($query){
             if(mysqli_affected_rows($_SESSION['link']) > 0){
