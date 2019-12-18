@@ -1,3 +1,11 @@
+<?php
+  if($_SESSION['is_login'])
+  {
+      
+      header("Location: chat.php");
+  }
+?>
+
 <!DOCTYPE html>
 <html lang="zh-TW">
 
