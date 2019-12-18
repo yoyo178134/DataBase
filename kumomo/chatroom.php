@@ -65,12 +65,13 @@
                             <h6 class="title">郭垣佑</h6>
                         </div>
                         <div class="col s8 m8">
-                            <p>閉嘴</p>
+                            <p>閉嘴閉嘴閉嘴閉嘴閉嘴閉嘴閉嘴閉嘴閉嘴閉嘴閉嘴閉嘴閉嘴閉嘴閉嘴閉嘴閉嘴閉嘴閉嘴閉嘴
+                                閉嘴閉嘴閉嘴閉嘴閉嘴閉嘴閉嘴閉嘴閉嘴閉嘴閉嘴閉嘴閉嘴閉嘴閉嘴閉嘴閉嘴閉嘴閉嘴閉嘴
+                                閉嘴閉嘴閉嘴閉嘴閉嘴閉嘴閉嘴閉嘴閉嘴閉嘴閉嘴閉嘴閉嘴閉嘴閉嘴
+                            </p>
                         </div>
                         <div class="col s8 m2">
-                            <br>
                             <p class="right-align"><span class="new badge">1</span></p>
-                            <br>
                         </div>
                     </div>
                     <p class="right-align grey-text""><small>2019-06-28 00:02:00</small></p>
