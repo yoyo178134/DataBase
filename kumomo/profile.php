@@ -82,7 +82,7 @@
             $.ajax({
                 type: "GET",
                 url: "php/userProfile.php",
-                dataType: "json"
+                dataType: "json",
                 success: function (data) {
                     console.log(data)
                     $("#id").text("ID : "+data.id)
@@ -91,6 +91,11 @@
                     $("#birthdate").text("BirthDate : "+data.birthdate)
                     $("#gender").text("Gender : "+data.gender)
                     $("#career").text("Career : "+data.career)
+                },
+                error: function(XMLHttpRequest, textStatus, errorThrown) {
+                    alert(XMLHttpRequest.status);
+                    alert(XMLHttpRequest.readyState);
+                    alert(textStatus);
                 }
             })
             return false;
