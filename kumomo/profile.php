@@ -53,7 +53,7 @@
             <div class="col s12 m8 offset-m2">
                 <div class="card-panel">
                     <p class="center-align"><i class="large material-icons">account_circle</i></p>
-                    <p class="center-align">ID : ###</p>
+                    <p class="center-alig" id="id" >ID : ###</p>
                     <div class="row">
                         <div class="col s12 m8 offset-m2">
                             <p class="left-align" id="account">Account : ###</p>
@@ -85,11 +85,12 @@
                 dataType: "json"
                 success: function (data) {
                     console.log(data)
-                    $(#account).text("Account : "+data.account)
-                    $(#account).text("Name : "+data.name)
-                    $(#account).text("BirthDate : "+data.birthdate)
-                    $(#account).text("Gender : "+data.gender)
-                    $(#account).text("Career : "+data.career)
+                    $("#id").text("ID : "+data.id)
+                    $("#account").text("Account : "+data.account)
+                    $("#name").text("Name : "+data.name)
+                    $("#birthdate").text("BirthDate : "+data.birthdate)
+                    $("#gender").text("Gender : "+data.gender)
+                    $("#career").text("Career : "+data.career)
                 }
             })
             return false;
