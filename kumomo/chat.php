@@ -57,7 +57,7 @@
     <div class="container">
         <br><br>
         <div class="collection">
-            <a href="#!" class="collection-item">
+            <a href="#!" class="collection-item avatar">
                 <i class="large material-icons">account_circle</i>
                 <span class="title">Title</span>
                 <p>First Line <br>
