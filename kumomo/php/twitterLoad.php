@@ -4,9 +4,7 @@
     
     $datas = twitterLoad();
     if(!empty($datas)){
-        foreach($datas as $data){
-            echo json_encode($data, JSON_UNESCAPED_UNICODE);
-        }
+        echo json_encode($datas, JSON_UNESCAPED_UNICODE);
     }
     else{
         echo "false";
