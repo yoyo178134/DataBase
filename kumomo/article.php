@@ -63,7 +63,7 @@
                     <div class="card-panel">
                         <div class="section">
                             <div class="row">
-                                <div id="id" style="display:none;">12</div>
+                                
                                 <div class="col s7 m9">
                                     <h5 id="name">林子平</h5>
                                 </div>
@@ -80,8 +80,11 @@
                                         <p id="text">阿你要先講啊</p>
                                     </div>
                                 </div>
-                                <p class="right-align"><a class="waves-effect waves-yellow btn-flat">
-                                        <i class="material-icons left">thumb_up</i><span id="likes">5</span></a>
+                                <p class="right-align">
+                                    <a class="waves-effect waves-yellow btn-flat" id="thumb">
+                                        <i class="material-icons left" >thumb_up</i><span id="likes">5</span>
+                                    </a>
+                                        <div id="id" style="display:none;">12</div>
                                 </p>
                             </blockquote>
                         </div>
@@ -134,11 +137,15 @@
                     var mix = '';
                     console.log(data)
                     $.each(data, function (key,ele){
+                        let id = ele.id;
                         temp.find("#id").text(ele.id)
                         temp.find("#name").text(ele.name)
                         temp.find("#text").text(ele.text)
                         temp.find("#time").text(ele.time)
                         temp.find("#likes").text(ele.likes)
+                        temp.find("#likes").attr("class","like"+id)
+                        temp.find("#thumb").attr('onclick',"thumbclick(" + id +"," + ")");
+                        
                         mix += temp[0].outerHTML;
                     })
                     $("#articleList").html(mix);
@@ -150,6 +157,26 @@
                 }
             })
         });
+        function thumbclick(id){
+            $.ajax({
+                type: "POST",
+                url: "php/twitterLike.php",
+                dataType: "text",
+                data:{id : id},
+                success: function (data) {
+                    console.log(data)
+                    $(".like"+id).text(parseInt($(".like"+id).text())+1)
+                    
+                },
+                error: function(XMLHttpRequest, textStatus, errorThrown) {
+                    alert(XMLHttpRequest.status);
+                    alert(XMLHttpRequest.readyState);
+                    alert(textStatus);
+                }
+            })
+        }
+
+        
     </script>
 </body>
 
