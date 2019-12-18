@@ -88,16 +88,7 @@
                 },
                 datatype:"text", 
                 success: function (data) {
-                    console.log(data.length)
-                    console.log(data)
-                    if (data == "true") {
-                        alert("success")
-                        window.location.href = "article.php"
-                    } else if (data == "false") {
-                        alert("fail")
-                    } else {
-                        alert("unexpecded")
-                    }
+                    window.location.href = "article.php"
                 }
             })
             return false;
