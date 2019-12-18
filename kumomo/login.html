@@ -50,9 +50,11 @@
                                 </p>
                             </div>
                             <div class="col s6">
-                                <p class="right-align"> <button class="btn waves-effect waves-light" type="submit">sign
-                                        in
-                                        <i class="material-icons right">send</i></button></p>
+                                <p class="right-align">
+                                    <button class="btn waves-effect waves-light" type="submit">sign in
+                                        <i class="material-icons right">send</i>
+                                    </button>
+                                </p>
                             </div>
 
                     </form>
@@ -72,9 +74,10 @@
                 url: "php/login.php",
                 data: form.serialize(),
                 success: function (data) {
+                    console.log(data)
                     if (data == "true") {
                         alert("sign in success")
-                        location = "login.html"
+                        //location = "login.html"
                     } else if (data == "false") {
                         alert("sign in  fail")
                     } else {
