@@ -62,12 +62,55 @@
         </div>
     </div>
 
+    <div class="fixed-action-btn">
+        <a class="btn-floating btn-large red tooltipped modal-trigger" href="#searchUser" data-position="left"
+            data-tooltip="找尋使用者">
+            <i class="large material-icons">search</i>
+        </a>
+        <!--
+                <ul>
+                    <li><a class="btn-floating red  tooltipped" data-position="left" data-tooltip="個人操作"><i
+                                class="material-icons">insert_chart</i></a></li>
+                    <li><a class="btn-floating yellow darken-1  tooltipped" data-position="left" data-tooltip="個人操作"><i
+                                class="material-icons">format_quote</i></a></li>
+                    <li><a class="btn-floating green  tooltipped" data-position="left" data-tooltip="個人操作"><i
+                                class="material-icons">publish</i></a></li>
+                    <li><a class="btn-floating blue  tooltipped" data-position="left" data-tooltip="個人操作"><i
+                                class="material-icons">attach_file</i></a></li>
+                </ul>
+                -->
+    </div>
+
+    <div id="searchUser" class="modal">
+        <div class="modal-content">
+            <h6>請輸入要查詢的使用者ID</h6>
+            <br>
+            <div class="row">
+                <form class="col s12">
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <i class="material-icons prefix">account_circle</i>
+                            <input id="icon_prefix" type="number" class="validate" max="9999999999">
+                            <label for="icon_prefix">使用者ID</label>
+                        </div>
+                    </div>
+                    <p class="right-align">
+                        <button class="btn waves-effect waves-light" type="submit">查詢
+                            <i class="material-icons right">search</i>
+                        </button>
+                    </p>
+                </form>
+            </div>
+        </div>
+    </div>
+
     <script type="text/javascript">
         $(document).ready(function () {
             $('.sidenav').sidenav();
             $('.fixed-action-btn').floatingActionButton();
             $('.tooltipped').tooltip();
             $(".dropdown-trigger").dropdown();
+            $('.modal').modal();
         });
     </script>
 </body>
