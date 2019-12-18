@@ -144,7 +144,9 @@
                         temp.find("#likes").text(ele.likes)
                         mix += temp[0].outerHTML;
                         temp.find("#thumb").click(function(){
-                            let id = $(this).siblings("#id").text;
+                            
+                            let id = $(this).siblings("#id").text();
+                            console.log("click id:"+id)
                             thumbclick(id);
                         })
                     })
@@ -165,6 +167,11 @@
                 data:{id : id},
                 success: function (data) {
                     console.log(data)
+                },
+                error: function(XMLHttpRequest, textStatus, errorThrown) {
+                    alert(XMLHttpRequest.status);
+                    alert(XMLHttpRequest.readyState);
+                    alert(textStatus);
                 }
             })
         }
