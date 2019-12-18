@@ -62,19 +62,19 @@
                     <form id="form">
                         <div class="row">
                             <div class="input-field col s12">
-                                <input id="name" name="name" type="text" class="validate" required>
+                                <input id="name" name="name" type="text" placeholder=" " class="validate" required>
                                 <label for="name">name</label>
                             </div>
                         </div>
                         <div class="row">
                             <div class="input-field col s12">
-                                <input id="birthdate" name="birthdate" type="text" class="datepicker" required>
+                                <input id="birthdate" name="birthdate" type="text" placeholder=" " class="datepicker" required>
                                 <label for="birthdate">birthdate</label>
                             </div>
                         </div>
                         <div class="row">
                             <div class="input-field col s12">
-                                <input id="career" name="career" type="text" class="validate" required>
+                                <input id="career" name="career" type="text" placeholder=" " class="validate" required>
                                 <label for="career">career</label>
                             </div>
                         </div>
