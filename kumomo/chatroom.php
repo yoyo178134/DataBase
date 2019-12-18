@@ -58,18 +58,20 @@
         <br><br>
         <ul class="collection">
             <li class="collection-item">
-                <div class="row">
-                    <div class="col s4 m2">
-                        <i class="medium material-icons">account_circle</i>
+                <a href="chat.php">
+                    <div class="row">
+                        <div class="col s4 m2">
+                            <i class="medium material-icons">account_circle</i>
+                        </div>
+                        <div class="col s8 m10">
+                            <h6 class="title">郭垣佑</h6>
+                            <div class="divider"></div>
+                            <br>
+                            <p>閉嘴<span class="new badge">1</span></p>
+                        </div>
                     </div>
-                    <div class="col s8 m10">
-                        <h6 class="title">郭垣佑</h6>
-                        <div class="divider"></div>
-                        <br>
-                        <p>閉嘴<span class="new badge">1</span></p>
-                    </div>
-                </div>
-                <p class="right-align grey-text""><small>2019-06-28 00:02:00</small></p>
+                    <p class="right-align grey-text""><small>2019-06-28 00:02:00</small></p>
+                </a>
             </li>
             <li href="#!" class="collection-item">Alvin</li>
             <li href="#!" class="collection-item">Alvin</li>
