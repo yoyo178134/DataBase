@@ -56,11 +56,18 @@
 
     <div class="container">
         <br><br>
-        <div id="articleList">
-            <div class="">
-
-            </div>
-        </div>
+        <div class="collection">
+            <a href="#!" class="collection-item">
+                <i class="large material-icons">account_circle</i>
+                <span class="title">Title</span>
+                <p>First Line <br>
+                    Second Line
+                </p>
+            </a>
+            <a href="#!" class="collection-item">Alvin</a>
+            <a href="#!" class="collection-item">Alvin</a>
+            <a href="#!" class="collection-item">Alvin</a>
+      </div>
     </div>
 
     <div class="fixed-action-btn">
