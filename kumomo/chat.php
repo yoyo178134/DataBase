@@ -56,18 +56,24 @@
 
     <div class="container">
         <br><br>
-        <div class="collection">
-            <a href="#!" class="collection-item avatar">
-                <i class="large material-icons">account_circle</i>
-                <span class="title">Title</span>
-                <p>First Line <br>
-                    Second Line
-                </p>
-            </a>
-            <a href="#!" class="collection-item">Alvin</a>
-            <a href="#!" class="collection-item">Alvin</a>
-            <a href="#!" class="collection-item">Alvin</a>
-      </div>
+        <ul class="collection">
+            <li href="#!" class="collection-item avatar">
+                <div class="row">
+                    <div class="col s2">
+                        <i class="large material-icons">account_circle</i>
+                    </div>
+                    <div class="col s10">
+                        <h6 class="title">郭垣佑</h6>
+                        <div class="divider"></div>
+                        <p>閉嘴<span class="new badge">1</span></p>
+                    </div>
+                </div>
+                <p class="right-align"><small>2019-06-28 00:02:00</small></p>
+            </li>
+            <li href="#!" class="collection-item avatar">Alvin</li>
+            <li href="#!" class="collection-item avatar">Alvin</li>
+            <li href="#!" class="collection-item avatar">Alvin</li>
+</ul>
     </div>
 
     <div class="fixed-action-btn">

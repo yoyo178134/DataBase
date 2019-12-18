@@ -1,3 +1,11 @@
+<?php
+    session_start() ;
+    if(!isset($_SESSION['is_login']) || !$_SESSION['is_login'])
+    {
+        header("Location: login.php");
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="zh-TW">
 
@@ -49,64 +57,38 @@
     <div class="container">
         <br><br>
         <div id="articleList">
-            <div class="articleBlock">
-                <div class="card-panel">
-                    <div class="section">
-                        <div class="row">
-                            <div class="col s7 m9">
-                                <h5>林子平</h5>
-                            </div>
-                            <div class="col s5 m3">
-                                <p class="right-align grey-text"><small>2019-10-11 10:01:50</small></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="divider"></div>
-                    <div class="section">
-                        <blockquote>
+
+            <template class="item">
+                <div class="articleBlock">
+                    <div class="card-panel">
+                        <div class="section">
                             <div class="row">
-                                <div class="col s12 m8 offset-m2">
-                                    <p>阿你要先講啊</p>
+                                <div id="id" style="display:none;">12</div>
+                                <div class="col s7 m9">
+                                    <h5 id="name">林子平</h5>
+                                </div>
+                                <div class="col s5 m3">
+                                    <p class="right-align grey-text"><small id="time">2019-10-11 10:01:50</small></p>
                                 </div>
                             </div>
-                            <p class="right-align"><a class="waves-effect waves-yellow btn-flat">
-                                    <i class="material-icons left">thumb_up</i><span>5</span></a>
-                            </p>
-                        </blockquote>
-                    </div>
-                </div>
-            </div>
-            <div class="articleBlock">
-                <div class="card-panel">
-                    <div class="section">
-                        <div class="row">
-                            <div class="col s7 m9">
-                                <h5>蔡宗翰</h5>
-                            </div>
-                            <div class="col s5 m3">
-                                <p class="right-align grey-text"><small>2019-10-10 00:01:50</small></p>
-                            </div>
+                        </div>
+                        <div class="divider"></div>
+                        <div class="section">
+                            <blockquote>
+                                <div class="row">
+                                    <div class="col s12 m8 offset-m2">
+                                        <p id="text">阿你要先講啊</p>
+                                    </div>
+                                </div>
+                                <p class="right-align"><a class="waves-effect waves-yellow btn-flat">
+                                        <i class="material-icons left">thumb_up</i><span id="likes">5</span></a>
+                                </p>
+                            </blockquote>
                         </div>
                     </div>
-                    <div class="divider"></div>
-                    <div class="section">
-                        <blockquote>
-                            <p class="right-align"><a class="waves-effect waves-red btn-flat"
-                                    onclick="$(this).parent().parent().parent().parent().fadeOut();">
-                                    <i class="material-icons">delete</i></a>
-                            </p>
-                            <div class="row">
-                                <div class="col s12 m8 offset-m2">
-                                    <p>有人沒跟我說證明要考</p>
-                                </div>
-                            </div>
-                            <p class="right-align"><a class="waves-effect waves-yellow btn-flat">
-                                    <i class="material-icons left">thumb_up</i><span>10</span></a>
-                            </p>
-                        </blockquote>
-                    </div>
                 </div>
-            </div>
+            </template>
+
         </div>
     </div>
 
@@ -130,11 +112,43 @@
     </div>
 
     <script type="text/javascript">
+        var getTemplate = function (){
+            var html = $("template.item").html();
+            return $(html).clone();
+        }
+
+
+
         $(document).ready(function () {
             $('.sidenav').sidenav();
             $('.fixed-action-btn').floatingActionButton();
             $('.tooltipped').tooltip();
             $(".dropdown-trigger").dropdown();
+
+            $.ajax({
+                type: "GET",
+                url: "php/twitterLoad.php",
+                dataType: "json",
+                success: function (data) {
+                    var temp = getTemplate();
+                    var mix = '';
+                    console.log(data)
+                    $.each(date, function (key,ele){
+                        temp.find("#id").text(ele.id)
+                        temp.find("#name").text(ele.name)
+                        temp.find("#text").text(ele.text)
+                        temp.find("#time").text(ele.time)
+                        temp.find("#likes").text(ele.likes)
+                        mix += temp[0].outerHTML();
+                    })
+                    $("#articleList").html(mix);
+                },
+                error: function(XMLHttpRequest, textStatus, errorThrown) {
+                    alert(XMLHttpRequest.status);
+                    alert(XMLHttpRequest.readyState);
+                    alert(textStatus);
+                }
+            })
         });
     </script>
 </body>
