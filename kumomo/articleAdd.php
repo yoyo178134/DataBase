@@ -88,7 +88,7 @@
                     console.log(data)
                     if (data == "true") {
                         alert("success")
-                        location = "article.php"
+                        location.href = "article.php"
                     } else if (data == "false") {
                         alert("fail")
                     } else {
