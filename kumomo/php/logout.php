@@ -4,6 +4,6 @@
     //砍掉session
     session_destroy();
 
-    header("Location: chat.php")
+    header("Location: ../login.php")
     
 ?>
