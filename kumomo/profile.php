@@ -34,7 +34,7 @@
                     <li><a href="article.php">文章</a></li>
                     <li><a href="chat.php">聊天室</a></li>
                     <li><a href="profile.php">個人頁面</a></li>
-                    <li><a class="waves-effect waves-light btn">登出</a></li>
+                    <li><a class="waves-effect waves-light btn" href="php/logout.php">登出</a></li>
                 </ul>
             </div>
         </div>
@@ -44,7 +44,7 @@
         <li><a href="article.php">文章</a></li>
         <li><a href="chat.php">聊天室</a></li>
         <li><a href="profile.php">個人頁面</a></li>
-        <li><a class="waves-effect waves-light btn">登出</a></li>
+        <li><a class="waves-effect waves-light btn" href="php/logout.php">登出</a></li>
     </ul>
 
     <div class="container">
