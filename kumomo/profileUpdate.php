@@ -78,27 +78,6 @@
                                 <label for="career">career</label>
                             </div>
                         </div>
-                        <span><label>gender</label></span>
-                        <div class="row">
-                            <div class="input-field col s4">
-                                <label>
-                                    <input name="gender" type="radio" value="m" required/>
-                                    <span>male</span>
-                                </label>
-                            </div>
-                            <div class="input-field col s4">
-                                <label>
-                                    <input name="gender" type="radio" value="f" />
-                                    <span>female</span>
-                                </label>
-                            </div>
-                            <div class="input-field col s4">
-                                <label>
-                                    <input name="gender" type="radio" value="s" />
-                                    <span>secret</span>
-                                </label>
-                            </div>
-                        </div>
                         <br>
                         <br>
                         <p class="right-align"><button class="btn waves-effect waves-light" type="submit"
@@ -129,7 +108,6 @@
                     console.log(data)
                     $("#name").val(data.name)
                     $("#birthdate").val(data.birthdate)
-                    $("input[@type=radio]").attr("checked",data.gender)
                     $("#career").val(data.career)
                 },
                 error: function(XMLHttpRequest, textStatus, errorThrown) {
