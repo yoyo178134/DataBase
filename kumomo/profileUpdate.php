@@ -127,10 +127,10 @@
                 dataType: "json",
                 success: function (data) {
                     console.log(data)
-                    $("#name").text("Name : "+data.name)
-                    $("#birthdate").text("BirthDate : "+data.birthdate)
+                    $("#name").val(data.name)
+                    $("#birthdate").val(data.birthdate)
                     $("input[@type=radio]").attr("checked",data.gender)
-                    $("#career").text("Career : "+data.career)
+                    $("#career").val(data.career)
                 },
                 error: function(XMLHttpRequest, textStatus, errorThrown) {
                     alert(XMLHttpRequest.status);
