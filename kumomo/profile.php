@@ -99,8 +99,7 @@
                 }
             })
             return false;
-            })
-        });
+        })
     </script>
 </body>
 
