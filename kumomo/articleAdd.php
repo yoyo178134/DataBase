@@ -86,11 +86,12 @@
                 data:{
                     text : $("#articleText").val()
                 },
+                datatype:"text", 
                 success: function (data) {
                     console.log(data)
                     if (data == "true") {
                         alert("success")
-                        location.href = "article.php"
+                        window.location.href = "article.php"
                     } else if (data == "false") {
                         alert("fail")
                     } else {
