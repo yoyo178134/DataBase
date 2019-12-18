@@ -63,7 +63,6 @@
                     <div class="card-panel">
                         <div class="section">
                             <div class="row">
-                                
                                 <div class="col s7 m9">
                                     <h5 id="name">林子平</h5>
                                 </div>
@@ -75,7 +74,7 @@
                         <div class="divider"></div>
                         <div class="section">
                             <blockquote>
-                                <p class="right-align">
+                                <p class="right-align" style="display: none;">
                                     <a class="waves-effect waves-yellow btn-flat" id="delete" onclick="$(this).parent().parent().parent().parent().parent().fadeOut()">
                                         <i class="material-icons right">delete</i>
                                     </a>
