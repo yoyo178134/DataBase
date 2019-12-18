@@ -75,7 +75,7 @@
                         <div class="divider"></div>
                         <div class="section">
                             <blockquote>
-                                <p class="right-align" style="display:none;">
+                                <p class="right-align">
                                     <a class="waves-effect waves-yellow btn-flat" id="delete">
                                         <i class="material-icons right">delete</i>
                                     </a>
