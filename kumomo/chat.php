@@ -60,7 +60,7 @@
             <a href="#!" class="collection-item avatar">
                 <div class="row">
                     <div class="col s2">
-                        <i class="large material-icons">account_circle</i>
+                        <i class="material-icons">account_circle</i>
                     </div>
                     <div class="col s10">
                         <span class="title">郭垣佑</span>
