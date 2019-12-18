@@ -1,3 +1,10 @@
+<?php
+    session_start() ;
+    if(!isset($_SESSION['is_login']) || !$_SESSION['is_login'])
+    {
+        header("Location: login.php");
+    }
+?>
 <!DOCTYPE html>
 <html lang="zh-TW">
 
@@ -52,22 +59,22 @@
         <div class="row">
             <div class="col s12 m8 offset-m2">
                 <div class="card-panel">
-                    <form id="login" action="./php/userUpdate.php" method="POST">
+                    <form id="form">
                         <div class="row">
                             <div class="input-field col s12">
-                                <input id="name" name="name" type="text" class="validate">
+                                <input id="name" name="name" type="text" class="validate" required>
                                 <label for="name">name</label>
                             </div>
                         </div>
                         <div class="row">
                             <div class="input-field col s12">
-                                <input id="birthdate" name="birthdate" type="text" class="datepicker">
+                                <input id="birthdate" name="birthdate" type="text" class="datepicker" required>
                                 <label for="birthdate">birthdate</label>
                             </div>
                         </div>
                         <div class="row">
                             <div class="input-field col s12">
-                                <input id="career" name="career" type="text" class="validate">
+                                <input id="career" name="career" type="text" class="validate" required>
                                 <label for="career">career</label>
                             </div>
                         </div>
@@ -75,7 +82,7 @@
                         <div class="row">
                             <div class="input-field col s4">
                                 <label>
-                                    <input name="gender" type="radio" value="m" />
+                                    <input name="gender" type="radio" value="m" required/>
                                     <span>male</span>
                                 </label>
                             </div>
@@ -110,7 +117,48 @@
             $('.fixed-action-btn').floatingActionButton();
             $('.tooltipped').tooltip();
             $(".dropdown-trigger").dropdown();
+
+            $.ajax({
+                type: "GET",
+                url: "php/userProfile.php",
+                dataType: "json",
+                success: function (data) {
+                    console.log(data)
+                    $("#name").text("Name : "+data.name)
+                    $("#birthdate").text("BirthDate : "+data.birthdate)
+                    $("input[@type=radio]").attr("checked",data.gender)
+                    $("#career").text("Career : "+data.career)
+                },
+                error: function(XMLHttpRequest, textStatus, errorThrown) {
+                    alert(XMLHttpRequest.status);
+                    alert(XMLHttpRequest.readyState);
+                    alert(textStatus);
+                }
+            })
+            return false;
+
         });
+
+        $("#form").submit(function(e){
+            var form = $(this);
+            $.ajax({
+                type: "POST",
+                url: "php/userUpdate.php",
+                data: form.serialize(),
+                success: function (data) {
+                    console.log(data)
+                    if (data == "true") {
+                        alert("success")
+                        location = "profile.php"
+                    } else if (data == "false") {
+                        alert("fail")
+                    } else {
+                        alert("unexpecded")
+                    }
+                }
+            })
+            return false;
+        })
     </script>
 </body>
 
