@@ -81,8 +81,8 @@
                                     </div>
                                 </div>
                                 <p class="right-align">
-                                    <a class="waves-effect waves-yellow btn-flat">
-                                        <i class="material-icons left" id="thumb">thumb_up</i><span id="likes">5</span>
+                                    <a class="waves-effect waves-yellow btn-flat" id="thumb">
+                                        <i class="material-icons left" >thumb_up</i><span id="likes">5</span>
                                     </a>
                                         <div id="id" style="display:none;">12</div>
                                 </p>
@@ -144,7 +144,6 @@
                         temp.find("#likes").text(ele.likes)
                         mix += temp[0].outerHTML;
                         temp.find("#thumb").click(function(){
-                            
                             let id = $(this).siblings("#id").text();
                             console.log("click id:"+id)
                             thumbclick(id);
