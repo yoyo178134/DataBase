@@ -2,7 +2,7 @@
     require_once 'kumomo_connect.php';
     require_once 'functions.php';
 
-    $msgUnreadCnt = msgUnreadCnt($_GET['send_id'], $_GET['receive_id']);
+    $msgUnreadCnt = msgUnreadCnt($_GET['receive_id']);
 
     if($msgUnreadCnt > 0){
         echo $msgUnreadCnt;

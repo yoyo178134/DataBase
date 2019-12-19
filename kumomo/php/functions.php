@@ -108,11 +108,11 @@
         return $result;
     }
 
-    function msgSend($text, $send_id ,$receive_id){
+    function msgSend($text, $receive_id){
         $result = null;
         $current_date = date("Y-m-d H:i:s");
         $text = htmlspecialchars($text);
-        //$user_send_id = $_SESSION['login_user_id'];
+        $send_id = $_SESSION['login_user_id'];
         $sql = "INSERT INTO message VALUES('', '{$text}', {$send_id}, {$receive_id}, '{$current_date}', 1, 1),
                                           ('', '{$text}', {$receive_id}, {$send_id}, '{$current_date}', 0, 0)";
         $query = mysqli_query($_SESSION['link'], $sql);
@@ -130,8 +130,9 @@
         return $result;
     }
 
-    function msgRsv($send_id, $receive_id){
+    function msgRsv($receive_id){
         $data = array();
+        $send_id = $_SESSION['login_user_id'];
         $sql = "SELECT message.*, S.name as send_name, R.name as receive_name FROM message, user as S, user as R WHERE send_id = '{$send_id}' AND receive_id = '{$receive_id}' AND send_id = S.id AND receive_id = R.id";
         $query = mysqli_query($_SESSION['link'], $sql);
         if($query){
@@ -147,8 +148,9 @@
         return $data;
     }
 
-    function msgRead($send_id, $receive_id){
+    function msgRead($receive_id){
         $result = null;
+        $send_id = $_SESSION['login_user_id'];
         $sql = "UPDATE message SET isRead = 1 WHERE send_id = '{$send_id}' AND receive_id = '{$receive_id}'";
         $query = mysqli_query($_SESSION['link'], $sql);
         if($query){
@@ -165,8 +167,9 @@
         return $result;
     }
 
-    function msgUnreadCnt($send_id, $receive_id){
+    function msgUnreadCnt($receive_id){
         $count = 0;
+        $send_id = $_SESSION['login_user_id'];
         $sql = "SELECT COUNT(id) FROM message WHERE send_id = '{$send_id}' AND receive_id = '{$receive_id}' AND isRead = 0";
         $query = mysqli_query($_SESSION['link'], $sql);
         if($query){
@@ -181,8 +184,9 @@
         return $count;
     }
 
-    function msgLast($send_id, $receive_id){
+    function msgLast($receive_id){
         $data = array();
+        $send_id = $_SESSION['login_user_id'];
         $sql = "SELECT * FROM message WHERE time in (SELECT MAX(time) FROM message WHERE send_id = '{$send_id}' AND receive_id = '{$receive_id}') AND isOwner = 0";
         $query = mysqli_query($_SESSION['link'], $sql);
         //echo $sql;
