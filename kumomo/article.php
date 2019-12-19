@@ -168,7 +168,7 @@
                         temp.find("#likes").attr("class","like"+id)
                         temp.find("#delete").attr("class","delBut"+id)
                         temp.find("#thumb").attr('onclick',"thumbclick(" + id + ")");
-                        emp.find("#delete").parent().hide();
+                        temp.find("#delete").parent().hide();
                         if(ele.poster_id === userid){
                             temp.find("#delete").attr('onclick',"deleteOnclick(" + id  + ")");
                             temp.find("#delete").parent().show();
