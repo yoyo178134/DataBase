@@ -73,7 +73,7 @@
 
 </body>
 
-<script>
+<script type="text/javascript">
     $(function () {
         $("#login").submit(function (e) {
             var form = $(this);
@@ -85,11 +85,14 @@
                     console.log(data)
                     if (data == "true") {
                         //alert("sign in success")
-                        window.location.replace("article.php");
+                        M.toast({html: "Signin Success", displayLength: 1000, completeCallback: function(){window.location.replace("article.php")}})
+                        //window.location.replace("article.php");
                     } else if (data == "false") {
-                        alert("sign in  fail")
+                        //alert("signin fail")
+                        M.toast({html: "Signin Fail"})
                     } else {
-                        alert("unexpecded")
+                        //alert("unexpecded")
+                        M.toast({html: "Unexpecded"})
                     }
                 }
             })

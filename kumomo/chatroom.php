@@ -59,26 +59,29 @@
         <div class="row">
             <div class="col s12 m10 offset-m1">
                 <ul class="collection">
-                    <li class="collection-item">
-                        <a href="chat.php" class="black-text">
-                            <div class="row">
-                                <div class="col s4 m2">
-                                    <p class="center-align"><i class="medium material-icons">account_circle</i></p>
-                                    <h6 class="title center-align">郭垣佑</h6>
+                    <template class="chatTemplate">
+                        <li class="collection-item">
+                            <a href="chat.php" class="black-text" id="href">
+                                <div class="row">
+                                    <div class="col s4 m2">
+                                        <p class="center-align"><i class="medium material-icons">account_circle</i></p>
+                                        <h6 class="title center-align" id="name">郭垣佑</h6>
+                                        <p class="hide" id="id">20</p>
+                                    </div>
+                                    <div class="col s6 m8">
+                                        <p class="truncate" id="text">閉嘴閉嘴閉嘴閉嘴閉嘴閉嘴閉嘴閉嘴閉嘴閉嘴閉嘴閉嘴閉嘴閉嘴閉嘴閉嘴閉嘴閉嘴閉嘴閉嘴
+                                            閉嘴閉嘴閉嘴閉嘴閉嘴閉嘴閉嘴閉嘴閉嘴閉嘴閉嘴閉嘴閉嘴閉嘴閉嘴閉嘴閉嘴閉嘴閉嘴閉嘴
+                                            閉嘴閉嘴閉嘴閉嘴閉嘴閉嘴閉嘴閉嘴閉嘴閉嘴閉嘴閉嘴閉嘴閉嘴閉嘴
+                                        </p>
+                                    </div>
+                                    <div class="col s2 m2">
+                                        <p class="right-align"><span class="new badge" data-badge-caption="" id="unReadNum" style="font-size: 2em; height: 26px;">1</span></p>
+                                    </div>
                                 </div>
-                                <div class="col s6 m8">
-                                    <p class="truncate">閉嘴閉嘴閉嘴閉嘴閉嘴閉嘴閉嘴閉嘴閉嘴閉嘴閉嘴閉嘴閉嘴閉嘴閉嘴閉嘴閉嘴閉嘴閉嘴閉嘴
-                                        閉嘴閉嘴閉嘴閉嘴閉嘴閉嘴閉嘴閉嘴閉嘴閉嘴閉嘴閉嘴閉嘴閉嘴閉嘴閉嘴閉嘴閉嘴閉嘴閉嘴
-                                        閉嘴閉嘴閉嘴閉嘴閉嘴閉嘴閉嘴閉嘴閉嘴閉嘴閉嘴閉嘴閉嘴閉嘴閉嘴
-                                    </p>
-                                </div>
-                                <div class="col s2 m2">
-                                    <p class="right-align"><span class="new badge" data-badge-caption="" style="font-size: 2em; height: 26px;">1</span></p>
-                                </div>
-                            </div>
-                            <p class="right-align grey-text""><small>2019-06-28 00:02:00</small></p>
-                        </a>
-                    </li>
+                                <p class="right-align grey-text" id="time"><small>2019-06-28 00:02:00</small></p>
+                            </a>
+                        </li>
+                    </template>
                 </ul>
             </div>
         </div>
@@ -127,12 +130,66 @@
     </div>
 
     <script type="text/javascript">
+        var getTemplate = function (){
+            var html = $("template.chatTemplate").html();
+            return $(html).clone();
+        }
+        var userid;
+        var userName;
+    
+        
+        
+
         $(document).ready(function () {
             $('.sidenav').sidenav();
             $('.fixed-action-btn').floatingActionButton();
             $('.tooltipped').tooltip();
             $(".dropdown-trigger").dropdown();
             $('.modal').modal();
+
+            $.ajax({
+                type: "GET",
+                url: "php/userProfile.php",
+                dataType: "json",
+                success: function (data) {
+                    userid =  data.id;
+                    userName = data.name;
+                },
+                error: function(XMLHttpRequest, textStatus, errorThrown) {
+                    alert(XMLHttpRequest.status);
+                    alert(XMLHttpRequest.readyState);
+                    alert(textStatus);
+                }
+            })
+
+            $.ajax({
+                type: "GET",
+                url: "php/msgLast.php",
+                dataType: "json",
+                success: function (data) {
+                    var temp;
+                    var mix = '';
+                    console.log(data)
+                    $.each(data, function (key,ele){
+                        temp = getTemplate();
+                        let id = ele.id;
+                        temp.find("#id").text(ele.receive_id)
+                        temp.find("#name").text(ele.receive_name)
+                        temp.find("#text").text(ele.text)
+                        temp.find("#time").text(ele.time)
+                        temp.find("#unReadNum").text(ele.unReadCnt)
+                        temp.find("#href").attr("href","chat.php?id="+id);
+                        mix += temp[0].outerHTML;
+                    })
+                    $("#collection").html(mix);
+                },
+                error: function(XMLHttpRequest, textStatus, errorThrown) {
+                    alert(XMLHttpRequest.status);
+                    alert(XMLHttpRequest.readyState);
+                    alert(textStatus);
+                }
+            })
+
         });
     </script>
 </body>
