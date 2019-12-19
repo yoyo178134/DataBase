@@ -85,14 +85,14 @@
                     console.log(data)
                     if (data == "true") {
                         //alert("sign in success")
-                        M.toast({html: "Signin Success", classes: 'rounded', displayLength: 1000, completeCallback: function(){window.location.replace("article.php")}})
+                        M.toast({html: "Signin Success", displayLength: 1000, completeCallback: function(){window.location.replace("article.php")}})
                         //window.location.replace("article.php");
                     } else if (data == "false") {
                         //alert("signin fail")
-                        M.toast({html: "Signin Fail", classes: 'rounded'})
+                        M.toast({html: "Signin Fail"})
                     } else {
                         //alert("unexpecded")
-                        M.toast({html: "Unexpecded", classes: 'rounded'})
+                        M.toast({html: "Unexpecded"})
                     }
                 }
             })
