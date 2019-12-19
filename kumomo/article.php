@@ -217,7 +217,7 @@
                 dataType: "html",
                 data:{id : id},
                 success: function (data) {
-                    $(".delBut"+id).parent().parent().parent().parent().parent().fadeOut();
+                    $(".delBut"+id).parent().parent().parent().parent().fadeOut();
                     console.log(data);
                     alert("delete success");
                     
