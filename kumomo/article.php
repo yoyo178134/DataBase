@@ -221,7 +221,7 @@
                     if(data == "true"){
                         alert("delete success");
                         $(".delBut"+id).parent().parent().parent().parent().parent().fadeOut();
-                    }else if(date == "false"){
+                    }else if(data == "false"){
                         alert("delete fail");
                     }else{
                         alert("unexpected");
