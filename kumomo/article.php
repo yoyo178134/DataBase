@@ -153,10 +153,11 @@
                 url: "php/twitterLoad.php",
                 dataType: "json",
                 success: function (data) {
-                    var temp = getTemplate();
+                    var temp;
                     var mix = '';
                     console.log(data)
                     $.each(data, function (key,ele){
+                        temp = getTemplate();
                         let id = ele.id;
                         temp.find("#id").text(ele.id)
                         temp.find("#name").text(ele.name)
@@ -164,17 +165,15 @@
                         temp.find("#time").text(ele.time)
                         temp.find("#likes").text(ele.likes)
                         temp.find("#poster_id").text(ele.poster_id)
-                        
-                        temp.find("#likes").attr("class","like"+id)
                         temp.find("#delete").addClass("delBut"+id)
                         temp.find("#thumb").attr('onclick',"thumbclick(" + id + ")");
                         temp.find("#delete").parent().hide();
                         if(ele.poster_id === userid){
                             temp.find("#delete").attr('onclick',"deleteOnclick(" + id  + ")");
                             temp.find("#delete").parent().show();
-                        }else{
+                        }/*else{
                             temp.find("#delete").attr('onclick',"");
-                        }
+                        }*/
                         mix += temp[0].outerHTML;
                     })
                     $("#articleList").html(mix);
