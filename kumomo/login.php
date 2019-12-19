@@ -85,7 +85,7 @@
                     console.log(data)
                     if (data == "true") {
                         //alert("sign in success")
-                        M.toast({html: "sign in success", classes: 'rounded', completeCallback: function(){window.location.replace("article.php")}})
+                        M.toast({html: "sign in success", classes: 'rounded', displayLength: 1500,completeCallback: function(){window.location.replace("article.php")}})
                         //window.location.replace("article.php");
                     } else if (data == "false") {
                         //alert("signin fail")
