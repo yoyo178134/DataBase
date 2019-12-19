@@ -107,7 +107,7 @@
                     } else {
                         alert("unexpecded")
                     }
-                    $("#loginModal").open();
+                    $("#loginModal").modal('open');
                 }
             })
             return false;
