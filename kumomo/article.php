@@ -214,7 +214,7 @@
             $.ajax({
                 type: "POST",
                 url: "php/twitterDelete.php",
-                dataType: "html"",
+                dataType: "html",
                 data:{id : id},
                 success: function (data) {
                     console.log(data);
