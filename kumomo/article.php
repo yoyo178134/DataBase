@@ -172,6 +172,8 @@
                         if(ele.poster_id === userid){
                             temp.find("#delete").attr('onclick',"deleteOnclick(" + id  + ")");
                             temp.find("#delete").parent().show();
+                        }else{
+                            temp.find("#delete").attr('onclick',"");
                         }
                         mix += temp[0].outerHTML;
                     })
