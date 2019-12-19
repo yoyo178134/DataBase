@@ -71,6 +71,17 @@
         </div>
     </div>
 
+        <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <br>
+            <h6 id="loginText"></h6>
+            <br>
+        </div>
+        <div class="modal-footer">
+      <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
+    </div>
+    </div>
+
 </body>
 
 <script>
@@ -85,12 +96,14 @@
                     console.log(data)
                     if (data == "true") {
                         //alert("sign in success")
+                        $("#loginText").text("sign in success");
                         window.location.replace("article.php");
                     } else if (data == "false") {
                         alert("sign in  fail")
                     } else {
                         alert("unexpecded")
                     }
+                    $("#loginModal").modal('show');
                 }
             })
             return false;
