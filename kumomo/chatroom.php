@@ -57,7 +57,7 @@
     <div class="container">
         <br><br>
         <div class="row">
-            <div class="col s12 m8">
+            <div class="col s12 m10 offset-m1">
                 <ul class="collection">
                     <li class="collection-item">
                         <a href="chat.php" class="black-text">
