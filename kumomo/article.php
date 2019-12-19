@@ -166,7 +166,7 @@
                         temp.find("#poster_id").text(ele.poster_id)
                         
                         temp.find("#likes").attr("class","like"+id)
-                        temp.find("#delete").attr("class","delBut"+id)
+                        temp.find("#delete").addClass("delBut"+id)
                         temp.find("#thumb").attr('onclick',"thumbclick(" + id + ")");
                         temp.find("#delete").parent().hide();
                         if(ele.poster_id === userid){
