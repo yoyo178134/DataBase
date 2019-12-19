@@ -60,7 +60,7 @@
             <li class="collection-item">
                 <a href="chat.php" class="black-text">
                     <div class="row">
-                        <div class="col s4 m2">
+                        <div class="col s4 m1 offset-m1">
                             <i class="medium material-icons">account_circle</i>
                             <h6 class="title">郭垣佑</h6>
                         </div>
@@ -70,7 +70,7 @@
                                 閉嘴閉嘴閉嘴閉嘴閉嘴閉嘴閉嘴閉嘴閉嘴閉嘴閉嘴閉嘴閉嘴閉嘴閉嘴
                             </p>
                         </div>
-                        <div class="col s2 m2">
+                        <div class="col s2 m1">
                             <p class="right-align"><span class="new badge" data-badge-caption="" style="font-size: 2em; height: 26px;">1</span></p>
                         </div>
                     </div>
