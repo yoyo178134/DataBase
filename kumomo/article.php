@@ -218,10 +218,10 @@
                 data:{id : id},
                 success: function (data) {
                     console.log(data);
-                    if(data == "true"){
+                    if(data == "yes"){
                         alert("delete success");
                         $(".delBut"+id).parent().parent().parent().parent().parent().fadeOut();
-                    }else if(data == "false"){
+                    }else if(data == "no"){
                         alert("delete fail");
                     }else{
                         alert("unexpected");
