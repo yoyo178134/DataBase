@@ -64,10 +64,10 @@
                         <div class="section">
                             <div class="row">
                                 <div class="col s7 m9">
-                                    <h5 id="name">林子平</h5>
+                                    <h5 id="name">###</h5>
                                 </div>
                                 <div class="col s5 m3">
-                                    <p class="right-align grey-text"><small id="time">2019-10-11 10:01:50</small></p>
+                                    <p class="right-align grey-text"><small id="time">####-##-## ##:##:##</small></p>
                                 </div>
                             </div>
                         </div>
@@ -80,16 +80,16 @@
                                     </a>
                                 </p>
                                 <div class="row">
-                                    <div class="col s12 m8 offset-m2">
-                                        <p id="text">阿你要先講啊</p>
+                                    <div class="col s12 m8 offset-m1">
+                                        <p id="text">############</p>
                                     </div>
                                 </div>
                                 <p class="right-align">
                                     <a class="waves-effect waves-yellow btn-flat" id="thumb">
-                                        <i class="material-icons left" >thumb_up</i><span id="likes">5</span>
+                                        <i class="material-icons left" >thumb_up</i><span id="likes">#</span>
                                     </a>
-                                    <div id="id" style="display:none;">12</div>
-                                    <div id="poster_id" style="display:none;">12</div>
+                                    <div id="id" style="display:none;">##</div>
+                                    <div id="poster_id" style="display:none;">##</div>
                                 </p>
                             </blockquote>
                         </div>
