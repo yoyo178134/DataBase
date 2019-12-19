@@ -63,8 +63,8 @@
                         <a href="chat.php" class="black-text">
                             <div class="row">
                                 <div class="col s4 m2">
-                                    <i class="medium material-icons">account_circle</i>
-                                    <h6 class="title">郭垣佑</h6>
+                                    <p class="center-align"><i class="medium material-icons">account_circle</i></p>
+                                    <h6 class="title center-align">郭垣佑</h6>
                                 </div>
                                 <div class="col s6 m8">
                                     <p class="truncate">閉嘴閉嘴閉嘴閉嘴閉嘴閉嘴閉嘴閉嘴閉嘴閉嘴閉嘴閉嘴閉嘴閉嘴閉嘴閉嘴閉嘴閉嘴閉嘴閉嘴
@@ -100,7 +100,7 @@
                     <li><a class="btn-floating blue  tooltipped" data-position="left" data-tooltip="個人操作"><i
                                 class="material-icons">attach_file</i></a></li>
                 </ul>
-                -->
+       -->
     </div>
 
     <div id="searchUser" class="modal">
@@ -112,7 +112,7 @@
                     <div class="row">
                         <div class="input-field col s12">
                             <i class="material-icons prefix">account_circle</i>
-                            <input id="icon_prefix" type="number" class="validate" max="9999999999">
+                            <input id="icon_prefix" type="text" class="validate">
                             <label for="icon_prefix">使用者ID</label>
                         </div>
                     </div>
