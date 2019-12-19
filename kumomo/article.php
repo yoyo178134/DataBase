@@ -212,11 +212,11 @@
                 dataType: "text",
                 data:{id : id},
                 success: function (data) {
-                    console.log(data)
+                    console.log(data);
                     if(data == "true"){
                         alert("delete success");
                         $(".delBut"+id).parent().parent().parent().parent().parent().fadeOut();
-                    }elseif(date == "false"){
+                    }else if(date == "false"){
                         alert("delete fail");
                     }else{
                         alert("unexpected");
