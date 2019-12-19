@@ -168,7 +168,7 @@
                         temp.find("#likes").attr("class","like"+id)
                         temp.find("#delete").attr("class","delBut"+id)
                         temp.find("#thumb").attr('onclick',"thumbclick(" + id + ")");
-                        
+                        console.log("artid"+ele.id+" postid: "+ele.poster_id+" myid: "+userid)
                         if(ele.poster_id === userid){
                             console.log("artid"+ele.id+" postid: "+ele.poster_id+" myid: "+userid)
                             temp.find("#delete").attr('onclick',"deleteOnclick(" + id  + ")");
