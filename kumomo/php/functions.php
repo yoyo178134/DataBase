@@ -133,7 +133,7 @@
     function msgRsv($receive_id){
         $data = array();
         $send_id = $_SESSION['login_user_id'];
-        $sql = "SELECT message.*, S.name as send_name, R.name as receive_name FROM message, user as S, user as R WHERE send_id = '{$send_id}' AND receive_id = '{$receive_id}' AND send_id = S.id AND receive_id = R.id";
+        $sql = "SELECT text, receive_id, time, isRead, isOwner, user.name as receive_name FROM message, user WHERE send_id = '{$send_id}' AND receive_id = '{$receive_id}' AND receive_id = user.id";
         $query = mysqli_query($_SESSION['link'], $sql);
         if($query){
             if(mysqli_num_rows($query) > 0){
@@ -167,38 +167,41 @@
         return $result;
     }
 
-    function msgUnreadCnt($receive_id){
-        $count = 0;
-        $send_id = $_SESSION['login_user_id'];
-        $sql = "SELECT COUNT(id) FROM message WHERE send_id = '{$send_id}' AND receive_id = '{$receive_id}' AND isRead = 0";
+    function msgUnreadCnt($send_id){
+        $data = array();
+        $sql = "SELECT COUNT(id) as UnreadCnt FROM message WHERE send_id = '{$send_id}' AND isRead = 0 GROUP BY receive_id ORDER BY time DESC";
         $query = mysqli_query($_SESSION['link'], $sql);
         if($query){
-            if(mysqli_num_rows($query) == 1){
-                $row = mysqli_fetch_assoc($query);
-                $count = $row['COUNT(id)'];
+            if(mysqli_num_rows($query) > 0){
+                while($row = mysqli_fetch_assoc($query)){
+                    $data[] = $row;
+                }
             } 
         }
         else{
             mysqli_error($_SESSION['link']);
         }
-        return $count;
+        return $data;
     }
 
-    function msgLast($receive_id){
+    function msgLast(){
         $data = array();
         $send_id = $_SESSION['login_user_id'];
-        $sql = "SELECT * FROM message WHERE time in (SELECT MAX(time) FROM message WHERE send_id = '{$send_id}' AND receive_id = '{$receive_id}') AND isOwner = 0";
+        $cnt = msgUnreadCnt($send_id);
+        $sql = "SELECT text, receive_id, MAX(time) as time, user.name as receive_name FROM message, user WHERE isOwner = 0 GROUP BY receive_id HAVING time in (SELECT time FROM message WHERE send_id = '{$send_id}' AND isOwner = 0) ORDER BY time DESC";
         $query = mysqli_query($_SESSION['link'], $sql);
-        //echo $sql;
         if($query){
-            if(mysqli_num_rows($query) == 1){
-                $row = mysqli_fetch_array($query,MYSQLI_ASSOC);
-                $data = $row;
+            if(mysqli_num_rows($query) > 0){
+                $i = 0;
+                while($row = mysqli_fetch_assoc($query)){
+                    $data[] = array_merge($row, $cnt[$i++]);
+                }
             }
         }
         else{
             mysqli_error($_SESSION['link']);
         }
+        
         return $data;
     }
 
