@@ -2,10 +2,10 @@
     require_once 'kumomo_connect.php';
     require_once 'functions.php';
 
-    $name = findName($_GET['id']);
+    $account = findAccount($_GET['id']);
 
-    if($name!=null){
-        echo $name;
+    if($account!=null){
+        echo $account;
     }
     else{
         echo "false";

@@ -221,6 +221,22 @@
         return $name;
     }
 
+    function findAccount($id){
+        $account = null;
+        $sql = "SELECT account FROM user WHERE id = '{$id}'";
+        $query = mysqli_query($_SESSION['link'], $sql);
+        if($query){
+            if(mysqli_num_rows($query) == 1){
+                $row = mysqli_fetch_array($query,MYSQLI_ASSOC);
+                $account = $row['account'];
+            }
+        }
+        else{
+            mysqli_error($_SESSION['link']);
+        }
+        return $account;
+    }
+
     function twitterPost($text){
         $result = null;
         $poster_id = $_SESSION['login_user_id'];
