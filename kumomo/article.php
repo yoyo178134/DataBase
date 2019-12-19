@@ -164,6 +164,7 @@
                         temp.find("#time").text(ele.time)
                         temp.find("#likes").text(ele.likes)
                         temp.find("#poster_id").text(ele.poster_id)
+                        console.log(ele.poster_id)
                         temp.find("#likes").attr("class","like"+id)
                         temp.find("#delete").attr("class","delBut"+id)
                         temp.find("#thumb").attr('onclick',"thumbclick(" + id + ")");
