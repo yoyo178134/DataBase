@@ -84,7 +84,11 @@
 
 </body>
 
-<script>
+<script type="text/javascript">
+    $(document).ready(function () {
+            $('.modal').modal();
+        });
+
     $(function () {
         $("#login").submit(function (e) {
             var form = $(this);
