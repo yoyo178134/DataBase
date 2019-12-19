@@ -71,24 +71,9 @@
         </div>
     </div>
 
-        <div id="loginModal" class="modal">
-        <div class="modal-content">
-            <br>
-            <h6 id="loginText"></h6>
-            <br>
-        </div>
-        <div class="modal-footer">
-      <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
-    </div>
-    </div>
-
 </body>
 
 <script type="text/javascript">
-    $(document).ready(function () {
-            $('.modal').modal();
-        });
-
     $(function () {
         $("#login").submit(function (e) {
             var form = $(this);
@@ -100,16 +85,14 @@
                     console.log(data)
                     if (data == "true") {
                         //alert("sign in success")
-                        $("#loginText").text("sign in success");
+                        M.toast({html: 'I am a toast!'})
                         window.location.replace("article.php");
                     } else if (data == "false") {
                         //alert("signin fail")
-                        $("#loginText").text("signin fail");
+                        M.toast({html: "signin fail"})
                     } else {
                         //alert("unexpecded")
-                        $("#loginText").text("unexpecded");
                     }
-                    $("#loginModal").modal('open');
                 }
             })
             return false;
