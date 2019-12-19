@@ -167,9 +167,9 @@
         return $result;
     }
 
-    function msgUnreadCnt($send_id){
+    function msgUnReadCnt($send_id){
         $data = array();
-        $sql = "SELECT COUNT(id) as UnreadCnt FROM message WHERE send_id = '{$send_id}' AND isRead = 0 GROUP BY receive_id ORDER BY time DESC";
+        $sql = "SELECT COUNT(id) as unReadCnt FROM message WHERE send_id = '{$send_id}' AND isRead = 0 GROUP BY receive_id ORDER BY time DESC";
         $query = mysqli_query($_SESSION['link'], $sql);
         if($query){
             if(mysqli_num_rows($query) > 0){
@@ -187,7 +187,7 @@
     function msgLast(){
         $data = array();
         $send_id = $_SESSION['login_user_id'];
-        $cnt = msgUnreadCnt($send_id);
+        $cnt = msgUnReadCnt($send_id);
         $sql = "SELECT text, receive_id, MAX(time) as time, user.name as receive_name FROM message, user WHERE isOwner = 0 GROUP BY receive_id HAVING time in (SELECT time FROM message WHERE send_id = '{$send_id}' AND isOwner = 0) ORDER BY time DESC";
         $query = mysqli_query($_SESSION['link'], $sql);
         if($query){
