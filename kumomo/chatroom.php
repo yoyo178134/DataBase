@@ -71,7 +71,7 @@
                             </p>
                         </div>
                         <div class="col s2 m2">
-                            <p class="right-align"><h5 class="new badge" data-badge-caption="">1</h5></p>
+                            <p class="right-align"><span class="new badge" data-badge-caption="" style="font-size: 2em; height: 35px;">1</span></p>
                         </div>
                     </div>
                     <p class="right-align grey-text""><small>2019-06-28 00:02:00</small></p>
