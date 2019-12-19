@@ -75,7 +75,7 @@
                         <div class="section">
                             <blockquote>
                                 <p class="right-align" style="display: none;">
-                                    <a class="waves-effect waves-yellow btn-flat" id="delete" onclick="$(this).parent().parent().parent().parent().parent().fadeOut()">
+                                    <a class="waves-effect waves-yellow btn-flat" id="delete" >
                                         <i class="material-icons right">delete</i>
                                     </a>
                                 </p>
@@ -89,6 +89,7 @@
                                         <i class="material-icons left" >thumb_up</i><span id="likes">5</span>
                                     </a>
                                     <div id="id" style="display:none;">12</div>
+                                    <div id="poster_id" style="display:none;">12</div>
                                 </p>
                             </blockquote>
                         </div>
@@ -123,6 +124,7 @@
             var html = $("template.item").html();
             return $(html).clone();
         }
+        var userid;
 
 
 
@@ -131,6 +133,20 @@
             $('.fixed-action-btn').floatingActionButton();
             $('.tooltipped').tooltip();
             $(".dropdown-trigger").dropdown();
+
+            $.ajax({
+                type: "GET",
+                url: "php/userProfile.php",
+                dataType: "json",
+                success: function (data) {
+                    userid =  data.id
+                },
+                error: function(XMLHttpRequest, textStatus, errorThrown) {
+                    alert(XMLHttpRequest.status);
+                    alert(XMLHttpRequest.readyState);
+                    alert(textStatus);
+                }
+            })
 
             $.ajax({
                 type: "GET",
@@ -147,9 +163,14 @@
                         temp.find("#text").text(ele.text)
                         temp.find("#time").text(ele.time)
                         temp.find("#likes").text(ele.likes)
+                        temp.find("#poster_id").text(ele.poster_id)
                         temp.find("#likes").attr("class","like"+id)
-                        temp.find("#thumb").attr('onclick',"thumbclick(" + id +"," + ")");
-                        
+                        temp.find("#delete").attr("class","delBut"+id)
+                        temp.find("#thumb").attr('onclick',"thumbclick(" + id + ")");
+                        if(ele.poster_id == userid){
+                            temp.find("#delete").attr('onclick',"deleteOnclick(" + id  + ")");
+                            temp.find("#delete").parent().show();
+                        }
                         mix += temp[0].outerHTML;
                     })
                     $("#articleList").html(mix);
@@ -160,7 +181,12 @@
                     alert(textStatus);
                 }
             })
+
+            
+            
         });
+
+
         function thumbclick(id){
             $.ajax({
                 type: "POST",
@@ -178,6 +204,33 @@
                     alert(textStatus);
                 }
             })
+        }
+        function deleteOnclick(id){
+            $.ajax({
+                type: "POST",
+                url: "php/twitterDelete.php",
+                dataType: "text",
+                data:{id : id},
+                success: function (data) {
+                    console.log(data)
+                    if(data == "true"){
+                        alert("delete success");
+                        $(".delBut"+id).parent().parent().parent().parent().parent().fadeOut();
+                    }elseif(date == "false"){
+                        alert("delete fail");
+                    }else{
+                        alert("unexpected");
+                    }
+                    
+                },
+                error: function(XMLHttpRequest, textStatus, errorThrown) {
+                    alert(XMLHttpRequest.status);
+                    alert(XMLHttpRequest.readyState);
+                    alert(textStatus);
+                }
+            })
+            
+
         }
 
         
