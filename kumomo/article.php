@@ -217,15 +217,9 @@
                 dataType: "html",
                 data:{id : id},
                 success: function (data) {
+                    $(".delBut"+id).parent().parent().parent().parent().parent().fadeOut();
                     console.log(data);
-                    if(data == "true"){
-                        alert("delete success");
-                        $(".delBut"+id).parent().parent().parent().parent().parent().fadeOut();
-                    }else if(data == "false"){
-                        alert("delete fail");
-                    }else{
-                        alert("unexpected");
-                    }
+                    alert("delete success");
                     
                 },
                 error: function(XMLHttpRequest, textStatus, errorThrown) {
