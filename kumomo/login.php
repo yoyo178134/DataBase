@@ -103,9 +103,11 @@
                         $("#loginText").text("sign in success");
                         window.location.replace("article.php");
                     } else if (data == "false") {
-                        alert("sign in  fail")
+                        //alert("signin fail")
+                        $("#loginText").text("signin fail");
                     } else {
-                        alert("unexpecded")
+                        //alert("unexpecded")
+                        $("#loginText").text("unexpecded");
                     }
                     $("#loginModal").modal('open');
                 }
