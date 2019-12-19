@@ -169,7 +169,7 @@
                         temp.find("#delete").attr("class","delBut"+id)
                         temp.find("#thumb").attr('onclick',"thumbclick(" + id + ")");
                         console.log("artid"+ele.id+" postid: "+ele.poster_id+" myid: "+userid)
-                        if(ele.poster_id == userid){
+                        if(ele.poster_id === userid){
                             
                             temp.find("#delete").attr('onclick',"deleteOnclick(" + id  + ")");
                             temp.find("#delete").parent().show();
