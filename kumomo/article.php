@@ -210,6 +210,7 @@
             })
         }
         function deleteOnclick(id){
+            console.log(id)
             $.ajax({
                 type: "POST",
                 url: "php/twitterDelete.php",
