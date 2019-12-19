@@ -164,12 +164,13 @@
                         temp.find("#time").text(ele.time)
                         temp.find("#likes").text(ele.likes)
                         temp.find("#poster_id").text(ele.poster_id)
-                        console.log(ele.poster_id)
+                        
                         temp.find("#likes").attr("class","like"+id)
                         temp.find("#delete").attr("class","delBut"+id)
                         temp.find("#thumb").attr('onclick',"thumbclick(" + id + ")");
-                        if(temp.find("#poster_id").text() == userid){
-                            console.log(temp.find("#poster_id").text()+" "+userid)
+                        console.log("artid"+ele.id+" postid: "+ele.poster_id+" myid: "+userid)
+                        if(ele.poster_id == userid){
+                            
                             temp.find("#delete").attr('onclick',"deleteOnclick(" + id  + ")");
                             temp.find("#delete").parent().show();
                         }
