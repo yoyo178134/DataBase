@@ -88,7 +88,7 @@
     </div>
 
     <div class="fixed-action-btn">
-        <a class="btn-floating btn-large red tooltipped modal-trigger" href="#searchUser" data-position="left"
+        <a class="btn-floating btn-large red tooltipped modal-trigger"  data-position="left"
             data-tooltip="找尋使用者">
             <i class="large material-icons">search</i>
         </a>
