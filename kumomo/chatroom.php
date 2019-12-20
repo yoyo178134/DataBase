@@ -191,8 +191,8 @@
             })
 
             $("#findUser").click(function(){
-                let find = $("#icon_prefix").text();
-                console.log(find);
+                let find = $("#icon_prefix").val();
+                console.log(find)
             })
 
 
