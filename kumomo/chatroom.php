@@ -154,6 +154,7 @@
                 success: function (data) {
                     userid =  data.id;
                     userName = data.name;
+                    userAccount = data.account;
                 },
                 error: function(XMLHttpRequest, textStatus, errorThrown) {
                     alert(XMLHttpRequest.status);
@@ -191,6 +192,10 @@
             })
 
             $("#findUser").click(function(){
+                if(account == $("#icon_prefix").val()){
+                    alert("can not find yourself");
+                    location.reload();
+                }
                 console.log("find user :"+ $("#icon_prefix").val())
                 $.ajax({
                     type: "GET",
@@ -202,7 +207,8 @@
                     success: function (data) {
                         console.log(data+data.length)
                         if(data == "false   "){
-                            alert("can not find user "+$("#icon_prefix").val())
+                            alert("can not find user "+$("#icon_prefix").val());
+                             location.reload();
                         }else{
                             location.href = "chat.php?id="+data
                         }
