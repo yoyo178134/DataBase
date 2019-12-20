@@ -200,7 +200,7 @@
                 console.log("find user :"+ $("#icon_prefix").val())
                 $.ajax({
                     type: "GET",
-                    url: "php/findId.php",
+                    url: "php/findAccount.php",
                     data:{
                         account : $("#icon_prefix").val()
                     },
