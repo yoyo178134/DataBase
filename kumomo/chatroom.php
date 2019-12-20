@@ -195,6 +195,7 @@
                 if(userAccount == $("#icon_prefix").val()){
                     alert("can not find yourself");
                     location.reload();
+                    return;
                 }
                 console.log("find user :"+ $("#icon_prefix").val())
                 $.ajax({
