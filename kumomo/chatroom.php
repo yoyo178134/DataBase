@@ -194,7 +194,7 @@
             $("#findUser").click(function(){
                 if(userAccount == $("#icon_prefix").val()){
                     alert("can not find yourself");
-                    location.reload();
+                    location.href("chatroom.php")
                     return;
                 }
                 console.log("find user :"+ $("#icon_prefix").val())
@@ -209,7 +209,7 @@
                         console.log(data+data.length)
                         if(data == "false   "){
                             alert("can not find user "+$("#icon_prefix").val());
-                             location.reload();
+                            location.href("chatroom.php")
                         }else{
                             location.href = "chat.php?id="+data
                         }
