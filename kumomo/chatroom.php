@@ -204,7 +204,7 @@
                         console.log(data.len());
                         console.log(typeof(data))
                     }
-                )}
+                })
             })
 
         });
