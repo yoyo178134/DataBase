@@ -120,7 +120,7 @@
                         </div>
                     </div>
                     <p class="right-align">
-                        <button class="btn waves-effect waves-light" type="submit">查詢
+                        <button class="btn waves-effect waves-light" id="findUser">查詢
                             <i class="material-icons right">search</i>
                         </button>
                     </p>
@@ -136,7 +136,7 @@
         }
         var userid;
         var userName;
-    
+        
         
         
 
@@ -189,6 +189,12 @@
                     alert(textStatus);
                 }
             })
+
+            $("#findUser").click(function(){
+                let find = $("#icon_prefix").text();
+                console.log(find);
+            })
+
 
         });
     </script>

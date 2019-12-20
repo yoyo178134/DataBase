@@ -221,20 +221,20 @@
         return $name;
     }
 
-    function findAccount($id){
-        $account = null;
-        $sql = "SELECT account FROM user WHERE id = '{$id}'";
+    function findAccount($account){
+        $id = null;
+        $sql = "SELECT id FROM user WHERE account = '{$account}'";
         $query = mysqli_query($_SESSION['link'], $sql);
         if($query){
             if(mysqli_num_rows($query) == 1){
                 $row = mysqli_fetch_array($query,MYSQLI_ASSOC);
-                $account = $row['account'];
+                $id = $row['id'];
             }
         }
         else{
             mysqli_error($_SESSION['link']);
         }
-        return $account;
+        return $id;
     }
 
     function twitterPost($text){
