@@ -202,15 +202,13 @@
                     success: function (data) {
                         //window.location.href = "article.php"
                         console.log(data);
-                        console.log(data.len());
+                        console.log(data.len);
                         console.log(typeof(data))
                     },
                     
                     error:function (XMLHttpRequest, textStatus, errorThrown){
                         console.log("ajax error "+XMLHttpRequest+textStatus+errorThrown)
                     }
-
-
                 })
             })
 
