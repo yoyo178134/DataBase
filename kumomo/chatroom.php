@@ -198,7 +198,7 @@
                     data:{
                         account : $("#icon_prefix").val()
                     },
-                    datatype:"text", 
+                    datatype:"json", 
                     success: function (data) {
                         console.log(data+data.length)
                         if(data == "false"){
