@@ -201,7 +201,7 @@
                     datatype:"json", 
                     success: function (data) {
                         console.log(data+data.length)
-                        if(data == "false"){
+                        if(data == "false   "){
                             alert("can not find user "+$("#icon_prefix").val())
                         }else{
                             location.href = "chat.php?id="+data
