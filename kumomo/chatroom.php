@@ -191,8 +191,22 @@
             })
 
             $("#findUser").click(function(){
-                let find = $("#icon_prefix").val();
-                console.log(find)
+                $.ajax({
+                type: "GET",
+                url: "php/findAccount.php",
+                data:{
+                    account : $("#icon_prefix").val()
+                },
+                datatype:"text", 
+                success: function (data) {
+                    //window.location.href = "article.php"
+                    console.log(data);
+                    console.log(data.len());
+                    console.log(typeof(data))
+                }
+            })
+            return false;
+        })
             })
 
 
