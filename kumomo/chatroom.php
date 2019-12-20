@@ -191,7 +191,7 @@
             })
 
             $("#findUser").click(function(){
-                console.log("find user : "+$("#icon_prefix").val())
+                console.log("find user : $("#icon_prefix").val())
                 $.ajax({
                     type: "GET",
                     url: "php/findAccount.php",
@@ -205,7 +205,8 @@
                         console.log(data.len());
                         console.log(typeof(data))
                     },
-                    error：function (XMLHttpRequest, textStatus, errorThrown){
+                    
+                    error:function (XMLHttpRequest, textStatus, errorThrown){
                         console.log("ajax error "+XMLHttpRequest+textStatus+errorThrown)
                     }
 
