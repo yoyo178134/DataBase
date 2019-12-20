@@ -136,7 +136,7 @@
         }
         var userid;
         var userName;
-        
+        var userAccount;
         
         
 
@@ -192,7 +192,7 @@
             })
 
             $("#findUser").click(function(){
-                if(account == $("#icon_prefix").val()){
+                if(userAccount == $("#icon_prefix").val()){
                     alert("can not find yourself");
                     location.reload();
                 }
