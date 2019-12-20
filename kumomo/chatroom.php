@@ -200,10 +200,12 @@
                     },
                     datatype:"text", 
                     success: function (data) {
+                        if(data == "false"){
+                            alert("can not find user "+$("#icon_prefix").val())
+                        }else{
+                            location.href = "chat.php?id="+data
+                        }
                         //window.location.href = "article.php"
-                        console.log(data);
-                        console.log(data.len);
-                        console.log(typeof(data))
                     },
                     
                     error:function (XMLHttpRequest, textStatus, errorThrown){
