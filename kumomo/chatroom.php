@@ -120,7 +120,7 @@
                         </div>
                     </div>
                     <p class="right-align">
-                        <button class="btn waves-effect waves-light" id="findUser">查詢
+                        <button class="btn waves-effect waves-light" id="findUser" type="button">查詢
                             <i class="material-icons right">search</i>
                         </button>
                     </p>
