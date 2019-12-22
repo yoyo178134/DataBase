@@ -27,6 +27,25 @@
   <script type="text/javascript">
 
   </script>
+  <style type="text/css">
+        body {
+            min-height: 100vh;
+            background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);
+        }
+
+        .card {
+
+            border-radius: 10px;
+
+        }
+
+        h3 {
+            font-family: montserrat;
+
+            text-align: center;
+            margin-bottom: 30px;
+        }
+    </style>
 </head>
 
 <body>
@@ -36,7 +55,8 @@
     <br>
     <div class="row">
       <div class="col s12 m8 offset-m2">
-        <div class="card-panel">
+        <div class="card-panel card">
+        <h3>Kumomo</h3>
           <form id="login">
             <div class="row">
               <div class="input-field col s12">
