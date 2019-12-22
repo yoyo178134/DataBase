@@ -5,7 +5,6 @@
         header("Location: article.php");
     }
 ?>
-
 <!DOCTYPE html>
 <html lang="zh-TW">
 
@@ -24,6 +23,26 @@
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <style type="text/css">
+        body {
+            min-height: 100vh;
+            background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);
+        }
+
+        .card {
+
+            border-radius: 10px;
+
+        }
+
+        h3 {
+            font-family: montserrat;
+
+            text-align: center;
+            margin-bottom: 30px;
+        }
+    </style>
 </head>
 
 <body>
@@ -31,41 +50,40 @@
     <div class="container">
         <br>
         <br>
-        <h5>Kumomo</h5>
+
         <div class="row">
             <div class="col s12 m8 offset-m2">
-                <div class="card-panel">
+                <div class="card-panel card">
+                    <h3>Kumomo</h3>
                     <form id="login">
                         <div class="row">
-                            <div class="input-field col s12">
+                            <div class="input-field col s10 offset-s1">
                                 <input id="account" name="account" type="text" class="validate">
                                 <label for="account">account</label>
                             </div>
                         </div>
                         <div class="row">
-                            <div class="input-field col s12">
+                            <div class="input-field col s10 offset-s1">
                                 <input id="password" name="password" type="password" class="validate">
                                 <label for="password">password</label>
                             </div>
                         </div>
 
                         <div class="row">
-                            <div class="col s6">
-                                <p class="left-align">
-                                    <button class="btn waves-effect waves-light" type="submit">sign in
+                            <div class="col s10  offset-s1">
+                                <p class="center-align">
+                                    <button class="btn waves-effect waves-light" style="width: 100%;" type="submit">sign
+                                        in
                                         <i class="material-icons right">send</i>
                                     </button>
                                 </p>
-                            </div>
-                            <div class="col s6">
-                                <p class="right-align">
-                                    <button class="btn waves-effect waves-light"
-                                        onclick="location.href='signup.php'">sign up
-                                        <i class="material-icons right">person_add</i>
-                                    </button>
+                                <p class="center-align">
+                                    If you don't have account , please&nbsp;
+                                    <a href="signup.php">sign up</a>.
                                 </p>
                             </div>
                         </div>
+
                     </form>
                 </div>
             </div>
@@ -86,14 +104,14 @@
                     console.log(data)
                     if (data == "true") {
                         //alert("sign in success")
-                        M.toast({html: "Signin Success", displayLength: 1000, completeCallback: function(){window.location.replace("article.php")}})
+                        M.toast({ html: "Signin Success", displayLength: 1000, completeCallback: function () { window.location.replace("article.php") } })
                         //window.location.replace("article.php");
                     } else if (data == "false") {
                         //alert("signin fail")
-                        M.toast({html: "Signin Fail"})
+                        M.toast({ html: "Signin Fail" })
                     } else {
                         //alert("unexpecded")
-                        M.toast({html: "Unexpecded"})
+                        M.toast({ html: "Unexpecded" })
                     }
                 }
             })
