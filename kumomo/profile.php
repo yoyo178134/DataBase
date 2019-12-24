@@ -64,11 +64,46 @@
                     <div class="divider"></div>
                     <div class="row">
                         <div class="col s12 m8 offset-m2">
-                            <span class="left-align">Account : </span><span class="right-align" id="account">###</span>
-                            <span class="left-align">Name : </span><span class="right-align" id="name">###</span>
-                            <span class="left-align">BirthDate : </span><span class="right-align" id="birthdate">###</span>
-                            <span class="left-align">Gender : </span><span class="right-align" id="gender">###</span>
-                            <span class="left-align">Career : </span><span class="right-align" id="career">###</span>
+                            <div class="row">
+                                <div class="col s6">
+                                    <p class="left-align">Account : </p>
+                                </div>
+                                <div class="col s6">
+                                    <p class="right-align" id="account">###</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col s6">
+                                    <p class="left-align">Name : </p>
+                                </div>
+                                <div class="col s6">
+                                    <p class="right-align" id="name">###</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col s6">
+                                    <p class="left-align">BirthDate : </p>
+                                </div>
+                                <div class="col s6">
+                                    <p class="right-align" id="birthdate">###</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col s6">
+                                    <p class="left-align">Gender : </p>
+                                </div>
+                                <div class="col s6">
+                                    <p class="right-align" id="gender">###</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col s6">
+                                    <p class="left-align">Career : </p>
+                                </div>
+                                <div class="col s6">
+                                    <p class="right-align" id="career">###</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <p class="right-align">
