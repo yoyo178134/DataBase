@@ -90,12 +90,16 @@
                                 <td colspan="2">Career : </td>
                                 <td id="career"></td>
                             </tr>
+                            <tr>
+                                <td colspan="3">
+                                    <p class="right-align">
+                                        <a class="btn waves-effect waves-light" href="profileUpdate.php">編輯個人資料<i
+                                                class="material-icons right">edit</i></a>
+                                    </p>
+                                </td>
+                            </tr>
                         </tbody>
                     </table>
-                    <p class="right-align">
-                        <a class="btn waves-effect waves-light" href="profileUpdate.php">編輯個人資料<i
-                                class="material-icons right">edit</i></a>
-                    </p>
                 </div>
             </div>
         </div>
