@@ -207,7 +207,7 @@
                     success: function (data) {
                         console.log(data+data.length)
                         if(data == "false   "){
-                            M.toast({html: "Can't Find User" + $("#icon_prefix").val(), displayLength: 2000, completeCallback: function () { location.href = "chatroom.php" }})
+                            M.toast({html: "Can't Find User " + $("#icon_prefix").val(), displayLength: 2000, completeCallback: function () { location.href = "chatroom.php" }})
                             //alert("can not find user "+$("#icon_prefix").val());
                             //location.href = "chatroom.php"
                         }else{
