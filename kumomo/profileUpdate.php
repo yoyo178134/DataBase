@@ -130,7 +130,7 @@
                 success: function (data) {
                     console.log(data)
                     if (data == "true") {
-                        M.toast({html: "Update Success", displayLength: 1000, completeCallback: function () { window.location.replace("profile.php") }})
+                        M.toast({html: "Update Success", displayLength: 500, completeCallback: function () { window.location.replace("profile.php") }})
                     } else if (data == "false") {
                         M.toast({html: "Update Fail"})
                     } else {

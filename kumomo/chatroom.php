@@ -193,8 +193,7 @@
 
             $("#findUser").click(function(){
                 if(userAccount == $("#icon_prefix").val()){
-                    alert("can not find yourself");
-                    location.href = "chatroom.php"
+                    M.toast({html: "You Can't Find Yourself", displayLength: 500, completeCallback: function () { location.href = "chatroom.php" }})
                     return;
                 }
                 console.log("find user :"+ $("#icon_prefix").val())
@@ -208,8 +207,9 @@
                     success: function (data) {
                         console.log(data+data.length)
                         if(data == "false   "){
-                            alert("can not find user "+$("#icon_prefix").val());
-                            location.href = "chatroom.php"
+                            M.toast({html: "Can't Find Yourself" + $("#icon_prefix").val(), displayLength: 500, completeCallback: function () { location.href = "chatroom.php" }})
+                            //alert("can not find user "+$("#icon_prefix").val());
+                            //location.href = "chatroom.php"
                         }else{
                             location.href = "chat.php?id="+data
                         }

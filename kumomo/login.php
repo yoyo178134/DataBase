@@ -103,7 +103,7 @@
                 success: function (data) {
                     console.log(data)
                     if (data == "true") {
-                        M.toast({ html: "Login Success", displayLength: 1000, completeCallback: function () { window.location.replace("article.php") } })
+                        M.toast({ html: "Login Success", displayLength: 500, completeCallback: function () { window.location.replace("article.php") } })
                         //window.location.replace("article.php");
                     } else if (data == "false") {
                         M.toast({ html: "Login Fail" })
