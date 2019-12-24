@@ -59,10 +59,16 @@
         <div class="row">
             <div class="col s12 m8 offset-m2">
                 <div class="card-panel">
-                    <p class="center-align"><i class="large material-icons">account_circle</i></p>
-                    <p class="center-align" id="id" >###</p>
-                    <div class="divider"></div>
                     <table class="striped">
+                        <thead>
+                            <tr>
+                                <th colspan="3">
+                                    <p class="center-align"><i class="large material-icons">account_circle</i></p>
+                                    <p class="center-align" id="id" >###</p>
+                                </th>
+                            </tr>
+                        </thead>
+
                         <tbody>
                             <tr>
                                 <td colspan="2">Account : </td>
