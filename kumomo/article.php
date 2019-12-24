@@ -199,7 +199,8 @@
                 data:{id : id},
                 success: function (data) {
                     console.log(data)
-                    $(".like"+id).text(parseInt($(".like"+id).text())+1)
+                    //M.toast({ html : "Like"} );
+                    $(".like"+id).text(parseInt($(".like"+id).text())+1);
                     
                 },
                 error: function(XMLHttpRequest, textStatus, errorThrown) {
