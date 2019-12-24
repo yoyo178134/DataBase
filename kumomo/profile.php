@@ -60,14 +60,15 @@
             <div class="col s12 m8 offset-m2">
                 <div class="card-panel">
                     <p class="center-align"><i class="large material-icons">account_circle</i></p>
-                    <p class="center-align" id="id" >ID : ###</p>
+                    <p class="center-align" id="id" >###</p>
+                    <div class="divider"></div>
                     <div class="row">
                         <div class="col s12 m8 offset-m2">
-                            <p class="left-align" id="account">Account : ###</p>
-                            <p class="left-align" id="name">Name : ###</p>
-                            <p class="left-align" id="birthdate">BirthDate : ###</p>
-                            <p class="left-align" id="gender">Gender : ###</p>
-                            <p class="left-align" id="career">Career : ###</p>
+                            <span>Account : </span><p class="right-align" id="account">###</p>
+                            <span>Name : </span><p class="right-align" id="name">###</p>
+                            <span>BirthDate : </span><p class="right-align" id="birthdate">###</p>
+                            <span>Gender : </span><p class="right-align" id="gender">###</p>
+                            <span>Career : </span><p class="right-align" id="career">###</p>
                         </div>
                     </div>
                     <p class="right-align">
@@ -92,12 +93,12 @@
                 dataType: "json",
                 success: function (data) {
                     console.log(data)
-                    $("#id").text("ID : "+data.id)
-                    $("#account").text("Account : "+data.account)
-                    $("#name").text("Name : "+data.name)
-                    $("#birthdate").text("BirthDate : "+data.birthdate)
-                    $("#gender").text("Gender : "+data.gender)
-                    $("#career").text("Career : "+data.career)
+                    $("#id").text("ID : " + data.id)
+                    $("#account").text(data.account)
+                    $("#name").text(data.name)
+                    $("#birthdate").text(data.birthdate)
+                    $("#gender").text(data.gender)
+                    $("#career").text(data.career)
                 },
                 error: function(XMLHttpRequest, textStatus, errorThrown) {
                     alert(XMLHttpRequest.status);
