@@ -62,50 +62,30 @@
                     <p class="center-align"><i class="large material-icons">account_circle</i></p>
                     <p class="center-align" id="id" >###</p>
                     <div class="divider"></div>
-                    <div class="row">
-                        <div class="col s12 m8 offset-m2">
-                            <div class="row">
-                                <div class="col s6">
-                                    <p class="left-align">Account : </p>
-                                </div>
-                                <div class="col s6">
-                                    <p class="right-align" id="account">###</p>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col s6">
-                                    <p class="left-align">Name : </p>
-                                </div>
-                                <div class="col s6">
-                                    <p class="right-align" id="name">###</p>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col s6">
-                                    <p class="left-align">BirthDate : </p>
-                                </div>
-                                <div class="col s6">
-                                    <p class="right-align" id="birthdate">###</p>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col s6">
-                                    <p class="left-align">Gender : </p>
-                                </div>
-                                <div class="col s6">
-                                    <p class="right-align" id="gender">###</p>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col s6">
-                                    <p class="left-align">Career : </p>
-                                </div>
-                                <div class="col s6">
-                                    <p class="right-align" id="career">###</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <table class="striped">
+                        <tbody>
+                            <tr>
+                                <td colspan="2">Account : </td>
+                                <td id="account"></td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">Name : </td>
+                                <td id="name"></td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">BirthDate : </td>
+                                <td id="birthdate"></td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">Gender : </td>
+                                <td id="gender"></td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">Career : </td>
+                                <td id="career"></td>
+                            </tr>
+                        </tbody>
+                    </table>
                     <p class="right-align">
                         <a class="btn waves-effect waves-light" href="profileUpdate.php">編輯個人資料<i
                                 class="material-icons right">edit</i></a>
