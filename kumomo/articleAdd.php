@@ -96,7 +96,7 @@
                 },
                 datatype:"text", 
                 success: function (data) {
-                    window.location.href = "article.php"
+                    M.toast({ html: "Add Success", displayLength: 500, completeCallback: function () { window.location.replace("article.php") } })
                 }
             })
             return false;
