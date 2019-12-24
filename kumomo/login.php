@@ -72,8 +72,8 @@
                         <div class="row">
                             <div class="col s10  offset-s1">
                                 <p class="center-align">
-                                    <button class="btn waves-effect waves-light" style="width: 100%;" type="submit">sign
-                                        in
+                                    <button class="btn waves-effect waves-light" style="width: 100%;" type="submit">
+                                        Login
                                         <i class="material-icons right">send</i>
                                     </button>
                                 </p>
@@ -103,10 +103,10 @@
                 success: function (data) {
                     console.log(data)
                     if (data == "true") {
-                        M.toast({ html: "Signin Success", displayLength: 1000, completeCallback: function () { window.location.replace("article.php") } })
+                        M.toast({ html: "Login Success", displayLength: 1000, completeCallback: function () { window.location.replace("article.php") } })
                         //window.location.replace("article.php");
                     } else if (data == "false") {
-                        M.toast({ html: "Signin Fail" })
+                        M.toast({ html: "Login Fail" })
                     } else {
                         M.toast({ html: "Unexpected" })
                     }
