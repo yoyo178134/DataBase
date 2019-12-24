@@ -64,11 +64,11 @@
                     <div class="divider"></div>
                     <div class="row">
                         <div class="col s12 m8 offset-m2">
-                            <span>Account : </span><p class="right-align" id="account">###</p>
-                            <span>Name : </span><p class="right-align" id="name">###</p>
-                            <span>BirthDate : </span><p class="right-align" id="birthdate">###</p>
-                            <span>Gender : </span><p class="right-align" id="gender">###</p>
-                            <span>Career : </span><p class="right-align" id="career">###</p>
+                            <span class="left-align">Account : </span><span class="right-align" id="account">###</span>
+                            <span class="left-align">Name : </span><span class="right-align" id="name">###</span>
+                            <span class="left-align">BirthDate : </span><span class="right-align" id="birthdate">###</span>
+                            <span class="left-align">Gender : </span><span class="right-align" id="gender">###</span>
+                            <span class="left-align">Career : </span><span class="right-align" id="career">###</span>
                         </div>
                     </div>
                     <p class="right-align">
