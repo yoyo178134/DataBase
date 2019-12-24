@@ -219,8 +219,7 @@
                 success: function (data) {
                     $(".delBut"+id+"").parent().parent().parent().parent().parent().fadeOut();
                     console.log(data);
-                    alert("delete success");
-                    //location.reload()
+                    M.toast({html: "Delete Success"});           
                 },
                 error: function(XMLHttpRequest, textStatus, errorThrown) {
                     alert(XMLHttpRequest.status);

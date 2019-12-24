@@ -130,12 +130,11 @@
                 success: function (data) {
                     console.log(data)
                     if (data == "true") {
-                        alert("success")
-                        location = "profile.php"
+                        M.toast({html: "Update Success", displayLength: 1000, completeCallback: function () { window.location.replace("profile.php") }})
                     } else if (data == "false") {
-                        alert("fail")
+                        M.toast({html: "Update Fail"})
                     } else {
-                        alert("unexpecded")
+                        M.toast({html: "Unexpected"})
                     }
                 }
             })

@@ -187,14 +187,11 @@
           data: form.serialize(),
           success: function (data) {
             if (data == "true") {
-              //alert("registration success")
-              M.toast({html: "Registration Success", displayLength: 1000, completeCallback: function(){window.location.replace("login.php")}})
+              M.toast({html: "Signup Success", displayLength: 500, completeCallback: function(){window.location.replace("login.php")}})
             } else if (data == "false") {
-              //alert("registration fail")
-              M.toast({html: "Registration Fail"})
+              M.toast({html: "Signup Fail"})
             } else {
-              //alert("unexpecded")
-              M.toast({html: "Unexpecded"})
+              M.toast({html: "Unexpected"})
             }
           }
         })
