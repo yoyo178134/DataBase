@@ -205,6 +205,25 @@
         return $data;
     }
 
+    function msgAllSendRsv(){
+        $data = array();
+        $send_id = $_SESSION['login_user_id'];
+        $sql = "SELECT * FROM message WHERE send_id = {$send_id}";
+        echo $sql;
+        $query = mysqli_query($_SESSION['link'], $sql);
+        if($query){
+            if(mysqli_num_rows($query) > 0){
+                while($row = mysqli_fetch_assoc($query)){
+                    $data[] = $row;
+                }
+            }
+        }
+        else{
+            mysqli_error($_SESSION['link']);
+        }
+        return $data;
+    }
+
     function findName($id){
         $name = null;
         $sql = "SELECT name FROM user WHERE id = '{$id}'";
