@@ -90,17 +90,13 @@
         <div class="messageList">
             <div id="recvId" class="hide"><?php echo $id ?></div>
             <div class="row">
-                <div class="col s6 m4 left"> 
-                    <div class="messageBox">
-                        <span>123</span>
-                    </div>
+                <div class="messageBox left">
+                    <span>123</span>
                 </div>
             </div>
             <div class="row">
-                <div class="col s6 m4 right">
-                    <div class="messageBox"> 
-                        <span>45jhfjsdhfdslhfiushdiulhasliujfnjfnjnjfnvjfnvjnfjvnfjnvfjnvjfvjfnvjfnvjfnvjfnjekdnwkdjkwmdmdwkdiuashdliuhasuil6</span>
-                    </div>
+                <div class="messageBox right"> 
+                    <span>45jhfjsdhfdslhfiushdiulhasliujfnjfnjnjfnvjfnvjnfjvnfjnvfjnvjfvjfnvjfnvjfnvjfnjekdnwkdjkwmdmdwkdiuashdliuhasuil6</span>
                 </div>
             </div>
         </div>
