@@ -28,6 +28,38 @@
     <script type="text/javascript">
 
     </script>
+
+    <style type="text/css">
+        .messageList {
+            padding: 2em;
+        }
+
+        .messageBox {
+            border: 2px solid #dedede;
+            background-color: #f1f1f1;
+            border-radius: 5px;
+            padding: 10px;
+            margin: 10px 0;
+            max-width: 60%;
+        }
+
+        .messageBox span::after {
+            content: "";
+            clear: both;
+        }
+
+        .messageReceive {
+            float: left;
+        }
+
+        .messageSend {
+            float: right;
+        }
+
+        .messageInput {
+            bottom: 0px;
+        }
+    </style>
 </head>
 
 <body>
@@ -56,13 +88,22 @@
 
     <div class="container">
         <br><br>
-          <div class="row">
+        <div class="messageList">
+            <div class="messageBox messageReceive">
+                <span>123</span>
+            </div>
+            <div class="messageBox messageSend">
+                <span>456</span>
+            </div>
+        </div>
+        <div class="messageInput">
+            <div class="row">
                 <form class="col s12">
                     <div class="row">
                         <div class="input-field col s10 m8 offset-m2">
                             <i class="material-icons prefix">mode_edit</i>
-                            <input id="messageSend" type="text" class="validate">
-                            <label for="messageSend">Message</label>
+                            <input id="message" type="text" class="validate">
+                            <label for="message">Message</label>
                         </div>
                         <div class="input-field col s2">
                             <button class="btn waves-effect waves-light" type="submit">
@@ -72,6 +113,7 @@
                     </div>
                 </form>
             </div>
+        </div>
     </div>
 
     <script type="text/javascript">
