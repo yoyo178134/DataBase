@@ -49,8 +49,7 @@
         }
 
         .messageInput {
-            width: 100%;
-            top: calc(100vh - 90vh);
+            top: calc(100vh - 10vh);
         }
 
         @media #{$small-and-down} {
