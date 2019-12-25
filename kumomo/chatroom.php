@@ -174,12 +174,13 @@
                     $.each(data, function (key,ele){
                         temp = getTemplate();
                         let id = ele.id;
+                        let name = ele.receive_name;
                         temp.find("#id").text(ele.receive_id)
                         temp.find("#name").text(ele.receive_name)
                         temp.find("#text").text(ele.text)
                         temp.find("#time").text(ele.time)
                         temp.find("#unReadNum").text(ele.unReadCnt)
-                        temp.find("#href").attr("href","chat.php?id="+id);
+                        temp.find("#href").attr("href","chat.php?id="+id+"?name"+name);
                         mix += temp[0].outerHTML;
                     })
                     $("#collection").html(mix);
