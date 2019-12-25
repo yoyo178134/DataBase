@@ -41,6 +41,7 @@
             border-radius: 5px;
             padding: 10px;
             margin: 10px 0;
+            max-width: 40%;
         }
 
         .messageBox span {
@@ -50,6 +51,12 @@
         .messageInput {
             position: fixed;
             bottom: 5px;
+        }
+
+        @media #{$small-and-down} {
+            .messageBox {
+                max-width: 60%;
+            }
         }
     </style>
 </head>
