@@ -56,6 +56,14 @@
             float: right;
         }
 
+        .messageReceive span::after {
+            border-left: 15px solid transparent; 
+        }
+
+        .messageSend span::after {
+            border-right: 15px solid transparent; 
+        }
+
         .messageInput {
             bottom: 0px;
         }
@@ -89,11 +97,15 @@
     <div class="container">
         <br><br>
         <div class="messageList">
-            <div class="messageBox messageReceive">
-                <span>123</span>
-            </div>
-            <div class="messageBox messageSend">
-                <span>456</span>
+            <div class="row">
+                <div class="col s10 m8 offset-m2">
+                    <div class="messageBox messageReceive">
+                        <span>123</span>
+                    </div>
+                    <div class="messageBox messageSend">
+                        <span>456</span>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="messageInput">
