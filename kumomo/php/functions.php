@@ -130,10 +130,11 @@
         return $result;
     }
 
-    function msgRsv($receive_id){
+    function msgAllSendRsv($receive_id){
         $data = array();
         $send_id = $_SESSION['login_user_id'];
-        $sql = "SELECT text, receive_id, time, isRead, isOwner, user.name as receive_name FROM message, user WHERE send_id = '{$send_id}' AND receive_id = '{$receive_id}' AND receive_id = user.id";
+        msgRead($receive_id);
+        $sql = "SELECT text, send_id, receive_id, time, isRead, isOwner FROM message WHERE send_id = '{$send_id}' AND receive_id = '{$receive_id}' ORDER BY time ASC";
         $query = mysqli_query($_SESSION['link'], $sql);
         if($query){
             if(mysqli_num_rows($query) > 0){
@@ -205,10 +206,10 @@
         return $data;
     }
 
-    function msgAllSendRsv(){
+    function msgAllChatSendRsv(){
         $data = array();
         $send_id = $_SESSION['login_user_id'];
-        $sql = "SELECT text, send_id, receive_id, time, isRead, isOwner FROM message WHERE send_id = {$send_id} ORDER BY time ASC";
+        $sql = "SELECT text, send_id, receive_id, time, isRead, isOwner FROM message WHERE send_id = '{$send_id}' ORDER BY time ASC";
         $query = mysqli_query($_SESSION['link'], $sql);
         if($query){
             if(mysqli_num_rows($query) > 0){
