@@ -49,8 +49,10 @@
         }
 
         .messageInput {
-            display: absolute;
+            position: fixed;
+            left: 0;
             bottom: 1em;
+            width: 100%;
         }
 
         @media #{$small-and-down} {
