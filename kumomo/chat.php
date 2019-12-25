@@ -41,7 +41,6 @@
             border-radius: 5px;
             padding: 10px;
             margin: 10px 0;
-            max-width
         }
 
         .messageBox span {
