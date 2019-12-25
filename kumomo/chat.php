@@ -36,8 +36,8 @@
         }
 
         .messageBox {
-            border: 2px solid #dedede;
-            background-color: #f1f1f1;
+            border: 2px solid #004d40;
+            background-color: #e0f2f1;
             border-radius: 5px;
             padding: 10px;
             margin: 10px 0;
