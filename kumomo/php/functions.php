@@ -208,8 +208,7 @@
     function msgAllSendRsv(){
         $data = array();
         $send_id = $_SESSION['login_user_id'];
-        $sql = "SELECT * FROM message WHERE send_id = {$send_id}";
-        echo $sql;
+        $sql = "SELECT text, send_id, receive_id, time, isRead, isOwner FROM message WHERE send_id = {$send_id} ORDER BY time ASC";
         $query = mysqli_query($_SESSION['link'], $sql);
         if($query){
             if(mysqli_num_rows($query) > 0){
