@@ -195,7 +195,7 @@
             if(mysqli_num_rows($query) > 0){
                 $i = 0;
                 if(count($cnt)!=mysqli_num_rows($query)){
-                    $cnt[mysqli_num_rows($query)-1]['unReadCnt'] = 0;
+                    $cnt[mysqli_num_rows($query)-1]['unReadCnt'] = 0;//如果為已讀且最後一筆需再加一筆為0(msgUnReadCnt只看未讀)
                 }
                 while($row = mysqli_fetch_assoc($query)){
                     $data[] = array_merge($row, $cnt[$i++]);
