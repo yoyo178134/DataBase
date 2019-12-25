@@ -49,6 +49,7 @@
         }
 
         .messageInput {
+            display: absolute;
             top: calc(100vh - 10vh);
         }
 
