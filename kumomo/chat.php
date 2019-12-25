@@ -34,34 +34,47 @@
             padding: 2em;
         }
 
-        .messageBox {
+        .messageReceive {
+            display: inline-block;
+            position:relative;
+            min-height: 40px;
+            line-height:20px;
+            word-break: break-all;
             border: 2px solid #dedede;
             background-color: #f1f1f1;
             border-radius: 5px;
             padding: 10px;
             margin: 10px 0;
             max-width: 60%;
-        }
-
-        .messageReceive .messageSend span::after {
-            content: "";
-            clear: both;
-        }
-
-        .messageReceive {
             float: left;
         }
 
         .messageSend {
+            border: 2px solid #dedede;
+            background-color: #f1f1f1;
+            border-radius: 5px;
+            padding: 10px;
+            margin: 10px 0;
+            max-width: 60%;
             float: right;
         }
 
         .messageReceive span::before {
+            content: " ";
+            position: absolute;
+            top: 9px;
+            left: 100%;
             border-left: 15px solid transparent; 
+            border-left-color: #ff0000;
         }
 
-        .messageSend span::before {
-            border-right: 15px solid transparent; 
+        .messageSend span {
+            display: block;
+        }
+
+        .messageSend span::after {
+            content: "";
+            clear: both;
         }
 
         .messageInput {
@@ -98,12 +111,14 @@
         <br><br>
         <div class="messageList">
             <div class="row">
-                <div class="col s10 m10 offset-m1">
-                    <div class="messageBox messageReceive">
+                <div class="col s12 m10 offset-m1">
+                    <div class="messageReceive">
                         <span>123</span>
                     </div>
-                    <div class="messageBox messageSend">
-                        <span>456</span>
+                </div>
+                <div class="col s12 m10 offset-m1">
+                    <div class="messageSend">
+                        <span>45jhfjsdhfdslhfiushdiulhasliudiuashdliuhasuil6</span>
                     </div>
                 </div>
             </div>
@@ -112,13 +127,13 @@
             <div class="row">
                 <form class="col s12">
                     <div class="row">
-                        <div class="input-field col s10 m8 offset-m1">
+                        <div class="input-field col s10 m9 offset-m1">
                             <i class="material-icons prefix">mode_edit</i>
                             <input id="message" type="text" class="validate">
                             <label for="message">Message</label>
                         </div>
-                        <div class="input-field col s2">
-                            <button class="btn waves-effect waves-light" type="submit">
+                        <div class="input-field col s2 m1">
+                            <button class="btn waves-effect waves-light right" type="submit">
                                 <i class="material-icons">send</i>
                             </button>
                         </div>
