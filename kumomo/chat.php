@@ -34,25 +34,23 @@
             padding: 2em;
         }
 
-        .messageBox {
+        .messageReceive {
             border: 2px solid #dedede;
             background-color: #f1f1f1;
             border-radius: 5px;
             padding: 10px;
             margin: 10px 0;
             max-width: 60%;
-        }
-
-        .messageReceive .messageSend span::after {
-            content: "";
-            clear: both;
-        }
-
-        .messageReceive {
             float: left;
         }
 
         .messageSend {
+            border: 2px solid #dedede;
+            background-color: #f1f1f1;
+            border-radius: 5px;
+            padding: 10px;
+            margin: 10px 0;
+            max-width: 60%;
             float: right;
         }
 
@@ -107,10 +105,10 @@
         <div class="messageList">
             <div class="row">
                 <div class="col s12 m10 offset-m1">
-                    <div class="messageBox messageReceive">
+                    <div class="messageReceive">
                         <span>123</span>
                     </div>
-                    <div class="messageBox messageSend">
+                    <div class="messageSend">
                         <span>456</span>
                     </div>
                 </div>
