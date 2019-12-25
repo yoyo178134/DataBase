@@ -102,10 +102,8 @@
                 </div>
             </div>
         </div>
-    </div>
 
-    <div class="messageInput">
-        <div class="container">
+        <div class="messageInput">
             <div class="row">
                 <form class="col s12">
                     <div class="row">
