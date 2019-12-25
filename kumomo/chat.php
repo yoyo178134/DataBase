@@ -61,7 +61,7 @@
                     <div class="row">
                         <div class="input-field col s12 m8 offset-m2">
                             <i class="material-icons prefix">mode_edit</i>
-                            <textarea id="messageSend" class="materialize-textarea"></textarea>
+                            <input id="messageSend" type="text" class="validate">
                             <label for="messageSend">Message</label>
                         </div>
                     </div>
