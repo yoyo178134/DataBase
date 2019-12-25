@@ -59,10 +59,15 @@
           <div class="row">
                 <form class="col s12">
                     <div class="row">
-                        <div class="input-field col s12 m8 offset-m2">
+                        <div class="input-field col s10 m8 offset-m2">
                             <i class="material-icons prefix">mode_edit</i>
                             <input id="messageSend" type="text" class="validate">
                             <label for="messageSend">Message</label>
+                        </div>
+                        <div class="input-field col s2">
+                            <button class="btn waves-effect waves-light" type="submit">
+                                <i class="material-icons right">send</i>
+                            </button>
                         </div>
                     </div>
                 </form>
