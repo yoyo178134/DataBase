@@ -57,10 +57,18 @@
         }
 
         .messageReceive span::before {
+            content: " ";
+            position: absolute;
+            top: 9px;
+            left: 100%;
             border-left: 15px solid transparent; 
         }
 
         .messageSend span::before {
+            content: " ";
+            position: absolute;
+            top: 9px;
+            right: 100%;
             border-right: 15px solid transparent; 
         }
 
@@ -98,7 +106,7 @@
         <br><br>
         <div class="messageList">
             <div class="row">
-                <div class="col s10 m10 offset-m1">
+                <div class="col s12 m10 offset-m1">
                     <div class="messageBox messageReceive">
                         <span>123</span>
                     </div>
