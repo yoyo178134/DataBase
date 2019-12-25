@@ -43,7 +43,7 @@
             max-width: 60%;
         }
 
-        .messageBox span::after {
+        .messageReceive .messageSend span::after {
             content: "";
             clear: both;
         }
@@ -98,7 +98,7 @@
         <br><br>
         <div class="messageList">
             <div class="row">
-                <div class="col s10 m8 offset-m1">
+                <div class="col s10 m10 offset-m1">
                     <div class="messageBox messageReceive">
                         <span>123</span>
                     </div>
