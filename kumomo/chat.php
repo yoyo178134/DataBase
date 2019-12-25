@@ -118,7 +118,7 @@
                 </div>
                 <div class="col s12 m10 offset-m1">
                     <div class="messageSend">
-                        <span>456</span>
+                        <span>45jhfjsdhfdslhfiushdiulhasliudiuashdliuhasuifjsdfjndsjknskndkjsndkjsndjknsdjnsdjknsdjksndj6</span>
                     </div>
                 </div>
             </div>
