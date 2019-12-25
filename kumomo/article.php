@@ -218,7 +218,7 @@
                 dataType: "html",
                 data:{id : id},
                 success: function (data) {
-                    $(".delBut"+id+"").parent().parent().parent().parent().parent().fadeOut();
+                    $(".delBut"+id+"").parent().parent().parent().parent().parent().fadeOut("slow");
                     console.log(data);
                     M.toast({html: "Delete Success"});           
                 },
