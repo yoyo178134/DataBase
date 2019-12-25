@@ -68,10 +68,14 @@
             border-left-color: #ff0000;
         }
 
+        .messageSend span {
+            display: block;
+        }
+
         .messageSend span::after {
             content: "";
             clear: both;
-            display: block;
+            display: table;
         }
 
         .messageInput {
