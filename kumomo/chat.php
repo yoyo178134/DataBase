@@ -1,6 +1,5 @@
 <?php
     $id = $_GET['id'];
-    $name = $_GET['name'];
     session_start() ;
     if(!isset($_SESSION['is_login']) || !$_SESSION['is_login'])
     {

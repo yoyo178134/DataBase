@@ -180,7 +180,7 @@
                         temp.find("#text").text(ele.text)
                         temp.find("#time").text(ele.time)
                         temp.find("#unReadNum").text(ele.unReadCnt)
-                        temp.find("#href").attr("href","chat.php?id="+id+"?name"+name);
+                        temp.find("#href").attr("href","chat.php?id="+id);
                         mix += temp[0].outerHTML;
                     })
                     $("#collection").html(mix);
