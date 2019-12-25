@@ -69,12 +69,9 @@
         }
 
         .messageSend span::before {
-            content: " ";
-            position: absolute;
-            top: 9px;
-            right: 100%;
-            border-right: 15px solid transparent; 
-            border-left-color: #ff0000;
+            content: "";
+            clear: both;
+            display: table;
         }
 
         .messageInput {
@@ -118,7 +115,7 @@
                 </div>
                 <div class="col s12 m10 offset-m1">
                     <div class="messageSend">
-                        <span>45jhfjsdhfdslhfiushdiulhasliudiuashdliuhasuifjsdfjndsjknskndkjsndkjsndjknsdjnsdjknsdjksndj6</span>
+                        <span>45jhfjsdhfdslhfiushdiulhasliudiuashdliuhasuil6</span>
                     </div>
                 </div>
             </div>
