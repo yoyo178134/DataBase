@@ -173,7 +173,7 @@
                     console.log(data)
                     $.each(data, function (key,ele){
                         temp = getTemplate();
-                        let id = ele.id;
+                        let id = ele.receive_id;
                         let name = ele.receive_name;
                         temp.find("#id").text(ele.receive_id)
                         temp.find("#name").text(ele.receive_name)
@@ -212,7 +212,7 @@
                             //alert("can not find user "+$("#icon_prefix").val());
                             //location.href = "chatroom.php"
                         }else{
-                            location.href = "chat.php?id="+data
+                            location.href = "chat.php?id="+data;
                         }
                         //window.location.href = "article.php"
                     },
