@@ -49,7 +49,8 @@
         }
 
         .messageInput {
-            position: fixed;
+            position: absolute;
+            width: 100%;
             bottom: 5px;
         }
 
