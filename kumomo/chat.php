@@ -41,11 +41,15 @@
             border-radius: 5px;
             padding: 10px;
             margin: 10px 0;
-            max-width: 60%;
         }
 
-        .messageBox p {
+        .messageBox span {
             word-break: break-all;
+        }
+
+        .messageInput {
+            position: absolute;
+            bottom: 5px;
         }
     </style>
 </head>
@@ -78,11 +82,19 @@
         <br><br>
         <div class="messageList">
             <div id="recvId" class="hide"><?php echo $id ?></div>
-            <div class="messageBox left">
-                <p>123</p>
+            <div class="row">
+                <div class="messageBox left">
+                    <div class="col s6 m4"> 
+                        <span>123</span>
+                    </div>
+                </div>
             </div>
-            <div class="messageBox right">
-                <p>45jhfjsdhfdslhfiushdiulhasliujfnjfnjnjfnvjfnvjnfjvnfjnvfjnvjfvjfnvjfnvjfnvjfnjekdnwkdjkwmdmdwkdiuashdliuhasuil6</p>
+            <div class="row">
+                <div class="messageBox right">
+                    <div class="col s6 m4"> 
+                        <span>45jhfjsdhfdslhfiushdiulhasliujfnjfnjnjfnvjfnvjnfjvnfjnvfjnvjfvjfnvjfnvjfnvjfnjekdnwkdjkwmdmdwkdiuashdliuhasuil6</span>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="messageInput">
