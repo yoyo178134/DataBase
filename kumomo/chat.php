@@ -65,6 +65,7 @@
             top: 9px;
             left: 100%;
             border-left: 15px solid transparent; 
+            border-left-color: #ff0000;
         }
 
         .messageSend span::before {
@@ -73,6 +74,7 @@
             top: 9px;
             right: 100%;
             border-right: 15px solid transparent; 
+            border-left-color: #ff0000;
         }
 
         .messageInput {
