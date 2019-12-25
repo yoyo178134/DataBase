@@ -56,11 +56,11 @@
             float: right;
         }
 
-        .messageReceive span::after {
+        .messageReceive span::before {
             border-left: 15px solid transparent; 
         }
 
-        .messageSend span::after {
+        .messageSend span::before {
             border-right: 15px solid transparent; 
         }
 
@@ -98,7 +98,7 @@
         <br><br>
         <div class="messageList">
             <div class="row">
-                <div class="col s10 m8 offset-m2">
+                <div class="col s10 m8 offset-m1">
                     <div class="messageBox messageReceive">
                         <span>123</span>
                     </div>
@@ -112,7 +112,7 @@
             <div class="row">
                 <form class="col s12">
                     <div class="row">
-                        <div class="input-field col s10 m8 offset-m2">
+                        <div class="input-field col s10 m8 offset-m1">
                             <i class="material-icons prefix">mode_edit</i>
                             <input id="message" type="text" class="validate">
                             <label for="message">Message</label>
