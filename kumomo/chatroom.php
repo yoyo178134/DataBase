@@ -183,6 +183,7 @@
                         temp.find("#href").attr("href","chat.php?id="+id);
                         mix += temp[0].outerHTML;
                     })
+                    console.log(mix)
                     $("#collection").html(mix);
                 },
                 error: function(XMLHttpRequest, textStatus, errorThrown) {
