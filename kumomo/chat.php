@@ -68,7 +68,7 @@
             border-left-color: #ff0000;
         }
 
-        .messageSend span::before {
+        .messageSend span::after {
             content: "";
             clear: both;
             display: block;
