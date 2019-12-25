@@ -66,7 +66,7 @@
                         </div>
                         <div class="input-field col s2">
                             <button class="btn waves-effect waves-light" type="submit">
-                                <i class="material-icons right">send</i>
+                                <i class="material-icons">send</i>
                             </button>
                         </div>
                     </div>
