@@ -75,9 +75,12 @@
         <div class="messageList">
             <div id="recvId" class="hide"><?php echo $id ?></div>
             <div id="recvName" class="hide"><?php echo $name ?></div>
-            <p class="messageBox">123</p>
-            <br>
-            <p class="messageBox">45jhfjsdhfdslhfiushdiulhasliujfnjfnjnjfnvjfnvjnfjvnfjnvfjnvjfvjfnvjfnvjfnvjfnjekdnwkdjkwmdmdwkdiuashdliuhasuil6</p>
+            <div class="messageBox left">
+                <p>123</p>
+            </div>
+            <div class="messageBox right">
+                <p>45jhfjsdhfdslhfiushdiulhasliujfnjfnjnjfnvjfnvjnfjvnfjnvfjnvjfvjfnvjfnvjfnvjfnjekdnwkdjkwmdmdwkdiuashdliuhasuil6</p>
+            </div>
         </div>
         <div class="messageInput">
             <div class="row">
