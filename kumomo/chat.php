@@ -115,6 +115,8 @@
                     <div class="messageReceive">
                         <span>123</span>
                     </div>
+                </div>
+                <div class="col s12 m10 offset-m1">
                     <div class="messageSend">
                         <span>456</span>
                     </div>
