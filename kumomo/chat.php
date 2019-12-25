@@ -56,7 +56,17 @@
 
     <div class="container">
         <br><br>
-
+          <div class="row">
+                <form class="col s12">
+                    <div class="row">
+                        <div class="input-field col s12 m8 offset-m2">
+                            <i class="material-icons prefix">mode_edit</i>
+                            <textarea id="messageSend" class="materialize-textarea"></textarea>
+                            <label for="messageSend">Message</label>
+                        </div>
+                    </div>
+                </form>
+            </div>
     </div>
 
     <script type="text/javascript">
