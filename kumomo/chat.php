@@ -36,51 +36,13 @@
             padding: 2em;
         }
 
-        .messageReceive {
-            display: inline-block;
-            position:relative;
-            min-height: 40px;
-            line-height:20px;
-            word-break: break-all;
+        .messageBox {
             border: 2px solid #dedede;
             background-color: #f1f1f1;
             border-radius: 5px;
             padding: 10px;
             margin: 10px 0;
             max-width: 60%;
-            float: left;
-        }
-
-        .messageSend {
-            border: 2px solid #dedede;
-            background-color: #f1f1f1;
-            border-radius: 5px;
-            padding: 10px;
-            margin: 10px 0;
-            max-width: 60%;
-            float: right;
-        }
-
-        .messageReceive span::before {
-            content: " ";
-            position: absolute;
-            top: 9px;
-            left: 100%;
-            border-left: 15px solid transparent; 
-            border-left-color: #ff0000;
-        }
-
-        .messageSend span {
-            display: block;
-        }
-
-        .messageSend span::after {
-            content: "";
-            clear: both;
-        }
-
-        .messageInput {
-            bottom: 0px;
         }
     </style>
 </head>
@@ -112,20 +74,10 @@
     <div class="container">
         <br><br>
         <div class="messageList">
-            <div class="row">
-                <div id="recvId" class="hide"><?php echo $id ?></div>
-                <div id="recvName" class="hide"><?php echo $name ?></div>
-                <div class="col s12 m10 offset-m1">
-                    <div class="messageReceive">
-                        <span>123</span>
-                    </div>
-                </div>
-                <div class="col s12 m10 offset-m1">
-                    <div class="messageSend">
-                        <span>45jhfjsdhfdslhfiushdiulhasliudiuashdliuhasuil6</span>
-                    </div>
-                </div>
-            </div>
+            <div id="recvId" class="hide"><?php echo $id ?></div>
+            <div id="recvName" class="hide"><?php echo $name ?></div>
+            <p class="messageBox left">123</p>
+            <p class="messageBox right">45jhfjsdhfdslhfiushdiulhasliujfnjfnjnjfnvjfnvjnfjvnfjnvfjnvjfvjfnvjfnvjfnvjfnjekdnwkdjkwmdmdwkdiuashdliuhasuil6</p>
         </div>
         <div class="messageInput">
             <div class="row">
