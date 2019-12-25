@@ -112,13 +112,13 @@
             <div class="row">
                 <form class="col s12">
                     <div class="row">
-                        <div class="input-field col s10 m8 offset-m1">
+                        <div class="input-field col s10 m9 offset-m1">
                             <i class="material-icons prefix">mode_edit</i>
                             <input id="message" type="text" class="validate">
                             <label for="message">Message</label>
                         </div>
-                        <div class="input-field col s2">
-                            <button class="btn waves-effect waves-light" type="submit">
+                        <div class="input-field col s2 m1">
+                            <button class="btn waves-effect waves-light right" type="submit">
                                 <i class="material-icons">send</i>
                             </button>
                         </div>
