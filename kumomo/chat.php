@@ -32,7 +32,7 @@
 
     <style type="text/css">
         .messageList {
-            padding: 2em;
+            padding: 1em;
         }
 
         .messageBox {
@@ -75,8 +75,9 @@
         <div class="messageList">
             <div id="recvId" class="hide"><?php echo $id ?></div>
             <p class="messageBox left">123</p>
+            <p class="messageBox">123</p>
             <br>
-            <p class="messageBox right">45jhfjsdhfdslhfiushdiulhasliujfnjfnjnjfnvjfnvjnfjvnfjnvfjnvjfvjfnvjfnvjfnvjfnjekdnwkdjkwmdmdwkdiuashdliuhasuil6</p>
+            <p class="messageBox">45jhfjsdhfdslhfiushdiulhasliujfnjfnjnjfnvjfnvjnfjvnfjnvfjnvjfvjfnvjfnvjfnvjfnjekdnwkdjkwmdmdwkdiuashdliuhasuil6</p>
         </div>
         <div class="messageInput">
             <div class="row">
