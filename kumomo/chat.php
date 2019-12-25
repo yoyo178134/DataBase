@@ -51,7 +51,7 @@
         .messageInput {
             position: fixed;
             left: 0;
-            bottom: 0.5em;
+            bottom: 0.2em;
             width: 100%;
         }
 
