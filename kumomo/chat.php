@@ -91,16 +91,23 @@
         <br><br>
         <div class="messageList">
             <div id="recvId" class="hide"><?php echo $id ?></div>
-            <div class="row">
-                <div class="messageBox left">
-                    <span>123</span>
+
+            <template class="messageReceived">
+                <div class="row">
+                    <div class="messageBox left">
+                        <span id="RecvMsg">##########</span>
+                    </div>
                 </div>
-            </div>
-            <div class="row">
-                <div class="messageBox right"> 
-                    <span>45jhfjsdhfdslhfiushdiulhasliujfnjfnjnjfnvjfnvjnfjvnfjnvfjnvjfvjfnvjfnvjfnvjfnjekdnwkdjkwmdmdwkdiuashdliuhasuil6</span>
+            </template>
+            
+            <template class="messageSend">
+                <div class="row">
+                    <div class="messageBox right"> 
+                        <span id="SendMsg">##########</span>
+                    </div>
                 </div>
-            </div>
+            </template>
+
         </div>
 
         <div class="messageInput">
