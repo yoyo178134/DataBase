@@ -75,7 +75,6 @@
         .messageSend span::after {
             content: "";
             clear: both;
-            display: table;
         }
 
         .messageInput {
