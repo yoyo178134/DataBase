@@ -50,7 +50,7 @@
 
         .messageInput {
             display: absolute;
-            top: calc(100vh - 10vh);
+            bottom: 1em;
         }
 
         @media #{$small-and-down} {
@@ -100,7 +100,10 @@
                 </div>
             </div>
         </div>
-        <div class="messageInput">
+    </div>
+
+    <div class="messageInput">
+        <div class="container">
             <div class="row">
                 <form class="col s12">
                     <div class="row">
