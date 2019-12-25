@@ -1,4 +1,6 @@
 <?php
+    $id = $_GET['id'];
+    $name = $_GET['name'];
     session_start() ;
     if(!isset($_SESSION['is_login']) || !$_SESSION['is_login'])
     {
@@ -111,6 +113,8 @@
         <br><br>
         <div class="messageList">
             <div class="row">
+                <div id="recvId" class="hide"><?php echo $id ?></div>
+                <div id="recvName" class="hide"><?php echo $name ?></div>
                 <div class="col s12 m10 offset-m1">
                     <div class="messageReceive">
                         <span>123</span>
