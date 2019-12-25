@@ -58,7 +58,7 @@
         <br><br>
         <div class="row">
             <div class="col s12 m10 offset-m1">
-                <ul class="collection">
+                <ul class="collection" id="list">
                     <template class="chatTemplate">
                         <li class="collection-item">
                             <a href="chat.php" class="black-text" id="href">
@@ -184,7 +184,7 @@
                         mix += temp[0].outerHTML;
                     })
                     console.log(mix)
-                    $("#collection").html(mix);
+                    $("#list").html(mix);
                 },
                 error: function(XMLHttpRequest, textStatus, errorThrown) {
                     alert(XMLHttpRequest.status);
