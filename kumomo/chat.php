@@ -35,6 +35,11 @@
         }
 
         .messageReceive {
+            display: inline-block;
+            position:relative;
+            min-height: 40px;
+            line-height:20px;
+            word-break: break-all;
             border: 2px solid #dedede;
             background-color: #f1f1f1;
             border-radius: 5px;
