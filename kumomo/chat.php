@@ -55,11 +55,10 @@
             border-radius: 5px;
             padding: 10px;
             margin: 10px 0;
-            display: inline-block;
             float: right;
         }
 
-        .messageReceive span::before {
+        .messageReceive p::before {
             content: " ";
             position: absolute;
             top: 9px;
@@ -68,10 +67,10 @@
             border-left-color: #ff0000;
         }
 
-        .messageSend span::before {
+        .messageSend p::before {
             content: "";
             clear: both;
-            display: table;
+            display: inline-block;
         }
 
         .messageInput {
@@ -110,12 +109,12 @@
             <div class="row">
                 <div class="col s12 m10 offset-m1">
                     <div class="messageReceive">
-                        <span>123</span>
+                        <p>123</p>
                     </div>
                 </div>
                 <div class="col s12 m10 offset-m1">
                     <div class="messageSend">
-                        <span>45jhfjsdhfdslhfiushdiulhasliudiuashdliuhasuil6</span>
+                        <p>45jhfjsdhfdslhfiushdiulhasliudiuashdliuhasuil6</p>
                     </div>
                 </div>
             </div>
