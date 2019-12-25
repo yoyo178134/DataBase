@@ -43,6 +43,10 @@
             margin: 10px 0;
             max-width: 60%;
         }
+
+        .messageBox p {
+            word-break: break-all;
+        }
     </style>
 </head>
 
