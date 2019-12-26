@@ -114,6 +114,7 @@
                         <div class="messageBox left">
                             <span id="RecvMsg" class="msg">##########</span>
                         </div>
+                        <span id="ResvTime" class="left">##########</span>
                     </div>
                 </template>
                 
@@ -122,6 +123,7 @@
                         <div class="messageBox right"> 
                             <span id="SendMsg" class="msg">##########</span>
                         </div>
+                        <span id="SendTime" class="right">##########</span>
                     </div>
                 </template>
 
