@@ -31,10 +31,13 @@
     </script>
 
     <style type="text/css">
-        .messageList {
+        .container {
             border: 1px solid #f5f5f5;
             background-color: #fafafa;
             border-radius: 2px;
+        }
+
+        .messageList {
             padding: 1em;
             overflow-y: auto;
             height: calc(100vh - 200px);
