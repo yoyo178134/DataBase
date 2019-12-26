@@ -32,13 +32,15 @@
 
     <style type="text/css">
         .messageList {
+            border: 2px solid #80cbc4;
+            background-color: #e0f2f1;
             padding: 1em;
             overflow-y: auto;
             max-height: calc(100vh - 210px);
         }
 
         .messageList .row{
-            /*margin-bottom: 0px;*/
+            margin-bottom: 0px;
         }
 
         .messageBox {
