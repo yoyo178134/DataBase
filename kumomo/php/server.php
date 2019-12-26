@@ -166,11 +166,12 @@
         $str1 = msg_encode(json_encode($msg_ar1));//傳送端訊息
         $str2 = msg_encode(json_encode($msg_ar2));//接受端訊息
         echo $str1;
-
-        socket_write($cilentArray[$clientKey]['socket'], $str1, strlen($str1));//傳送端
-
-        if($temp_msg->receive_id != -1)
+        
+       
+        if($temp_msg->receive_id != -1){
+            socket_write($cilentArray[$clientKey]['socket'], $str1, strlen($str1));//傳送端
             msgSend($temp_msg->text, $temp_msg->send_id, $temp_msg->receive_id);//MySQL
+        }
 
         if($receiverKey!=null){//有接收端key
             if(in_array($cilentArray[$receiverKey]['socket'], $socketArray)){
