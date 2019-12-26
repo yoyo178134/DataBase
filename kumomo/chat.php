@@ -220,7 +220,7 @@
                 }
             })
 
-            var websocket = new WebSocket('ws://118.169.145.219:8080'); 
+            var websocket = new WebSocket('ws://course.clipfetcher.com:8080'); 
             websocket.onopen = function(event) { 
                 
                 if(websocket.readyState==1){

@@ -159,6 +159,7 @@
                 url: "php/userProfile.php",
                 dataType: "json",
                 success: function (data) {
+                    console.log(data)
                     userid =  data.id;
                     userName = data.name;
                     userAccount = data.account;
