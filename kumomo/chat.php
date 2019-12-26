@@ -118,12 +118,12 @@
                     </div>
                 </template>
                 
-                <template class="messageSend">
+                <template class="messageSend"> 
                     <div class="row">
                         <div class="messageBox right"> 
-                            <span id="SendMsg" class="msg">##########</span>
+                            <span id="SendMsg" class="msg tiny">##########</span>
                         </div>
-                        <span id="SendTime" class="right">##########</span>
+                        <span id="SendTime" class="right tiny">##########</span>
                     </div>
                 </template>
 
