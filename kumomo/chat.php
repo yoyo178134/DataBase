@@ -146,7 +146,7 @@
                 type: "GET",
                 url: "php/msgAllSendRsvphp.php",
                 dataType: "json",
-                date: $(#recvId).text(),
+                date: $(#recvId).text,
                 success: function (data) {
                     var temp;
                     var mix = '';
