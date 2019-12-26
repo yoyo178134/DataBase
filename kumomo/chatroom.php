@@ -63,20 +63,20 @@
                         <li class="collection-item">
                             <a href="chat.php" class="black-text" id="href">
                                 <div class="row">
-                                    <div class="col s4 m2">
+                                    <div class="col s2 m2">
                                         <p class="center-align"><i class="medium material-icons">account_circle</i></p>
+                                    </div>
+                                    <div class="col s6 m8">
+                                        <h6 class="title center-align" id="name">###</h6>
+                                        <p class="hide" id="id">##</p>
+                                    </div>
+                                    <div class="col s2 m2">
+                                        <p class="right-align"><span class="new badge" data-badge-caption="" id="unReadNum">1</span></p>
                                     </div>
                                     <div class="col s6 m8">
                                         <p class="truncate" id="text">#####</p>
                                     </div>
-                                    <div class="col s2 m2">
-                                        <p class="right-align"><span class="new badge" data-badge-caption="" id="unReadNum" style="font-size: 2em; height: 26px;">1</span></p>
-                                    </div>
-                                    <div class="col s4 m2">
-                                        <h6 class="title center-align" id="name">###</h6>
-                                        <p class="hide" id="id">##</p>
-                                    </div>
-                                    <div class="col s8 m10">
+                                    <div class="col s4 m4">
                                         <p class="right-align grey-text" id="time"><small>2019-06-28 00:02:00</small></p>
                                     </div>
                                 </div>
