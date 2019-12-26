@@ -45,7 +45,7 @@
             background-color: #fafafa;
             border-radius: 5px;
             padding: 0.5em;
-            overflow-y: auto;
+            overflow-y: hidden;
             height: calc(100% - 100px);
         }
 
