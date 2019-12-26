@@ -170,7 +170,7 @@
 
     function msgUnReadCnt($send_id){
         $data = array();
-        $sql = "SELECT COUNT(id) as unReadCnt FROM message WHERE send_id = '{$send_id}' AND isRead = 0 GROUP BY receive_id ORDER BY time DESC";
+        $sql = "SELECT COUNT(id) as unReadCnt, receive_id FROM message WHERE send_id = '{$send_id}' AND isRead = 0 GROUP BY receive_id ORDER BY time DESC";
         $query = mysqli_query($_SESSION['link'], $sql);
         if($query){
             if(mysqli_num_rows($query) > 0){
@@ -195,8 +195,8 @@
             if(mysqli_num_rows($query) > 0){
                 $i = 0;
                 if(count($cnt)!=mysqli_num_rows($query)){
-                    for($i=count($cnt); $i<mysqli_num_rows($query); $i++)
-                        $cnt[$i]['unReadCnt'] = 0;//如果為已讀且最後一筆需再加一筆為0(msgUnReadCnt只看未讀)
+                    for($j=count($cnt); $j<mysqli_num_rows($query); $j++)
+                        $cnt[$j]['unReadCnt'] = 0;//如果為已讀且最後一筆需再加一筆為0(msgUnReadCnt只看未讀)
                 }
                 while($row = mysqli_fetch_assoc($query)){
                     $data[] = array_merge($row, $cnt[$i++]);
