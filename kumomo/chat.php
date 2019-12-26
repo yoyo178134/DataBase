@@ -32,8 +32,9 @@
 
     <style type="text/css">
         .messageList {
-            border: 2px solid #80cbc4;
-            background-color: #e0f2f1;
+            border: 1px solid #f5f5f5;
+            background-color: #fafafa;
+            border-radius: 2px;
             padding: 1em;
             overflow-y: auto;
             max-height: calc(100vh - 210px);
