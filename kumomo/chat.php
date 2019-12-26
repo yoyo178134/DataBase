@@ -145,13 +145,11 @@
         $.ajax({
                 type: "GET",
                 url: "php/msgAllSendRsv.php",
-                dataType: "json",
+                //dataType: "json",
                 date: {
                     receive_id : $("#recvId").text()
                 },
                 success: function (data) {
-                    var temp;
-                    var mix = '';
                     console.log(data)
                     /*
                     $.each(data, function (key,ele){
