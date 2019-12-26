@@ -36,7 +36,7 @@
             background-color: #fafafa;
             border-radius: 4px;
             padding: 1em;
-            padding-bottom: 2em;
+            margin-bottom: 2em;
             bottom: 1em;
             height: calc(100vh - 80px);
         }
