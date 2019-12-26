@@ -34,7 +34,8 @@
         .message {
             border: 1px solid #f5f5f5;
             background-color: #fafafa;
-            border-radius: 2px;
+            border-radius: 4px;
+            bottom: 1em;
         }
 
         .messageList {
@@ -60,12 +61,12 @@
             word-break: break-all;
         }
 
-
+        /*
         .messageInput {
             left: 0;
             bottom: 0;
             width: 100%;
-        }
+        }*/
 
         @media #{$small-and-down} {
             .messageBox {
