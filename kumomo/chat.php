@@ -36,7 +36,7 @@
             background-color: #fafafa;
             border-radius: 4px;
             padding: 1em;
-            height: calc(100vh - 80px);
+            height: calc(100vh - 60px);
         }
 
         .messageList {
