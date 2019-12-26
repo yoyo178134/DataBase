@@ -37,7 +37,7 @@
             border-radius: 2px;
             padding: 1em;
             overflow-y: auto;
-            max-height: calc(100vh - 180px);
+            max-height: calc(100vh - 202px);
         }
 
         .messageList .row{
@@ -65,6 +65,10 @@
         }
 
         @media #{$small-and-down} {
+            .messageList {
+                max-height: calc(100vh - 192px);
+            }
+
             .messageBox {
                 max-width: 60%;
             }
