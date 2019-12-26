@@ -34,7 +34,7 @@
         .messageList {
             padding: 1em;
             overflow-x: auto;
-            bottom: 119px;
+            margin-bottom: 119px;
         }
 
         .messageBox {
