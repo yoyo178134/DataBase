@@ -67,7 +67,7 @@
                                         <p class="center-align"><i class="small material-icons">account_circle</i></p>
                                     </div>
                                     <div class="col s9">
-                                        <h6 class="title center-align" id="name">###</h6>
+                                        <h6 class="title" id="name">###</h6>
                                         <p class="hide" id="id">##</p>
                                     </div>
                                     <div class="col s2">
