@@ -159,6 +159,7 @@
                 url: "php/userProfile.php",
                 dataType: "json",
                 success: function (data) {
+                    console.log(data)
                     userid =  data.id;
                     userName = data.name;
                     userAccount = data.account;
@@ -194,9 +195,7 @@
                     $("#list").html(mix);
                 },
                 error: function(XMLHttpRequest, textStatus, errorThrown) {
-                    alert(XMLHttpRequest.status);
-                    alert(XMLHttpRequest.readyState);
-                    alert(textStatus);
+                    console.log("msgLast ajax error "+XMLHttpRequest+" status:"+textStatus+" thrown:"+errorThrown)
                 }
             })
 
