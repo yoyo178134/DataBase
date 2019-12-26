@@ -73,10 +73,10 @@
                                     <div class="col s2">
                                         <p class="right-align"><span class="new badge" data-badge-caption="" id="unReadNum">1</span></p>
                                     </div>
-                                    <div class="col s6 offset-s2">
+                                    <div class="col s6">
                                         <p class="truncate" id="text">#####</p>
                                     </div>
-                                    <div class="col s4">
+                                    <div class="col s6">
                                         <p class="right-align grey-text" id="time"><small>2019-06-28 00:02:00</small></p>
                                     </div>
                                 </div>
