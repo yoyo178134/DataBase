@@ -28,6 +28,12 @@
     <script type="text/javascript">
 
     </script>
+
+    <style type="text/javascript">
+        .container .row {
+            margin-bootom: 0;
+        }
+    </style>
 </head>
 
 <body>
