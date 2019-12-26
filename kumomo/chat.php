@@ -43,7 +43,7 @@
         .messageList {
             padding: 0.5em;
             overflow-y: auto;
-            height: calc(100% - 80px);
+            height: calc(100% - 100px);
         }
 
         .messageList .row{
