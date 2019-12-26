@@ -80,7 +80,7 @@
                                         <p class="right-align"><span class="new badge" data-badge-caption="" id="unReadNum">1</span></p>
                                     </div>
                                     <div class="col s6 offset-s1">
-                                        <p class="grey-text darken-4 truncate" id="text">#####</p>
+                                        <p class="grey-text text-darken-4 truncate" id="text">#####</p>
                                     </div>
                                     <div class="col s3">
                                         <p class="right-align grey-text truncate" id="time"><small class="tiny">2019-06-28 00:02:00</small></p>
