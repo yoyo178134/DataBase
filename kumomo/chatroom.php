@@ -30,7 +30,7 @@
     </script>
 
     <style type="text/javascript">
-        .collection-item .row {
+        .chatroomList {
             margin-bottom: 0px;
         }
     </style>
@@ -68,7 +68,7 @@
                     <template class="chatTemplate">
                         <li class="collection-item">
                             <a href="chat.php" class="black-text" id="href">
-                                <div class="row">
+                                <div class="row chatroomList">
                                     <div class="col s2">
                                         <p class="center-align"><i class="small material-icons">account_circle</i></p>
                                     </div>
@@ -80,7 +80,7 @@
                                         <p class="right-align"><span class="new badge" data-badge-caption="" id="unReadNum">1</span></p>
                                     </div>
                                     <div class="col s6 offset-s1">
-                                        <p class="grey-text truncate" id="text">#####</p>
+                                        <p class="grey-text darken-4 truncate" id="text">#####</p>
                                     </div>
                                     <div class="col s3">
                                         <p class="right-align grey-text truncate" id="time"><small class="tiny">2019-06-28 00:02:00</small></p>
