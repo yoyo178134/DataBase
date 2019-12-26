@@ -37,7 +37,7 @@
             border-radius: 2px;
             padding: 1em;
             overflow-y: auto;
-            max-height: calc(100vh - 210px);
+            max-height: calc(100vh - 200px);
         }
 
         .messageList .row{
@@ -97,7 +97,7 @@
     </ul>
 
     <div class="container">
-        <br><br>
+        <br>
         <div class="messageList">
             <div id="recvId" class="hide"><?php echo $id ?></div>
 
