@@ -30,8 +30,8 @@
     </script>
 
     <style type="text/javascript">
-        .container .row {
-            margin-bottom: 0;
+        .collection-item .row {
+            margin-bottom: 0px;
         }
     </style>
 </head>
