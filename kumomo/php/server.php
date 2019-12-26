@@ -6,7 +6,7 @@
         session_start();
     }*/
 
-    $serverSocket = webSocket('127.0.0.1',8080);
+    $serverSocket = webSocket('0.0.0.0',8080);
     $socketArray = array($serverSocket);
     $cilentArray = array();
     $userIDtoID = array();
