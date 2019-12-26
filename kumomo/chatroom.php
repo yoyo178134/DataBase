@@ -76,7 +76,7 @@
                                     <div class="col s6 offset-s1">
                                         <p class="truncate" id="text">#####</p>
                                     </div>
-                                    <div class="col s4">
+                                    <div class="col s3">
                                         <p class="right-align grey-text truncate" id="time"><small class="tiny">2019-06-28 00:02:00</small></p>
                                     </div>
                                 </div>
