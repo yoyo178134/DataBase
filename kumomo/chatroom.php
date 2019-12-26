@@ -195,9 +195,7 @@
                     $("#list").html(mix);
                 },
                 error: function(XMLHttpRequest, textStatus, errorThrown) {
-                    alert(XMLHttpRequest.status);
-                    alert(XMLHttpRequest.readyState);
-                    alert(textStatus);
+                    console.log("msgLast ajax error")
                 }
             })
 
