@@ -149,6 +149,10 @@
     </div>
 
     <script type="text/javascript">
+        var userid;
+        var userName;
+        var userAccount;
+        var recvid;
         function getRecvTemp() {
             return $($("template.messageReceived").html()).clone();
         }
@@ -171,7 +175,22 @@
             $('.tooltipped').tooltip();
             $(".dropdown-trigger").dropdown();
             $('.modal').modal();
-
+            recvid = $("#recvId").text();
+            $.ajax({
+                type: "GET",
+                url: "php/userProfile.php",
+                dataType: "json",
+                success: function (data) {
+                    userid =  data.id;
+                    userName = data.name;
+                    userAccount = data.account;
+                },
+                error: function(XMLHttpRequest, textStatus, errorThrown) {
+                    alert(XMLHttpRequest.status);
+                    alert(XMLHttpRequest.readyState);
+                    alert(textStatus);
+                }
+            })
             $.ajax({
                 type: "GET",
                 url: "php/msgAllSendRsv.php",
@@ -185,7 +204,7 @@
                         //console.log(ele);
                         writeMessage(ele.text,ele.time,(ele.isOwner == "1"))
                     })
-
+                    $(".messageList").animate({scrollTop:$(".messageList").height()});
                 },
                 error: function(XMLHttpRequest, textStatus, errorThrown) {
                     alert(XMLHttpRequest.status);
@@ -193,7 +212,60 @@
                     alert(textStatus);
                 }
             })
+
+            var websocket = new WebSocket('ws://course.clipfetcher.com:8080'); 
+            websocket.onopen = function(event) { 
+                
+                if(websocket.readyState==1){
+                    //console.log(websocket.readyState)
+                    let msg = {
+                        text : "ok",
+                        send_id: userid,
+                        receive_id : -1
+                    }
+                    console.log(JSON.stringify(msg))
+                    websocket.send(JSON.stringify(msg))
+                } 
+                    
+            }
+
+            websocket.onmessage = function(event) {
+                var Data = JSON.parse(event.data);
+                console.log(Data);
+                if(Data.receive_id==-1){
+                    id = Data.send_id;
+                }
+                console.log(id)
+                writeMessage(Data.text,Data.time,(Data.isOwner == "1"))
+                $(".messageList").animate({scrollTop:$(".messageList").height()});
+                //showMessage("<div class='"+Data.message_type+"'>"+Data.message+"</div>");
+                //$('#chat-message').val('');
+            };
+            
+            websocket.onerror = function(event){
+                //showMessage("<div class='error'>Problem due to some Error</div>");
+                console.log("ws error")
+            };
+
+            websocket.onclose = function(event){
+                //showMessage("<div class='chat-connection-ack'>Connection Closed</div>");
+                console.log("ws close")
+            }; 
+            
+            
+            $('#message').on("submit",function(event){
+                event.preventDefault();      
+                var messageJSON = {
+                    text: $("#message").val(),
+                    send_id: userid,
+                    receive_id: recvid
+                };
+                websocket.send(JSON.stringify(messageJSON));
+
+            });
+            
         });
+
     </script>
 </body>
 
