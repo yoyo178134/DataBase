@@ -1,6 +1,6 @@
 <?php
-    //require_once 'kumomo_connect.php';
-    //require_once 'functions.php';
+    require_once 'kumomo_connect.php';
+    require_once 'functions.php';
     
     /*if(!isset($_SESSION)){
         session_start();
@@ -157,8 +157,7 @@
         $receiverKey = findReceiverID($msg);
         echo $receiverKey;
         $temp_msg = json_decode($msg);
-        //if($msg->receive_id != 1)
-        //    msgSend($msg->text, $msg->receive_id);//MySQL
+        
         $msg_ar1 = array('text'=>$temp_msg->text,'send_id'=>$temp_msg->send_id, 'receive_id'=>$temp_msg->receive_id, 
                         'time'=>date("Y-m-d H:i:s"), 'isRead'=>1, 'isOwner'=> 1);
         $msg_ar2 = array('text'=>$temp_msg->text,'send_id'=>$temp_msg->receive_id, 'receive_id'=>$temp_msg->send_id, 
@@ -167,11 +166,13 @@
         $str2 = msg_encode(json_encode($msg_ar2));
         echo $str1;
         socket_write($cilentArray[$clientKey]['socket'], $str1, strlen($str1));//傳送端
+        if($temp_msg->receive_id != -1)
+            msgSend($temp_msg->text, $temp_msg->send_id, $temp_msg->receive_id);//MySQL
 
         if($receiverKey!=null){
             if(in_array($cilentArray[$receiverKey]['socket'], $socketArray)){
                 socket_write($cilentArray[$receiverKey]['socket'], $str2, strlen($str2));//接受端
-                //msgRead($temp_msg->receive_id);//MySQL
+                msgRead($temp_msg->receive_id, $temp_msg->send_id);//MySQL
             }
         }
     }
