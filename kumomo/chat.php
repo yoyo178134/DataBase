@@ -62,12 +62,10 @@
             word-break: break-all;
         }
 
-        /*
+        
         .messageInput {
-            left: 0;
             bottom: 0;
-            width: 100%;
-        }*/
+        }
 
         @media #{$small-and-down} {
             .messageBox {
