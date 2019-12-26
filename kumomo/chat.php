@@ -269,7 +269,7 @@
                 };
                 websocket.send(JSON.stringify(messageJSON));
                 $("#message").val("");
-                //return false;
+                return false;
             });
             
         });
