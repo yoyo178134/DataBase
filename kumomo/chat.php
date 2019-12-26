@@ -155,7 +155,7 @@
     </div>
 
     <script type="text/javascript">
-        var websocket = new WebSocket('ws://118.169.145.219:8080'); 
+        var websocket = new WebSocket('ws://127.0.0.1:8080'); 
         
         var userid;
         var userName;
