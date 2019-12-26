@@ -143,7 +143,7 @@
             
         }
 
-
+        /*
         $.ajax({
                 type: "GET",
                 url: "php/msgAllSendRsv.php",
@@ -153,7 +153,7 @@
                 },
                 success: function (data) {
                     console.log(data)
-                    /*
+                    
                     $.each(data, function (key,ele){
                         temp = getTemplate();
                         let id = ele.receive_id;
@@ -166,7 +166,7 @@
                         temp.find("#href").attr("href","chat.php?id="+id);
                         mix += temp[0].outerHTML;
                     })
-                    */
+                    
 
                 },
                 error: function(XMLHttpRequest, textStatus, errorThrown) {
@@ -174,7 +174,7 @@
                     alert(XMLHttpRequest.readyState);
                     alert(textStatus);
                 }
-        })
+        })*/
 
         $(document).ready(function () {
             $('.sidenav').sidenav();
@@ -182,6 +182,25 @@
             $('.tooltipped').tooltip();
             $(".dropdown-trigger").dropdown();
             $('.modal').modal();
+
+            $.ajax({
+                type: "GET",
+                url: "php/msgAllSendRsv.php",
+                dataType : "json",
+                data: {
+                receive_id : $("#recvId").text()
+                },
+                success: function (data) {
+                    console.log(data)
+
+
+                },
+                error: function(XMLHttpRequest, textStatus, errorThrown) {
+                    alert(XMLHttpRequest.status);
+                    alert(XMLHttpRequest.readyState);
+                    alert(textStatus);
+                }
+            })
         });
     </script>
 </body>
