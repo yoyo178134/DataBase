@@ -73,7 +73,7 @@
                                     <div class="col s2">
                                         <p class="right-align"><span class="new badge" data-badge-caption="" id="unReadNum">1</span></p>
                                     </div>
-                                    <div class="col s6">
+                                    <div class="col s6 offset-s1">
                                         <p class="truncate" id="text">#####</p>
                                     </div>
                                     <div class="col s4">
