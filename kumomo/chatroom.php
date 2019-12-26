@@ -77,7 +77,7 @@
                                         <p class="truncate" id="text">#####</p>
                                     </div>
                                     <div class="col s4">
-                                        <p class="right-align grey-text" id="time"><small class="tiny">2019-06-28 00:02:00</small></p>
+                                        <p class="right-align grey-text truncate" id="time"><small class="tiny">2019-06-28 00:02:00</small></p>
                                     </div>
                                 </div>
                             </a>
