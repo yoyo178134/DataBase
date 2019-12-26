@@ -116,7 +116,7 @@
                         </div>
                     </div>
                     <div class="row">
-                        <span id="ResvTime" class="left tiny grey-text">##########</span>
+                        <span id="ResvTime" class="left tiny grey-text msgtime">##########</span>
                     </div>
                 </template>
                 
@@ -127,7 +127,7 @@
                         </div>
                     </div>
                     <div class="row">
-                        <span id="SendTime" class="right tiny grey-text">##########</span>
+                        <span id="SendTime" class="right tiny grey-text msgtime">##########</span>
                     </div>
                 </template>
 
@@ -171,6 +171,7 @@
             //console.log(text+time+isOwner)
             var temp = (isOwner)?getSendTemp():getRecvTemp();
             temp.find(".msg").text(text);
+            temp.find(".msgtime").text(time);
             $(".messageList").append(temp);
         }
 
