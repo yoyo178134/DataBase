@@ -95,7 +95,7 @@
             <template class="messageReceived">
                 <div class="row">
                     <div class="messageBox left">
-                        <span id="RecvMsg">##########</span>
+                        <span id="RecvMsg" class="msg">##########</span>
                     </div>
                 </div>
             </template>
@@ -103,7 +103,7 @@
             <template class="messageSend">
                 <div class="row">
                     <div class="messageBox right"> 
-                        <span id="SendMsg">##########</span>
+                        <span id="SendMsg" class="msg">##########</span>
                     </div>
                 </div>
             </template>
@@ -140,7 +140,10 @@
         }
 
         function writeMessage(text,time,isOwner) {
-            console.log(text+time+isOwner)
+            //console.log(text+time+isOwner)
+            var temp = (isOwner)?getSendTemp():getRecvTemp();
+            temp.find(".msg").text(text);
+            $(".messageList").append(temp);
         }
 
 
@@ -161,7 +164,7 @@
                 success: function (data) {
                     
                     $.each(data, function (key,ele){
-                        console.log(ele);
+                        //console.log(ele);
                         writeMessage(ele.text,ele.time,(ele.isOwner == "1"))
                     })
 
