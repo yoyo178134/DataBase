@@ -31,7 +31,7 @@
     </script>
 
     <style type="text/css">
-        .container {
+        .message {
             border: 1px solid #f5f5f5;
             background-color: #fafafa;
             border-radius: 2px;
@@ -101,43 +101,45 @@
 
     <div class="container">
         <br>
-        <div class="messageList">
-            <div id="recvId" class="hide"><?php echo $id ?></div>
+        <div class="message">
+            <div class="messageList">
+                <div id="recvId" class="hide"><?php echo $id ?></div>
 
-            <template class="messageReceived">
-                <div class="row">
-                    <div class="messageBox left">
-                        <span id="RecvMsg" class="msg">##########</span>
-                    </div>
-                </div>
-            </template>
-            
-            <template class="messageSend">
-                <div class="row">
-                    <div class="messageBox right"> 
-                        <span id="SendMsg" class="msg">##########</span>
-                    </div>
-                </div>
-            </template>
-
-        </div>
-
-        <div class="messageInput">
-            <div class="row">
-                <form class="col s12">
+                <template class="messageReceived">
                     <div class="row">
-                        <div class="input-field col s10 m9 offset-m1">
-                            <i class="material-icons prefix">mode_edit</i>
-                            <input id="message" type="text" class="validate">
-                            <label for="message">Message</label>
-                        </div>
-                        <div class="input-field col s2 m1">
-                            <button class="btn waves-effect waves-light right" type="submit">
-                                <i class="material-icons">send</i>
-                            </button>
+                        <div class="messageBox left">
+                            <span id="RecvMsg" class="msg">##########</span>
                         </div>
                     </div>
-                </form>
+                </template>
+                
+                <template class="messageSend">
+                    <div class="row">
+                        <div class="messageBox right"> 
+                            <span id="SendMsg" class="msg">##########</span>
+                        </div>
+                    </div>
+                </template>
+
+            </div>
+
+            <div class="messageInput">
+                <div class="row">
+                    <form class="col s12">
+                        <div class="row">
+                            <div class="input-field col s10 m9 offset-m1">
+                                <i class="material-icons prefix">mode_edit</i>
+                                <input id="message" type="text" class="validate">
+                                <label for="message">Message</label>
+                            </div>
+                            <div class="input-field col s2 m1">
+                                <button class="btn waves-effect waves-light right" type="submit">
+                                    <i class="material-icons">send</i>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
