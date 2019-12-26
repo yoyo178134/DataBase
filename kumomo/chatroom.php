@@ -31,7 +31,7 @@
 
     <style type="text/javascript">
         .container .row {
-            margin-bootom: 0;
+            margin-bottom: 0;
         }
     </style>
 </head>
