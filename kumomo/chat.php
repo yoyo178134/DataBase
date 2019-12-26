@@ -131,50 +131,18 @@
     </div>
 
     <script type="text/javascript">
-        function getRecvTemp(params) {
+        function getRecvTemp() {
             return $("template.messageReceived").html().clone();
         }
 
-        function  getSendTemp(params) {
+        function  getSendTemp() {
             return $("template.messageSend").html().clone();
         }
 
-        function writeMessage(params) {
-            
+        function writeMessage(text,time,isOwner) {
+            comsole.log(text+time+isOwner)
         }
 
-        /*
-        $.ajax({
-                type: "GET",
-                url: "php/msgAllSendRsv.php",
-                dataType: "json",
-                date: {
-                receive_id : $("#recvId").text()
-                },
-                success: function (data) {
-                    console.log(data)
-                    
-                    $.each(data, function (key,ele){
-                        temp = getTemplate();
-                        let id = ele.receive_id;
-                        let name = ele.receive_name;
-                        temp.find("#id").text(ele.receive_id)
-                        temp.find("#name").text(ele.receive_name)
-                        temp.find("#text").text(ele.text)
-                        temp.find("#time").text(ele.time)
-                        temp.find("#unReadNum").text(ele.unReadCnt)
-                        temp.find("#href").attr("href","chat.php?id="+id);
-                        mix += temp[0].outerHTML;
-                    })
-                    
-
-                },
-                error: function(XMLHttpRequest, textStatus, errorThrown) {
-                    alert(XMLHttpRequest.status);
-                    alert(XMLHttpRequest.readyState);
-                    alert(textStatus);
-                }
-        })*/
 
         $(document).ready(function () {
             $('.sidenav').sidenav();
@@ -191,8 +159,11 @@
                 receive_id : $("#recvId").text()
                 },
                 success: function (data) {
-                    console.log(data)
-
+                    
+                    $.each(data, function (key,ele){
+                        console.log(ele);
+                        writeMessage(ele.text,ele.time,(ele.isOwner == "1"))
+                    })
 
                 },
                 error: function(XMLHttpRequest, textStatus, errorThrown) {
