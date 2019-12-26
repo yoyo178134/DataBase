@@ -63,10 +63,10 @@
                         <li class="collection-item">
                             <a href="chat.php" class="black-text" id="href">
                                 <div class="row">
-                                    <div class="col s1">
+                                    <div class="col s2">
                                         <p class="center-align"><i class="small material-icons">account_circle</i></p>
                                     </div>
-                                    <div class="col s9">
+                                    <div class="col s8">
                                         <h6 class="title" id="name">###</h6>
                                         <p class="hide" id="id">##</p>
                                     </div>
@@ -77,7 +77,7 @@
                                         <p class="truncate" id="text">#####</p>
                                     </div>
                                     <div class="col s4">
-                                        <p class="right-align grey-text" id="time"><small>2019-06-28 00:02:00</small></p>
+                                        <p class="right-align grey-text" id="time"><small class="tiny">2019-06-28 00:02:00</small></p>
                                     </div>
                                 </div>
                             </a>
