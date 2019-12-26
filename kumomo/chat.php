@@ -36,13 +36,13 @@
             background-color: #fafafa;
             border-radius: 4px;
             padding: 1em;
-            height: calc(100vh - 60px);
+            height: calc(100vh - 80px);
         }
 
         .messageList {
             padding: 0.5em;
             overflow-y: auto;
-            height: calc(100vh - 200px);
+            height: calc(100% - 200px);
         }
 
         .messageList .row{
