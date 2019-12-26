@@ -34,7 +34,11 @@
         .messageList {
             padding: 1em;
             overflow-y: auto;
-            max-height: calc(100vh - 200px)
+            max-height: calc(100vh - 250px)
+        }
+
+        .messageList .row{
+            margin-bottom: 0px;
         }
 
         .messageBox {
