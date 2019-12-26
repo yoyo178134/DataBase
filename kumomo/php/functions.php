@@ -194,7 +194,7 @@
         if($query){
             if(mysqli_num_rows($query) > 0){
                 $i = 0;
-                if(count($cnt)!=mysqli_num_rows($query)){
+                if(count($cnt)<mysqli_num_rows($query)){
                     for($j=count($cnt); $j<mysqli_num_rows($query); $j++)
                         $cnt[$j]['unReadCnt'] = 0;//如果為已讀且最後一筆需再加一筆為0(msgUnReadCnt只看未讀)
                 }
