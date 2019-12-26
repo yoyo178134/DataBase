@@ -73,13 +73,13 @@
                                         <p class="center-align"><i class="small material-icons">account_circle</i></p>
                                     </div>
                                     <div class="col s8">
-                                        <h6 class="title" id="name">###</h6>
+                                        <h6 class="title" id="name">###</h6>:
                                         <p class="hide" id="id">##</p>
                                     </div>
                                     <div class="col s2">
                                         <p class="right-align"><span class="new badge" data-badge-caption="" id="unReadNum">1</span></p>
                                     </div>
-                                    <div class="col s6 offset-s1">
+                                    <div class="col s6 ">
                                         <p class="grey-text text-darken-2 truncate" id="text">#####</p>
                                     </div>
                                     <div class="col s3">
