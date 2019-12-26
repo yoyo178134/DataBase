@@ -64,7 +64,7 @@
                             <a href="chat.php" class="black-text" id="href">
                                 <div class="row">
                                     <div class="col s2 m2">
-                                        <p class="center-align"><i class="material-icons">account_circle</i></p>
+                                        <p class="center-align"><i class="small material-icons">account_circle</i></p>
                                     </div>
                                     <div class="col s6 m8">
                                         <h6 class="title center-align" id="name">###</h6>
