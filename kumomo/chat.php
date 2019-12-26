@@ -132,11 +132,11 @@
 
     <script type="text/javascript">
         function getRecvTemp() {
-            return $("template.messageReceived").html().clone();
+            return $("template.messageReceived").clone();
         }
 
         function  getSendTemp() {
-            return $("template.messageSend").html().clone();
+            return $("template.messageSend").clone();
         }
 
         function writeMessage(text,time,isOwner) {
