@@ -135,7 +135,7 @@
 
             <div class="messageInput">
                 <div class="row">
-                    <form class="col s12">
+                    <form id="messageInputForm" class="col s12">
                         <div class="row">
                             <div class="input-field col s10 m9 offset-m1">
                                 <i class="material-icons prefix">mode_edit</i>
@@ -143,7 +143,7 @@
                                 <label for="message">Message</label>
                             </div>
                             <div class="input-field col s2 m1">
-                                <button class="btn waves-effect waves-light right" type="button">
+                                <button class="btn waves-effect waves-light right" type="submit">
                                     <i class="material-icons">send</i>
                                 </button>
                             </div>
@@ -260,7 +260,7 @@
             }; 
             
             
-            $('#message').on("click",function(event){
+            $('#messageInputForm').on("submit",function(event){
                 event.preventDefault();      
                 var messageJSON = {
                     text: $("#message").val(),
