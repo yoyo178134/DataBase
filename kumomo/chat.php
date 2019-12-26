@@ -33,8 +33,8 @@
     <style type="text/css">
         .messageList {
             padding: 1em;
-            overflow-x: auto;
-            margin-bottom: 119px;
+            overflow-y: auto;
+            max-height: calc(100vh - 161px)
         }
 
         .messageBox {
