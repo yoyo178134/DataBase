@@ -158,9 +158,9 @@
         echo $receiverKey;
         $temp_msg = json_decode($msg);
         
-        $msg_ar1 = array('text'=>$temp_msg->text,'send_id'=>$temp_msg->send_id, 'receive_id'=>$temp_msg->receive_id, 
+        $msg_ar1 = array('text'=>$temp_msg->text, 'send_id'=>$temp_msg->send_id, 'receive_id'=>$temp_msg->receive_id, 
                         'time'=>date("Y-m-d H:i:s"), 'isRead'=>1, 'isOwner'=> 1);
-        $msg_ar2 = array('text'=>$temp_msg->text,'send_id'=>$temp_msg->receive_id, 'receive_id'=>$temp_msg->send_id, 
+        $msg_ar2 = array('text'=>$temp_msg->text, 'send_id'=>$temp_msg->receive_id, 'receive_id'=>$temp_msg->send_id, 
                         'time'=>date("Y-m-d H:i:s"), 'isRead'=>1, 'isOwner'=> 0);
 
         $str1 = msg_encode(json_encode($msg_ar1));//傳送端訊息
