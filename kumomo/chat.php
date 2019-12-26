@@ -261,7 +261,7 @@
                     receive_id: recvid
                 };
                 websocket.send(JSON.stringify(messageJSON));
-
+                return false;
             });
             
         });
