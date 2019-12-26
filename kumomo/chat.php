@@ -211,7 +211,7 @@
                         //console.log(ele);
                         writeMessage(ele.text,ele.time,(ele.isOwner == "1"))
                     })
-                    $(".messageList").animate({scrollTop:$(".messageList").height()});
+                    $(".messageList").animate({scrollTop:$(".messageList").get(0).scrollHeight});
                 },
                 error: function(XMLHttpRequest, textStatus, errorThrown) {
                     alert(XMLHttpRequest.status);
