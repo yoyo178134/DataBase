@@ -73,7 +73,7 @@
                                         <p class="center-align"><i class="small material-icons">account_circle</i></p>
                                     </div>
                                     <div class="col s8">
-                                        <h6 class="title" id="name">###</h6>:
+                                        <h6 class="title" id="name">###</h6>
                                         <p class="hide" id="id">##</p>
                                     </div>
                                     <div class="col s2">
@@ -184,7 +184,7 @@
                         let id = ele.receive_id;
                         let name = ele.receive_name;
                         temp.find("#id").text(ele.receive_id)
-                        temp.find("#name").text(ele.receive_name)
+                        temp.find("#name").text(ele.receive_name)+":"
                         temp.find("#text").text(ele.text)
                         temp.find("#time").text(ele.time)
                         temp.find("#unReadNum").text(ele.unReadCnt)
