@@ -140,7 +140,7 @@
         }
 
         function writeMessage(text,time,isOwner) {
-            comsole.log(text+time+isOwner)
+            console.log(text+time+isOwner)
         }
 
 
