@@ -115,7 +115,7 @@
 
     <div id="searchUser" class="modal">
         <div class="modal-content">
-            <h6>請輸入要查詢的使用者ID</h6>
+            <h6>請輸入要查詢的使用者 Account</h6>
             <br>
             <div class="row">
                 <form class="col s12">
@@ -123,7 +123,7 @@
                         <div class="input-field col s12">
                             <i class="material-icons prefix">account_circle</i>
                             <input id="icon_prefix" type="text" class="validate">
-                            <label for="icon_prefix">使用者ID</label>
+                            <label for="icon_prefix">使用者 Account</label>
                         </div>
                     </div>
                     <p class="right-align">
