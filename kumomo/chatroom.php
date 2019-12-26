@@ -79,7 +79,7 @@
                                     <div class="col s2">
                                         <p class="right-align"><span class="new badge" data-badge-caption="" id="unReadNum">1</span></p>
                                     </div>
-                                    <div class="col s6 offset-s1">
+                                    <div class="col s6 ">
                                         <p class="grey-text text-darken-2 truncate" id="text">#####</p>
                                     </div>
                                     <div class="col s3">
@@ -184,7 +184,7 @@
                         let id = ele.receive_id;
                         let name = ele.receive_name;
                         temp.find("#id").text(ele.receive_id)
-                        temp.find("#name").text(ele.receive_name)
+                        temp.find("#name").text(ele.receive_name+":")
                         temp.find("#text").text(ele.text)
                         temp.find("#time").text(ele.time)
                         temp.find("#unReadNum").text(ele.unReadCnt)
