@@ -146,7 +146,7 @@
                 type: "GET",
                 url: "php/msgAllSendRsv.php",
                 dataType: "text",
-                date: 
+                date: {
                     receive_id : $("#recvId").text()
                 },
                 success: function (data) {
