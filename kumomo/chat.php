@@ -174,7 +174,7 @@
                     alert(XMLHttpRequest.readyState);
                     alert(textStatus);
                 }
-            })
+        })
 
         $(document).ready(function () {
             $('.sidenav').sidenav();
