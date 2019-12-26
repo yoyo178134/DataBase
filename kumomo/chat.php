@@ -36,7 +36,8 @@
             background-color: #fafafa;
             border-radius: 4px;
             padding: 1em;
-            height: calc(100vh - 60px);
+            bottom: 0.5em;
+            height: calc(100vh - 80px);
         }
 
         .messageList {
@@ -64,7 +65,9 @@
 
         
         .messageInput {
+            left: 0;
             bottom: 0;
+            width: 100%;
         }
 
         @media #{$small-and-down} {
