@@ -108,11 +108,11 @@
         return $result;
     }
 
-    function msgSend($text, $receive_id){
+    function msgSend($text, $send_id, $receive_id){
         $result = null;
         $current_date = date("Y-m-d H:i:s");
         $text = htmlspecialchars($text);
-        $send_id = $_SESSION['login_user_id'];
+        //$send_id = $_SESSION['login_user_id'];
         $sql = "INSERT INTO message VALUES('', '{$text}', {$send_id}, {$receive_id}, '{$current_date}', 1, 1),
                                           ('', '{$text}', {$receive_id}, {$send_id}, '{$current_date}', 0, 0)";
         $query = mysqli_query($_SESSION['link'], $sql);
@@ -133,7 +133,7 @@
     function msgAllSendRsv($receive_id){
         $data = array();
         $send_id = $_SESSION['login_user_id'];
-        msgRead($receive_id);
+        msgRead($send_id, $receive_id);
         $sql = "SELECT text, send_id, receive_id, time, isRead, isOwner FROM message WHERE send_id = '{$send_id}' AND receive_id = '{$receive_id}' ORDER BY time ASC";
         $query = mysqli_query($_SESSION['link'], $sql);
         if($query){
@@ -149,9 +149,9 @@
         return $data;
     }
 
-    function msgRead($receive_id){
+    function msgRead($send_id, $receive_id){
         $result = null;
-        $send_id = $_SESSION['login_user_id'];
+        //$send_id = $_SESSION['login_user_id'];
         $sql = "UPDATE message SET isRead = 1 WHERE send_id = '{$send_id}' AND receive_id = '{$receive_id}'";
         $query = mysqli_query($_SESSION['link'], $sql);
         if($query){
