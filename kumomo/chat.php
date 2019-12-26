@@ -142,10 +142,12 @@
         function writeMessage(params) {
             
         }
+
+
         $.ajax({
                 type: "GET",
                 url: "php/msgAllSendRsv.php",
-                dataType: "text",
+                dataType: "json",
                 date: {
                     receive_id : $("#recvId").text()
                 },
