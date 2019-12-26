@@ -239,10 +239,6 @@
             websocket.onmessage = function(event) {
                 var Data = JSON.parse(event.data);
                 console.log(Data);
-                if(Data.receive_id==-1){
-                    id = Data.send_id;
-                }
-                console.log(id)
                 writeMessage(Data.text,Data.time,(Data.isOwner == "1"))
                 $(".messageList").animate({scrollTop:$(".messageList").height()});
                 //showMessage("<div class='"+Data.message_type+"'>"+Data.message+"</div>");
