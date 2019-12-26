@@ -29,7 +29,7 @@
 
     </script>
 
-    <style type="text/javascript">
+    <style type="text/css">
         .chatroomList {
             margin-bottom: 0px;
         }
