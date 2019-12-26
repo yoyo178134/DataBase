@@ -36,15 +36,14 @@
             background-color: #fafafa;
             border-radius: 4px;
             padding: 1em;
-            margin-bottom: 2em;
-            bottom: 1em;
-            height: calc(100vh - 90px);
+            bottom: 5em;
+            height: calc(100vh - 80px);
         }
 
         .messageList {
             padding: 0.5em;
             overflow-y: auto;
-            height: calc(100% - 100px);
+            height: calc(100% - 80px);
         }
 
         .messageList .row{
