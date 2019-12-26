@@ -42,7 +42,7 @@
 
         .messageList {
             border: 1px solid #bdbdbd;
-            background-color: #e0e0e0;
+            background-color: #fafafa;
             border-radius: 4px;
             padding: 0.5em;
             overflow-y: auto;
@@ -68,9 +68,7 @@
 
         
         .messageInput {
-            left: 0;
-            bottom: 0;
-            width: 100%;
+            margin-top: 1em;
         }
 
         @media #{$small-and-down} {
