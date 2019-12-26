@@ -144,7 +144,7 @@
         }
         $.ajax({
                 type: "GET",
-                url: "php/msgAllSendRsvphp.php",
+                url: "php/msgAllSendRsv.php",
                 dataType: "json",
                 date: {
                     receive_id : $("#recvId").text()
