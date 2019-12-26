@@ -239,10 +239,13 @@
             websocket.onmessage = function(event) {
                 var Data = JSON.parse(event.data);
                 console.log(Data);
-                writeMessage(Data.text,Data.time,(Data.isOwner == "1"))
-                $(".messageList").animate({scrollTop:$(".messageList").height()});
-                //showMessage("<div class='"+Data.message_type+"'>"+Data.message+"</div>");
-                //$('#chat-message').val('');
+                if(recvid == Data.receive_id){
+                    writeMessage(Data.text,Data.time,(Data.isOwner == "1"))
+                    $(".messageList").animate({scrollTop:$(".messageList").height()});
+                }else{
+                    M.toast({html: Data.text, displayLength: 2000, completeCallback: function () { }})
+                }
+                
             };
             
             websocket.onerror = function(event){
