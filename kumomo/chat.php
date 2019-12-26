@@ -60,8 +60,8 @@
             word-break: break-all;
         }
 
+
         .messageInput {
-            position: fixed;
             left: 0;
             bottom: 0;
             width: 100%;
