@@ -131,12 +131,12 @@
     </div>
 
     <script type="text/javascript">
-        var getRecvTemp = function () {
-            return $("template.messageReceived").html().clone();
+        function getRecvTemp() {
+            return $($("template.messageReceived").html()).clone();
         }
 
-        var getSendTemp = function  () {
-            return $("template.messageSend").html().clone();
+        function  getSendTemp() {
+            return $($("template.messageSend").html()).clone();
         }
 
         function writeMessage(text,time,isOwner) {
