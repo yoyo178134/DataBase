@@ -32,16 +32,17 @@
 
     <style type="text/css">
         .message {
-            border: 1px solid #f5f5f5;
-            background-color: #e0f2f1;
-            border-radius: 2px;
+            border: 1px solid #9e9e9e;
+            background-color: #fafafa;
+            border-radius: 10px;
             padding: 1em;
+            z-index: 1;
             height: calc(100vh - 100px);
         }
 
         .messageList {
-            border: 1px solid #f5f5f5;
-            background-color: #fafafa;
+            border: 1px solid #bdbdbd;
+            background-color: #e0e0e0;
             border-radius: 4px;
             padding: 0.5em;
             overflow-y: auto;
