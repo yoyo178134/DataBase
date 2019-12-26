@@ -131,11 +131,11 @@
     </div>
 
     <script type="text/javascript">
-        function getRecvTemp() {
+        var getRecvTemp = function () {
             return $("template.messageReceived").html().clone();
         }
 
-        function  getSendTemp() {
+        var getSendTemp = function  () {
             return $("template.messageSend").html().clone();
         }
 
