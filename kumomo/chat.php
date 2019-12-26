@@ -33,13 +33,16 @@
     <style type="text/css">
         .message {
             border: 1px solid #f5f5f5;
-            background-color: #fafafa;
-            border-radius: 4px;
+            background-color: #e0f2f1;
+            border-radius: 2px;
             padding: 1em;
             height: calc(100vh - 100px);
         }
 
         .messageList {
+            border: 1px solid #f5f5f5;
+            background-color: #fafafa;
+            border-radius: 4px;
             padding: 0.5em;
             overflow-y: auto;
             height: calc(100% - 100px);
