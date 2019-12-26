@@ -131,6 +131,49 @@
     </div>
 
     <script type="text/javascript">
+        function getRecvTemp(params) {
+            return $("template.messageReceived").html().clone();
+        }
+
+        function  getSendTemp(params) {
+            return $("template.messageSend").html().clone();
+        }
+
+        function writeMessage(params) {
+            
+        }
+        $.ajax({
+                type: "GET",
+                url: "php/msgAllSendRsvphp.php",
+                dataType: "json",
+                date: $(#recvId).text(),
+                success: function (data) {
+                    var temp;
+                    var mix = '';
+                    console.log(data)
+                    /*
+                    $.each(data, function (key,ele){
+                        temp = getTemplate();
+                        let id = ele.receive_id;
+                        let name = ele.receive_name;
+                        temp.find("#id").text(ele.receive_id)
+                        temp.find("#name").text(ele.receive_name)
+                        temp.find("#text").text(ele.text)
+                        temp.find("#time").text(ele.time)
+                        temp.find("#unReadNum").text(ele.unReadCnt)
+                        temp.find("#href").attr("href","chat.php?id="+id);
+                        mix += temp[0].outerHTML;
+                    })
+                    */
+
+                },
+                error: function(XMLHttpRequest, textStatus, errorThrown) {
+                    alert(XMLHttpRequest.status);
+                    alert(XMLHttpRequest.readyState);
+                    alert(textStatus);
+                }
+            })
+
         $(document).ready(function () {
             $('.sidenav').sidenav();
             $('.fixed-action-btn').floatingActionButton();
