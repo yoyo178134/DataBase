@@ -32,7 +32,7 @@
 
     <style type="text/css">
         .message {
-            border: 1px solid #9e9e9e;
+            /*border: 1px solid #9e9e9e;*/
             background-color: #fafafa;
             border-radius: 10px;
             padding: 1em;
@@ -41,9 +41,9 @@
         }
 
         .messageList {
-            border: 1px solid #bdbdbd;
+            /*border: 1px solid #bdbdbd;*/
             background-color: #fafafa;
-            border-radius: 4px;
+            border-radius: 5px;
             padding: 0.5em;
             overflow-y: auto;
             height: calc(100% - 100px);
