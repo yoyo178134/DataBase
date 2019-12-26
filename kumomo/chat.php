@@ -38,7 +38,7 @@
             padding: 1em;
             margin-bottom: 2em;
             bottom: 1em;
-            height: calc(100vh - 80px);
+            height: calc(100vh - 90px);
         }
 
         .messageList {
