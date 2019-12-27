@@ -89,10 +89,10 @@
                                     <div class="col s2">
                                         <p class="right-align"><span class="new badge" data-badge-caption="" id="unReadNum">1</span></p>
                                     </div>
-                                    <div class="col s3 m6">
+                                    <div class="col s2 m5">
                                         <p class="grey-text text-darken-2 truncate" id="text">#####</p>
                                     </div>
-                                    <div class="col s6 m3">
+                                    <div class="col s7 m4">
                                         <p class="right-align grey-text truncate" id="time"><small class="tiny">#####</small></p>
                                     </div>
                                 </div>
