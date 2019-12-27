@@ -28,6 +28,19 @@
     <script type="text/javascript">
 
     </script>
+
+    <style type="text/css">
+        body {
+            min-height: 100vh;
+            background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);
+        }
+        .card {
+
+            border-radius: 10px;
+
+        }
+
+    </style>
 </head>
 
 <body>
@@ -59,7 +72,7 @@
         <br>
         <div class="row">
             <div class="col s12 m8 offset-m2">
-                <div class="card-panel">
+                <div class="card-panel card">
                     <form id="form">
                         <div class="row">
                             <div class="input-field col s12">

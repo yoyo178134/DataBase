@@ -37,6 +37,12 @@
         .chatroomList {
             margin-bottom: 0px;
         }
+
+        .card {
+
+        border-radius: 10px;
+
+        }
     </style>
 </head>
 
@@ -68,7 +74,7 @@
         <br><br>
         <div class="row">
             <div class="col s12 m10 offset-m1">
-                <ul class="collection" id="list">
+                <ul class="collection card" id="list">
                     <template class="chatTemplate">
                         <li class="collection-item">
                             <a href="chat.php" class="black-text" id="href">
