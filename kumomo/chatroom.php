@@ -136,7 +136,7 @@
                         </div>
                     </div>
                     <p class="right-align">
-                        <button class="btn waves-effect waves-light" id="findUser" type="button">查詢
+                        <button class="btn waves-effect waves-light" id="findUser" type="submit">查詢
                             <i class="material-icons right">search</i>
                         </button>
                     </p>
@@ -208,7 +208,7 @@
                 }
             })
 
-            $("#findUser").click(function(){
+            $("#findUser").on("submit",function(){
                 if(userAccount == $("#icon_prefix").val()){
                     M.toast({html: "You Can't Find Yourself", displayLength: 2000, completeCallback: function () { location.href = "chatroom.php" }})
                     return;
@@ -237,6 +237,7 @@
                         console.log("ajax error "+XMLHttpRequest+textStatus+errorThrown)
                     }
                 })
+                return false;
             })
 
         });
