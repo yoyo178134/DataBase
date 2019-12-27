@@ -74,11 +74,6 @@
             word-break: break-all;
         }
 
-        
-        .messageInput {
-            margin-top: 1em;
-        }
-
         @media #{$small-and-down} {
             .messageBox {
                 max-width: 60%;
