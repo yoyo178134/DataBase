@@ -31,9 +31,7 @@
         }
 
         .card {
-
             border-radius: 10px;
-
         }
 
         h3 {
@@ -49,7 +47,6 @@
     <div class="container">
         <br>
         <br>
-
         <div class="row">
             <div class="col s12 m8 offset-m2">
                 <div class="card-panel card">
