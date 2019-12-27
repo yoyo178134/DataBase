@@ -35,7 +35,7 @@
         }
         
         .card-panel {
-            border-radius: 10px;
+            border-radius: 5px;
         }
     </style>
 </head>
