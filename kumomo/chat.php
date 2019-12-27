@@ -74,6 +74,10 @@
             word-break: break-all;
         }
 
+        #message {
+            margin-bottom: 0px;
+        }
+
         @media #{$small-and-down} {
             .messageBox {
                 max-width: 60%;
