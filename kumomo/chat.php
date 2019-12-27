@@ -31,6 +31,11 @@
     </script>
 
     <style type="text/css">
+        body {
+            min-height: 100vh;
+            background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);
+        }
+        
         .message {
             /*border: 1px solid #9e9e9e;*/
             background-color: #fafafa;
@@ -46,7 +51,7 @@
             border-radius: 5px;
             padding: 0.5em;
             overflow-y: auto;
-            height: calc(100% - 110px);
+            height: calc(100% - 105px);
         }
 
         .messageList .row{
@@ -75,11 +80,6 @@
             .messageBox {
                 max-width: 60%;
             }
-        }
-
-        body {
-            min-height: 100vh;
-            background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);
         }
     </style>
 </head>

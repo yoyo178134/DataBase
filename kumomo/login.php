@@ -38,7 +38,6 @@
 
         h3 {
             font-family: montserrat;
-
             text-align: center;
             margin-bottom: 30px;
         }

@@ -34,14 +34,13 @@
             min-height: 100vh;
             background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);
         }
+
         .chatroomList {
             margin-bottom: 0px;
         }
 
         .card {
-
-        border-radius: 10px;
-
+            border-radius: 10px;
         }
     </style>
 </head>
