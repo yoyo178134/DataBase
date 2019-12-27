@@ -47,7 +47,7 @@
             border-radius: 10px;
             padding: 1em;
             z-index: 1;
-            height: calc(100vh - 100px);
+            height: calc(100vh - 95px);
         }
 
         .messageList {
