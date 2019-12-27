@@ -75,7 +75,7 @@
                         <div class="row">
                             <div class="input-field col s12">
                                 <textarea id="articleText" name="text" placeholder="寫點什麼吧" class="materialize-textarea"
-                                    maxlength="255" data-length="255" style="height: 200px"></textarea>
+                                    maxlength="255" data-length="255" style="height: 180px"></textarea>
                                 <label for="articleText">建立文章</label>
                             </div>
                         </div>
