@@ -143,7 +143,7 @@
                         <div class="row">
                             <div class="input-field col s10 m9 offset-m1">
                                 <i class="material-icons prefix">mode_edit</i>
-                                <input id="message" type="text" class="validate">
+                                <input id="message" type="text" class="validate" data-length="255">
                                 <label for="message">Message</label>
                             </div>
                             <div class="input-field col s2 m1">
@@ -186,6 +186,8 @@
             $('.tooltipped').tooltip();
             $(".dropdown-trigger").dropdown();
             $('.modal').modal();
+            $('input#message').characterCounter();
+
             recvid = $("#recvId").text();
             $.ajax({
                 type: "GET",
