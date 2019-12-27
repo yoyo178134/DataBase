@@ -39,6 +39,8 @@
         h6 {
             margin-top: 0px;
             margin-bottom: 1em;
+            text-align:center;
+            
         }
         
         .message {
