@@ -78,7 +78,7 @@
                                     <a href="signup.php">sign up</a>.
                                 </p>
                             </div>
-                            <div class="col s12 ">
+                            <div class="col s12 hide">
                                 <p class="center-align"><a href="">Slide</a></p>
                             </div>
                         </div>
