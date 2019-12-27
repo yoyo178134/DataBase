@@ -28,6 +28,17 @@
     <script type="text/javascript">
 
     </script>
+
+    <style type="text/css">
+        body {
+            min-height: 100vh;
+            background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);
+        }
+        
+        .card {
+            border-radius: 10px;
+        }
+    </style>
 </head>
 
 <body>
@@ -64,7 +75,7 @@
                         <div class="row">
                             <div class="input-field col s12">
                                 <textarea id="articleText" name="text" placeholder="寫點什麼吧" class="materialize-textarea"
-                                    style="height: 200px"></textarea>
+                                    data-length="255" style="height: 200px"></textarea>
                                 <label for="articleText">建立文章</label>
                             </div>
                         </div>
@@ -84,6 +95,7 @@
             $('.fixed-action-btn').floatingActionButton();
             $('.tooltipped').tooltip();
             $(".dropdown-trigger").dropdown();
+            $('textarea#articleText').characterCounter();
         });
 
         $("#form").submit(function (e) {

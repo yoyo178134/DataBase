@@ -31,22 +31,30 @@
     </script>
 
     <style type="text/css">
+        body {
+            min-height: 100vh;
+            background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);
+        }
+
+        h6 {
+            margin-top: 0px;
+            margin-bottom: 1em;
+        }
+        
         .message {
             /*border: 1px solid #9e9e9e;*/
             background-color: #fafafa;
             border-radius: 10px;
             padding: 1em;
             z-index: 1;
-            height: calc(100vh - 100px);
+            height: calc(100vh - 90px);
         }
 
         .messageList {
             /*border: 1px solid #bdbdbd;*/
             background-color: #fafafa;
-            border-radius: 5px;
-            padding: 0.5em;
             overflow-y: auto;
-            height: calc(100% - 100px);
+            height: calc(100% - 95px);
         }
 
         .messageList .row{
@@ -66,9 +74,8 @@
             word-break: break-all;
         }
 
-        
-        .messageInput {
-            margin-top: 1em;
+        #message {
+            margin-bottom: 0px;
         }
 
         @media #{$small-and-down} {
@@ -106,6 +113,7 @@
     <div class="container">
         <br>
         <div class="message">
+            <h6 id="targetName" class="title truncate">###</h6>
             <div class="messageList">
                 <div id="recvId" class="hide"><?php echo $id ?></div>
 
@@ -139,7 +147,7 @@
                         <div class="row">
                             <div class="input-field col s10 m9 offset-m1">
                                 <i class="material-icons prefix">mode_edit</i>
-                                <input id="message" type="text" class="validate">
+                                <input id="message" type="text" class="validate" data-length="255">
                                 <label for="message">Message</label>
                             </div>
                             <div class="input-field col s2 m1">
@@ -182,6 +190,8 @@
             $('.tooltipped').tooltip();
             $(".dropdown-trigger").dropdown();
             $('.modal').modal();
+            $('input#message').characterCounter();
+
             recvid = $("#recvId").text();
             $.ajax({
                 type: "GET",
@@ -230,7 +240,7 @@
                         send_id: userid,
                         receive_id : -1
                     }
-                    console.log(JSON.stringify(msg))
+                   // console.log(JSON.stringify(msg))
                     websocket.send(JSON.stringify(msg))
                 } 
                     
@@ -238,12 +248,31 @@
 
             websocket.onmessage = function(event) {
                 var Data = JSON.parse(event.data);
-                console.log(Data);
+                //console.log(Data);
                 if(recvid == Data.receive_id){
                     writeMessage(Data.text,Data.time,(Data.isOwner == "1"))
                     $(".messageList").animate({scrollTop:$(".messageList").get(0).scrollHeight});
                 }else{
-                    M.toast({html: Data.text, displayLength: 2000, completeCallback: function () { }})
+                    var recvName;
+                    $.ajax({
+                        type: "GET",
+                        url: "php/findName.php",
+                        dataType : "text",
+                        data: {
+                        id : Data.receive_id
+                        },
+                        success: function (data) {
+                            recvName = data;
+                            //console.log(recvName)
+                            M.toast({html: recvName+" : "+Data.text, displayLength: 2000, completeCallback: function () { }})
+                        },
+                        error: function(XMLHttpRequest, textStatus, errorThrown) {
+                            alert(XMLHttpRequest.status);
+                            alert(XMLHttpRequest.readyState);
+                            alert(textStatus);
+                        }
+                    })
+                    
                 }
                 
             };

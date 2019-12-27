@@ -30,8 +30,17 @@
     </script>
 
     <style type="text/css">
+        body {
+            min-height: 100vh;
+            background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);
+        }
+
         .chatroomList {
             margin-bottom: 0px;
+        }
+
+        .card {
+            border-radius: 10px;
         }
     </style>
 </head>
@@ -64,7 +73,7 @@
         <br><br>
         <div class="row">
             <div class="col s12 m10 offset-m1">
-                <ul class="collection" id="list">
+                <ul class="collection card" id="list">
                     <template class="chatTemplate">
                         <li class="collection-item">
                             <a href="chat.php" class="black-text" id="href">
@@ -79,11 +88,11 @@
                                     <div class="col s2">
                                         <p class="right-align"><span class="new badge" data-badge-caption="" id="unReadNum">1</span></p>
                                     </div>
-                                    <div class="col s6 ">
+                                    <div class="col s3 m6">
                                         <p class="grey-text text-darken-2 truncate" id="text">#####</p>
                                     </div>
-                                    <div class="col s3">
-                                        <p class="right-align grey-text truncate" id="time"><small class="tiny">2019-06-28 00:02:00</small></p>
+                                    <div class="col s7 m4">
+                                        <p class="right-align grey-text truncate" id="time"><small class="tiny">#####</small></p>
                                     </div>
                                 </div>
                             </a>
@@ -184,7 +193,7 @@
                         let id = ele.receive_id;
                         let name = ele.receive_name;
                         temp.find("#id").text(ele.receive_id)
-                        temp.find("#name").text(ele.receive_name+":")
+                        temp.find("#name").text(ele.receive_name+" : ")
                         temp.find("#text").text(ele.text)
                         temp.find("#time").text(ele.time)
                         temp.find("#unReadNum").text(ele.unReadCnt)

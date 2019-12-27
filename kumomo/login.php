@@ -31,14 +31,11 @@
         }
 
         .card {
-
             border-radius: 10px;
-
         }
 
         h3 {
             font-family: montserrat;
-
             text-align: center;
             margin-bottom: 30px;
         }
@@ -50,7 +47,6 @@
     <div class="container">
         <br>
         <br>
-
         <div class="row">
             <div class="col s12 m8 offset-m2">
                 <div class="card-panel card">
@@ -81,6 +77,9 @@
                                     If you don't have account , please&nbsp;
                                     <a href="signup.php">sign up</a>.
                                 </p>
+                            </div>
+                            <div class="col s12 hide">
+                                <p class="center-align"><a href="">Slide</a></p>
                             </div>
                         </div>
 
