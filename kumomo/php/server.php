@@ -170,7 +170,7 @@
         }
 
         if($receiverKey){//有接收端key
-            if(in_array($cilentArray[$receiverKey]['socket'], $socketArray)){
+            if(in_array($cilentArray[$receiverKey]['socket'], $socketArray)){//有在線上(socket存在)
                 socket_write($cilentArray[$receiverKey]['socket'], $str2, strlen($str2));//接受端
                 msgRead($temp_msg->receive_id, $temp_msg->send_id);//MySQL
             }
@@ -187,7 +187,7 @@
                 $str3 = msg_encode(json_encode($msg_ar3));
                 msgSend('['.findIDtoAccount($temp_msg->send_id).']'.findName($temp_msg->send_id).':'.$temp_msg->text, $temp_msg->receive_id, $carrerUser['id']);//MySQL
                 if($userKey){
-                    if(in_array($cilentArray[$userKey]['socket'], $socketArray)){
+                    if(in_array($cilentArray[$userKey]['socket'], $socketArray)){//有在線上(socket存在)
                         socket_write($cilentArray[$userKey]['socket'], $str3, strlen($str3));//相對應職業接受端
                         msgRead($carrerUser['id'], $temp_msg->receive_id);//MySQL
                     }
