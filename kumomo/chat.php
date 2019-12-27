@@ -152,7 +152,7 @@
                         <div class="row">
                             <div class="input-field col s10 m9 offset-m1">
                                 <i class="material-icons prefix">mode_edit</i>
-                                <input id="message" type="text" class="validate" data-length="255">
+                                <input id="message" type="text" class="validate" maxlength="255" data-length="255">
                                 <label for="message">Message</label>
                             </div>
                             <div class="input-field col s2 m1">
