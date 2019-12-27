@@ -131,7 +131,7 @@
                     <div class="row">
                         <div class="input-field col s12">
                             <i class="material-icons prefix">account_circle</i>
-                            <input id="icon_prefix" type="text" class="validate" autofocus />
+                            <input id="icon_prefix" type="text" class="validate"/>
                             <label for="icon_prefix">使用者 Account</label>
                         </div>
                     </div>
