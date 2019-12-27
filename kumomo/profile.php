@@ -28,6 +28,14 @@
     <script type="text/javascript">
 
     </script>
+
+    <style type="text/css">
+        body {
+            min-height: 100vh;
+            background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);
+        }
+
+    </style>
 </head>
 
 <body>
