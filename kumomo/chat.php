@@ -230,7 +230,7 @@
                         send_id: userid,
                         receive_id : -1
                     }
-                    console.log(JSON.stringify(msg))
+                   // console.log(JSON.stringify(msg))
                     websocket.send(JSON.stringify(msg))
                 } 
                     
@@ -238,7 +238,7 @@
 
             websocket.onmessage = function(event) {
                 var Data = JSON.parse(event.data);
-                console.log(Data);
+                //console.log(Data);
                 if(recvid == Data.receive_id){
                     writeMessage(Data.text,Data.time,(Data.isOwner == "1"))
                     $(".messageList").animate({scrollTop:$(".messageList").get(0).scrollHeight});
@@ -253,7 +253,7 @@
                         },
                         success: function (data) {
                             recvName = data;
-                            console.log(recvName)
+                            //console.log(recvName)
                             M.toast({html: recvName+" : "+Data.text, displayLength: 2000, completeCallback: function () { }})
                         },
                         error: function(XMLHttpRequest, textStatus, errorThrown) {
