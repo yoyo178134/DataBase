@@ -208,6 +208,10 @@
                 }
             })
 
+            $("#icon_prefix").on("click",function(event){
+                if(event.keyCode === 13)$("#findUser").click();
+            });
+
             $("#findUser").on("click",function(){
                 if(userAccount == $("#icon_prefix").val()){
                     M.toast({html: "You Can't Find Yourself", displayLength: 2000, completeCallback: function () { location.href = "chatroom.php" }})
