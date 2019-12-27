@@ -54,7 +54,7 @@
             /*border: 1px solid #bdbdbd;*/
             background-color: #fafafa;
             overflow-y: auto;
-            height: calc(100% - 100px);
+            height: calc(100% - 90px);
         }
 
         .messageList .row{
