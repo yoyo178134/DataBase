@@ -161,7 +161,7 @@
             $('.fixed-action-btn').floatingActionButton();
             $('.tooltipped').tooltip();
             $(".dropdown-trigger").dropdown();
-            $('.modal').modal($("#icon_prefix").focus());
+            $('.modal').modal();
 
             $.ajax({
                 type: "GET",
