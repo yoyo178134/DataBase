@@ -249,7 +249,7 @@
                         url: "php/findName.php",
                         dataType : "text",
                         data: {
-                        id : recvid
+                        id : Data.receive_id
                         },
                         success: function (data) {
                             recvName = data;
