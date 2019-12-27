@@ -40,7 +40,6 @@
             margin-top: 0px;
             margin-bottom: 1em;
             text-align:center;
-            
         }
         
         .message {
@@ -74,6 +73,10 @@
 
         .messageBox span {
             word-break: break-all;
+        }
+
+        .messageInput .row {
+            margin-bottom: 0px;
         }
 
         #message {
