@@ -92,7 +92,7 @@
                                     <div class="col s4 m6">
                                         <p class="grey-text text-darken-2 truncate" id="text">#####</p>
                                     </div>
-                                    <div class="col s5 m3">
+                                    <div class="col s8 m3">
                                         <p class="right-align grey-text truncate" id="time"><small class="tiny">#####</small></p>
                                     </div>
                                 </div>
