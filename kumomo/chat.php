@@ -115,7 +115,7 @@
     <div class="container">
         <br>
         <div class="message">
-            <h6 id="targetName">###</h6>
+            <h6 id="targetName" class="truncate">###</h6>
             <div class="messageList">
                 <div id="recvId" class="hide"><?php echo $id ?></div>
 
