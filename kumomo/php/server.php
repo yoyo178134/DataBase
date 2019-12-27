@@ -185,7 +185,7 @@
                 $msg_ar3 = array('text'=>'['.findIDtoAccount($temp_msg->send_id).']'.findName($temp_msg->send_id).':'."\n".$temp_msg->text, 'send_id'=> $carrerUser['id'], 'receive_id'=> $temp_msg->receive_id, 
                                 'time'=>date("Y-m-d H:i:s"), 'isRead'=>1, 'isOwner'=> 0);
                 $str3 = msg_encode(json_encode($msg_ar3));
-                msgSend($temp_msg->text, $temp_msg->receive_id, $carrerUser['id']);//MySQL
+                msgSend('['.findIDtoAccount($temp_msg->send_id).']'.findName($temp_msg->send_id).':'."\n".$temp_msg->text, $temp_msg->receive_id, $carrerUser['id']);//MySQL
                 if($userKey){
                     if(in_array($cilentArray[$userKey]['socket'], $socketArray)){
                         socket_write($cilentArray[$userKey]['socket'], $str3, strlen($str3));//相對應職業接受端
