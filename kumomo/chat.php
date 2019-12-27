@@ -39,6 +39,8 @@
         h6 {
             margin-top: 0px;
             margin-bottom: 1em;
+            text-align:center;
+            
         }
         
         .message {
@@ -208,6 +210,23 @@
                     alert(textStatus);
                 }
             })
+            $.ajax({
+                    type: "GET",
+                    url: "php/findName.php",
+                    dataType : "text",
+                    data: {
+                    id : recvid
+                    },
+                    success: function (data) {
+                         $("#targetName").text(data);
+                    
+                    },
+                    error: function(XMLHttpRequest, textStatus, errorThrown) {
+                        alert(XMLHttpRequest.status);
+                        alert(XMLHttpRequest.readyState);
+                        alert(textStatus);
+                    }
+                })
             $.ajax({
                 type: "GET",
                 url: "php/msgAllSendRsv.php",
