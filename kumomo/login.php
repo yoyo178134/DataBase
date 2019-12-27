@@ -78,10 +78,9 @@
                                     <a href="signup.php">sign up</a>.
                                 </p>
                             </div>
-                        </div>
-
-                        <div class="row">
-                            <p class="center-align"><a href="">Slide</a></p>
+                            <div class="col s12 ">
+                                <p class="center-align"><a href="">Slide</a></p>
+                            </div>
                         </div>
 
                     </form>
