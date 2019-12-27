@@ -253,6 +253,8 @@
                         },
                         success: function (data) {
                             recvName = data;
+                            console.log(recvName)
+                            M.toast({html: recvName+" : "+Data.text, displayLength: 2000, completeCallback: function () { }})
                         },
                         error: function(XMLHttpRequest, textStatus, errorThrown) {
                             alert(XMLHttpRequest.status);
@@ -260,7 +262,7 @@
                             alert(textStatus);
                         }
                     })
-                    M.toast({html: recvName+" : "+Data.text, displayLength: 2000, completeCallback: function () { }})
+                    
                 }
                 
             };
