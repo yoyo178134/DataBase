@@ -260,6 +260,39 @@
         return $id;
     }
 
+    function findIDtoAccount($id){
+        $account = null;
+        $sql = "SELECT account FROM user WHERE id = '{$id}'";
+        $query = mysqli_query($_SESSION['link'], $sql);
+        if($query){
+            if(mysqli_num_rows($query) == 1){
+                $row = mysqli_fetch_array($query,MYSQLI_ASSOC);
+                $account = $row['account'];
+            }
+        }
+        else{
+            mysqli_error($_SESSION['link']);
+        }
+        return $account;
+    }
+
+    function findCareerUser($career){
+        $data = array();
+        $sql = "SELECT id FROM user WHERE career = '{$career}'";
+        $query = mysqli_query($_SESSION['link'], $sql);
+        if($query){
+            if(mysqli_num_rows($query) > 0){
+                while($row = mysqli_fetch_assoc($query)){
+                    $data[] = $row;
+                }
+            }
+        }
+        else{
+            mysqli_error($_SESSION['link']);
+        }
+        return $data;
+    }
+
     function twitterPost($text){
         $result = null;
         $poster_id = $_SESSION['login_user_id'];

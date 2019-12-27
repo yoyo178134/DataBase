@@ -1,10 +1,6 @@
 <?php
     require_once 'kumomo_connect.php';
     require_once 'functions.php';
-    
-    /*if(!isset($_SESSION)){
-        session_start();
-    }*/
 
     $serverSocket = webSocket('0.0.0.0',8080);
     $socketArray = array($serverSocket);
@@ -109,11 +105,10 @@
         //echo json_encode($userIDtoID);
     }
 
-    function findReceiverID($msg){
+    function findReceiverKey($id){
         global $userIDtoID;
-        $msg = json_decode($msg);
         foreach($userIDtoID as $key=> $value){
-            if($msg->receive_id==$value['userID'])
+            if($id==$value['userID'])
                 return $key;
         }
     }
@@ -154,10 +149,11 @@
 
     function msg_send($msg, $clientKey){
         global $cilentArray, $socketArray;
-        $receiverKey = findReceiverID($msg);
-        echo $receiverKey;
         $temp_msg = json_decode($msg);
+        $receiverKey = findReceiverKey($temp_msg->receive_id);
+        echo $receiverKey;
         
+        //------------------------------------------1對1-------------------------------------------------------------
         $msg_ar1 = array('text'=>$temp_msg->text, 'send_id'=>$temp_msg->send_id, 'receive_id'=>$temp_msg->receive_id, 
                         'time'=>date("Y-m-d H:i:s"), 'isRead'=>1, 'isOwner'=> 1);
         $msg_ar2 = array('text'=>$temp_msg->text, 'send_id'=>$temp_msg->receive_id, 'receive_id'=>$temp_msg->send_id, 
@@ -173,11 +169,30 @@
             msgSend($temp_msg->text, $temp_msg->send_id, $temp_msg->receive_id);//MySQL
         }
 
-        if($receiverKey!=null){//有接收端key
+        if($receiverKey){//有接收端key
             if(in_array($cilentArray[$receiverKey]['socket'], $socketArray)){
                 socket_write($cilentArray[$receiverKey]['socket'], $str2, strlen($str2));//接受端
                 msgRead($temp_msg->receive_id, $temp_msg->send_id);//MySQL
             }
+        }
+        
+        //---------------------------------------------職業------------------------------------------------------
+        $account = findIDtoAccount($temp_msg->receive_id);//110 => police, 119 => ambulance, 100 => teacher
+        $carrerUsers = findCareerUser($account);
+        if($carrerUsers){//有對應職業的user
+            foreach($carrerUsers as $carrerUser){
+                $userKey = findReceiverKey($carrerUser['id']);
+                $msg_ar3 = array('text'=>$temp_msg->text, 'send_id'=> $carrerUser['id'], 'receive_id'=> $temp_msg->receive_id, 
+                                'time'=>date("Y-m-d H:i:s"), 'isRead'=>1, 'isOwner'=> 0, 'send_name'=> $account);
+                $str3 = msg_encode(json_encode($msg_ar3));
+                msgSend($temp_msg->text, $temp_msg->receive_id, $carrerUser['id']);//MySQL
+                if($userKey){
+                    if(in_array($cilentArray[$userKey]['socket'], $socketArray)){
+                        socket_write($cilentArray[$userKey]['socket'], $str3, strlen($str3));//相對應職業接受端
+                        msgRead($carrerUser['id'], $temp_msg->receive_id);//MySQL
+                    }
+                }
+             }
         }
     }
 
