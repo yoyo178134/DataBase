@@ -252,7 +252,7 @@
                         id : recvid
                         },
                         success: function (data) {
-                            recvName = date;
+                            recvName = data;
                         },
                         error: function(XMLHttpRequest, textStatus, errorThrown) {
                             alert(XMLHttpRequest.status);
