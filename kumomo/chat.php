@@ -35,10 +35,6 @@
             min-height: 100vh;
             background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);
         }
-
-        h6 {
-            margin: 0px;
-        }
         
         .message {
             /*border: 1px solid #9e9e9e;*/
