@@ -46,7 +46,7 @@
             border-radius: 5px;
             padding: 0.5em;
             overflow-y: auto;
-            height: calc(100% - 100px);
+            height: calc(100% - 110px);
         }
 
         .messageList .row{
@@ -111,6 +111,7 @@
     <div class="container">
         <br>
         <div class="message">
+            <h6 id="targetName">###</h6>
             <div class="messageList">
                 <div id="recvId" class="hide"><?php echo $id ?></div>
 
