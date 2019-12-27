@@ -55,7 +55,7 @@
             border-radius: 5px;
             padding: 0.5em;
             overflow-y: auto;
-            height: calc(100% - 105px);
+            height: calc(100% - 100px);
         }
 
         .messageList .row{
