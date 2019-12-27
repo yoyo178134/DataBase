@@ -240,6 +240,9 @@
                 var Data = JSON.parse(event.data);
                 console.log(Data);
                 if(recvid == Data.receive_id){
+                    writeMessage(Data.text,Data.time,(Data.isOwner == "1"))
+                    $(".messageList").animate({scrollTop:$(".messageList").get(0).scrollHeight});
+                }else{
                     var recvName;
                     $.ajax({
                         type: "GET",
@@ -257,10 +260,7 @@
                             alert(textStatus);
                         }
                     })
-                    writeMessage(recvName+" : "+Data.text,Data.time,(Data.isOwner == "1"))
-                    $(".messageList").animate({scrollTop:$(".messageList").get(0).scrollHeight});
-                }else{
-                    M.toast({html: Data.text, displayLength: 2000, completeCallback: function () { }})
+                    M.toast({html: recvName+" : "+Data.text, displayLength: 2000, completeCallback: function () { }})
                 }
                 
             };
