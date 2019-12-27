@@ -127,11 +127,11 @@
             <h6>請輸入要查詢的使用者 Account</h6>
             <br>
             <div class="row">
-                <form class="col s12">
+                <form class="col s12" id="searchUserForm">
                     <div class="row">
                         <div class="input-field col s12">
                             <i class="material-icons prefix">account_circle</i>
-                            <input id="icon_prefix" type="text" class="validate">
+                            <input id="icon_prefix" type="text" class="validate" focus>
                             <label for="icon_prefix">使用者 Account</label>
                         </div>
                     </div>
@@ -208,7 +208,7 @@
                 }
             })
 
-            $("#findUser").on("submit",function(e){
+            $("#searchUserForm").on("submit",function(e){
                 if(userAccount == $("#icon_prefix").val()){
                     M.toast({html: "You Can't Find Yourself", displayLength: 2000, completeCallback: function () { location.href = "chatroom.php" }})
                     return false;
