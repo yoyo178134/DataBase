@@ -48,14 +48,14 @@
             border-radius: 10px;
             padding: 1em;
             z-index: 1;
-            height: calc(100vh - 90px);
+            height: calc(100vh - 95px);
         }
 
         .messageList {
             /*border: 1px solid #bdbdbd;*/
             background-color: #fafafa;
             overflow-y: auto;
-            height: calc(100% - 95px);
+            height: calc(100% - 100px);
         }
 
         .messageList .row{
