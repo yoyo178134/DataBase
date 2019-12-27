@@ -211,7 +211,7 @@
             $("#findUser").on("submit",function(){
                 if(userAccount == $("#icon_prefix").val()){
                     M.toast({html: "You Can't Find Yourself", displayLength: 2000, completeCallback: function () { location.href = "chatroom.php" }})
-                    return;
+                    return false;
                 }
                 console.log("find user :"+ $("#icon_prefix").val())
                 $.ajax({
