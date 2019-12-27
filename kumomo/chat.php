@@ -319,7 +319,7 @@
                 };
                 websocket.send(JSON.stringify(messageJSON));
                 $("#message").val("");
-                //$("#message").focus();
+                $('input#message').characterCounter();
                 return false;
             });
             
