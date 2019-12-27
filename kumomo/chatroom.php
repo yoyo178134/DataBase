@@ -237,8 +237,8 @@
                         console.log("ajax error "+XMLHttpRequest+textStatus+errorThrown)
                     }
                 })
+                return false;
             })
-
         });
     </script>
 </body>
