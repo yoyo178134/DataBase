@@ -189,7 +189,7 @@
         $data = array();
         $send_id = $_SESSION['login_user_id'];
         $cnt = msgUnReadCnt($send_id);
-        $sql = "SELECT text, receive_id, time, user.name as receive_name FROM message, user WHERE send_id = '{$send_id}' AND receive_id = user.id HAVING time in (SELECT MAX(time) FROM message WHERE send_id = '{$send_id}' GROUP BY receive_id) ORDER BY time DESC";
+        $sql = "SELECT DISTINCT text, receive_id, time, user.name as receive_name FROM message, user WHERE send_id = '{$send_id}' AND receive_id = user.id HAVING time in (SELECT MAX(time) FROM message WHERE send_id = '{$send_id}' GROUP BY receive_id) ORDER BY time DESC";
         $query = mysqli_query($_SESSION['link'], $sql);
         if($query){
             if(mysqli_num_rows($query) > 0){
@@ -199,7 +199,7 @@
                     if($i<$rowcnt&&$cnt&&($cnt[$i]['receive_id']==$row['receive_id']))
                         $data[] = $row + $cnt[$i++];
                     else{
-                        $data[] = $row + array('unReadCnt'=> 0);
+                        $data[] = $row + array('unReadCnt'=> "0");
                     }
                 }
             }
