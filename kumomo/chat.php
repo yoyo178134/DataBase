@@ -40,7 +40,6 @@
             margin-top: 0px;
             margin-bottom: 1em;
             text-align:center;
-            
         }
         
         .message {
@@ -49,14 +48,14 @@
             border-radius: 10px;
             padding: 1em;
             z-index: 1;
-            height: calc(100vh - 90px);
+            height: calc(100vh - 95px);
         }
 
         .messageList {
             /*border: 1px solid #bdbdbd;*/
             background-color: #fafafa;
             overflow-y: auto;
-            height: calc(100% - 95px);
+            height: calc(100% - 100px);
         }
 
         .messageList .row{
@@ -74,6 +73,10 @@
 
         .messageBox span {
             word-break: break-all;
+        }
+
+        .messageInput .row {
+            margin-bottom: 0px;
         }
 
         #message {
@@ -149,7 +152,7 @@
                         <div class="row">
                             <div class="input-field col s10 m9 offset-m1">
                                 <i class="material-icons prefix">mode_edit</i>
-                                <input id="message" type="text" class="validate" data-length="255">
+                                <input id="message" type="text" class="validate" maxlength="255" data-length="255">
                                 <label for="message">Message</label>
                             </div>
                             <div class="input-field col s2 m1">
@@ -316,6 +319,8 @@
                 };
                 websocket.send(JSON.stringify(messageJSON));
                 $("#message").val("");
+                $("#message").focus();
+                $('input#message').characterCounter();
                 return false;
             });
             

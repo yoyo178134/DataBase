@@ -127,16 +127,16 @@
             <h6>請輸入要查詢的使用者 Account</h6>
             <br>
             <div class="row">
-                <form class="col s12">
+                <form class="col s12" id="searchUserForm">
                     <div class="row">
                         <div class="input-field col s12">
                             <i class="material-icons prefix">account_circle</i>
-                            <input id="icon_prefix" type="text" class="validate">
+                            <input id="icon_prefix" type="text" class="validate"/>
                             <label for="icon_prefix">使用者 Account</label>
                         </div>
                     </div>
                     <p class="right-align">
-                        <button class="btn waves-effect waves-light" id="findUser" type="button">查詢
+                        <button class="btn waves-effect waves-light" id="findUser" type="submit">查詢
                             <i class="material-icons right">search</i>
                         </button>
                     </p>
@@ -208,10 +208,10 @@
                 }
             })
 
-            $("#findUser").click(function(){
+            $("#searchUserForm").on("submit",function(e){
                 if(userAccount == $("#icon_prefix").val()){
                     M.toast({html: "You Can't Find Yourself", displayLength: 2000, completeCallback: function () { location.href = "chatroom.php" }})
-                    return;
+                    return false;
                 }
                 console.log("find user :"+ $("#icon_prefix").val())
                 $.ajax({
@@ -237,8 +237,8 @@
                         console.log("ajax error "+XMLHttpRequest+textStatus+errorThrown)
                     }
                 })
+                return false;
             })
-
         });
     </script>
 </body>
