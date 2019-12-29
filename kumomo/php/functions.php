@@ -194,12 +194,13 @@
         if($query){
             if(mysqli_num_rows($query) > 0){
                 $i = 0;
-                if(count($cnt)<mysqli_num_rows($query)){
-                    for($j=count($cnt); $j<mysqli_num_rows($query); $j++)
-                        $cnt[$j]['unReadCnt'] = 0;//如果為已讀且最後一筆需再加一筆為0(msgUnReadCnt只看未讀)
-                }
+                $rowcnt = count($cnt);
                 while($row = mysqli_fetch_assoc($query)){
-                    $data[] = array_merge($row, $cnt[$i++]);
+                    if($i<$rowcnt&&$cnt&&($cnt[$i]['receive_id']==$row['receive_id']))
+                        $data[] = $row + $cnt[$i++];
+                    else{
+                        $data[] = $row + array('unReadCnt'=> 0);
+                    }
                 }
             }
         }
