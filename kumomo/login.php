@@ -78,8 +78,8 @@
                                     <a href="signup.php">sign up</a>.
                                 </p>
                             </div>
-                            <div class="col s12 hide">
-                                <p class="center-align"><a href="">Slide</a></p>
+                            <div class="col s12">
+                                <p class="center-align"><a href="https://docs.google.com/presentation/d/1XFtY29ksNBxrkIRkEcxDzd9_D61RQpAUK2enkJyO2oQ/edit?usp=sharing" target="_blank">Slide</a></p>
                             </div>
                         </div>
 
